@@ -1,0 +1,15 @@
+body{
+    background-image: url(images/hk-background.png);
+    background-position: top;
+    background-repeat: repeat;
+    height: 100vh; 
+    overflow: hidden;
+    background-size: 100px 99px;
+    margin: 0;
+    padding: 0;
+
+}
+/* .header{
+    height: 100vh;
+    overflow: hidden;
+} */
