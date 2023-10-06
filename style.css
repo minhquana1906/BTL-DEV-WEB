@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Heavy;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+}
 body{
     background-image: url(images/hk-background.png);
     background-position: top;
@@ -13,3 +20,12 @@ body{
     height: 100vh;
     overflow: hidden;
 } */
+.nav-link a{
+    font-weight: bold;
+    font-size: 3em;
+}
+h1{
+    font-weight: bold;
+    font-size: 100px;
+    text-transform: uppercase;
+}
