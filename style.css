@@ -1,31 +1,54 @@
 @font-face {
-    font-family: Heavy;
+    font-family: upperNavfont;
     src: url(fonts/Futura\ PT\ Heavy.ttf);
-    
     font-family: lowerNavfont;
     src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
 }
 body{
     background-image: url(images/hk-background.png);
-    background-position: top;
     background-repeat: repeat;
-    height: 100vh; 
-    overflow: hidden;
-    background-size: 100px 99px;
-    margin: 0;
+    background-position: top;
     padding: 0;
-
+    margin: 0;
+    height: 100vh;
+    background-size: 100px ;
+    overflow: auto;
 }
 /* .header{
     height: 100vh;
     overflow: hidden;
 } */
-.nav-link a{
+.nav-link {
     font-weight: bold;
     font-size: 3em;
 }
-h1{
-    font-weight: bold;
-    font-size: 100px;
+p{
     text-transform: uppercase;
+    font-size: 2em;
+    font-weight: bold;
+}
+.trans-color{ 
+    color: #fff;
+    transition: color 0.1ms;
+    font-weight: bold;
+}
+.trans-color:hover{
+    color: #bc955c;
+}
+.nav-item{
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+.nav-item:nth-child(4){
+    margin-right: 50px;
+}
+.book{
+    color: #333;
+    font-weight: bold;
+    color: #333;
+}
+.add-hover:hover{
+    opacity: 0.5;
 }
