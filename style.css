@@ -5,16 +5,12 @@
     src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
 }
 body{
-    background-image: url(images/hk-background.png);
-    background-repeat: repeat;
-    background-position: top;
+    background-color:black;
     padding: 0;
     margin: 0;
     margin-top: 96px;
-    height: 11000px;
-    background-size: 100px ;
-    overflow: auto;
-    z-index: 2;
+    height: 111111px;
+
 }
 @media (max-width: 771px) {
     .navbar .navbar-brand {
@@ -48,15 +44,16 @@ body{
     margin-right: 50px;
 }
 .book{
-    color: black;
-    font-weight: bold;
-    
+
 }
 .button{
     background-color: #bc955c; 
     outline-style: none; 
     transition: background-color 0.1ms;
     border-radius: 8px;
+    width: fit-content;
+    color: black;
+
 }
 .button:hover{
     transform: scale(1.1);
@@ -73,22 +70,23 @@ body{
         margin-top: 15px;
     }
 }
-/* .bg-img-1{
+.bg-img-1{
 
     background-image: url(images/herofullpic.jpg);
 }
 .bg-img-2{
-    background-image: url(images/hellskitchen.jpg);
+    background-image: url(images/kcview.jpg);
     
 }
 .bg-img-3{
-    background-image: url(images/joinclass.jpg);
+    background-image: url(images/joinclass2.jpg);
     
-} */
+}
 .carousel-image{
-    /* padding-top: 50%; */
-    /* background-size: cover; */
-    max-height: 70%;
+    padding-top: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* max-height: 70%; */
 }
 
 .carousel__button{
@@ -98,3 +96,4 @@ body{
     border-radius: 8px;
     
 }
+
