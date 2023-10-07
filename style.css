@@ -1,0 +1,99 @@
+@font-face {
+    font-family: upperNavfont;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+}
+body{
+    background-color:black;
+    padding: 0;
+    margin: 0;
+    margin-top: 96px;
+    height: 111111px;
+
+}
+@media (max-width: 771px) {
+    .navbar .navbar-brand {
+      position: static;
+      transform: translateX(55%) ;
+    }
+    .sidebar{
+        background-color: rgba(255, 255, 255, 1.15);
+        backdrop-filter: 10px;
+    }
+    #book
+}
+.btn .btn-close{
+    right: 0;
+}
+.trans-color{ 
+    color: #fff;
+    transition: color 0.1ms;
+    font-weight: bold;
+}
+.trans-color:hover{
+    color: #bc955c;
+}
+.nav-item{
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+.nav-item:nth-child(4){
+    margin-right: 50px;
+}
+.book{
+
+}
+.button{
+    background-color: #bc955c; 
+    outline-style: none; 
+    transition: background-color 0.1ms;
+    border-radius: 8px;
+    width: fit-content;
+    color: black;
+
+}
+.button:hover{
+    transform: scale(1.1);
+    background-color: #b89068;
+}
+@media(max-width: 991px){
+    .button:hover{
+        transform: unset;
+    }
+    .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+}
+.bg-img-1{
+
+    background-image: url(images/herofullpic.jpg);
+}
+.bg-img-2{
+    background-image: url(images/kcview.jpg);
+    
+}
+.bg-img-3{
+    background-image: url(images/joinclass2.jpg);
+    
+}
+.carousel-image{
+    padding-top: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* max-height: 70%; */
+}
+
+.carousel__button{
+    width: fit-content;
+    background-color: #b89068;
+    outline-style: none;
+    border-radius: 8px;
+    
+}
+

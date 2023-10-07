@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="">
+</head>
+<body class="bg-black">
+    <header >
+      <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black navbar-fixed-top">
+            <div class="container">
+              <!-- logo -->
+              <a class="navbar-brand " href="#"><img style="height: 70px;" src="images/logo-bg/logo.png" alt="website logo "></a>
+              <!-- toggle btn-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- side bar -->
+              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar header -->
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- nav pc -->
+                <div class="nav-pc"> 
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#" ><span class="trans-color">HOME</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">LOCATION</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">ABOUT</span></a>
+                      </li>
+                    </ul>
+                    <div class="row-sm text-white border-bottom"></div>
+                    <div class="button">
+                      <a class="btn " href="#"><span class="fw-bold">BOOK</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <div id="carousel" class="carousel slide " data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-image bg-img-1 active">
+            <!-- <img style="height: 70%;" src="images/herofullpic.jpg" class="d-block w-100 " alt="..."> -->
+            <div class="carousel-caption d-none d-md-block">
+              <h1>First slide label</h1>
+              <p>Some representative placeholder content for the first slide.</p>
+              <div class="btn btn-primary btn-lg">MAKE A RESERVATION</div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-image bg-img-2" style="height: 70%;">
+            <!-- <img  src="images/hellskitchen.jpg" class="d-block w-100" alt="..."> -->
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Second slide label</h1>
+              <p>Some representative placeholder content for the second slide.</p>
+              <div class="btn btn-primary btn-lg">MAKE A RESERVATION</div>
+            </div>
+          </div>
+          <div class="carousel-item carousel-image bg-img-3">
+            <!-- <img src="images/joinclass.jpg" class="d-block w-100" alt="..."> -->
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Third slide label</h1>
+              <p>Some representative placeholder content for the third slide.</p>
+              <div class="btn btn-primary btn-lg">MAKE A RESERVATION</div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row text-white py-5">
+          <div class="col-lg-6 col-sm-12" style="padding-right: calc(660px - 473px);">
+            <div class="dine-with-us">
+              <h2>DINE WITH US</h2>
+              <img src="images/menu/intro1.jpg" alt="DINE WITH US" style="height: 100%;width: 100%;margin: 30px auto;">
+              <br><br>
+              <p>Experience Hell's Kitchen signature dishes like Beef Wellington, Lobster Risotto, Pan-Seared Scallops, Sticky Toffee Pudding, and more.</p>
+              <div class="button">
+                <a href="#MENU" class="btn p-2 fw-bold ">SEE THE MENU</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12" style="margin-top: 75px;padding-right: calc(660px - 473px);">
+            <div class="cocktail">
+              <h2>EXPERIENTIAL COCKTAILS</h2>
+              <img  src="images/menu/intro2.jpg" alt="EXPERIENTIAL COCKTAILS" style="height: 100%;width: 100%;margin: 30px auto;">
+              <p >Explore our showstopping cocktail menu and experience stunningly beautiful, hand-crafted cocktails like Smoke on the Boulevard and Notes from Gordon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flame-bg " style="left: 0;right: 0; background-image: url(images/logo-bg/flame-bg.jpg);">
+      <div class="container text-white" >
+        <div style="margin: 60px auto;text-align: center;">
+          <h2>IT'S TIME TO OPEN THE DOORS OF HELL'S KITCHEN</h2>
+        </div>
+        <div class="row">  
+          <div class="col-lg-6 col-sm-6">
+            <img width="100%" height="100%" style="padding-right: 50px;" src="images/menu/intro3.jpg" alt="INTRO">
+          </div>
+          <div class="col-lg-6"col-sm-6>
+            <div>
+              <p>Transcend on set to Chef Ramsay's iconic 22-season, six-time, Emmy-nominated television series Hell's Kitchen. A fine dining experience like no other, watch as the red and blue teams prepare, cook, and plate dishes emulating on-set Hell's Kitchen dinner service.</p>
+              <p>The doors to Hell's Kitchen Miami have finally opened, now you can experience Hell's Kitchen from coast to coast.</p> 
+            </div>
+            <div class="button">
+              <a class="btn fw-bold p-2" href="#Learn more">LEARN MORE</a>
+            </div>
+            <div class="container" style="margin-top: 30px;border-left: 4px solid #e1b988 ;">
+              <p class="fw-italic">I'm so excited to bring Gordon Ramsay HELL'S KITCHEN to Miami. With its impressive food scene, art deco architecture and amazing people, they really know how to bring on the heat, and I know HELL'S KITCHEN will feel right at home!</p>
+              <p>Chef Gordon Ramsay</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
