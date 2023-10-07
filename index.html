@@ -13,52 +13,87 @@
 <body>
     <header >
       <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black navbar-fixed-top">
             <div class="container">
               <!-- logo -->
-              <a class="navbar-brand" href="#"><img style="height: 90px;" src="images/logo.png" alt=""></a>
-              <!-- toggle -->
-              <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <a class="navbar-brand " href="#"><img style="height: 70px;" src="images/logo.png" alt="website logo "></a>
+              <!-- toggle btn-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <!-- side bar -->
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar header -->
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <!-- nav body -->
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-lg-end flex-grow-1 px-3 ">
-                    <li class="nav-item">
-                      <a class="nav-link active " aria-current="page" href="#" ><span class="trans-color">HOME</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active " href="#" ><span class="trans-color">LOCATION</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active " href="#" ><span class="trans-color">ABOUT</span></a>
-                    </li>
-                  </ul>
-                  <div>
-                    <a class="btn  " style="background-color: #bc955c; outline-style: none #333;" href="#"><span class="book">BOOK</span></a>
+                <!-- nav pc -->
+                <div class="nav-pc"> 
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#" ><span class="trans-color">HOME</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">LOCATION</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">ABOUT</span></a>
+                      </li>
+                    </ul>
+                    <div class="row-sm text-white border-bottom"></div>
+                    <div class="button">
+                      <a class="btn " href="#"><span class="book">BOOK</span></a>
+                    </div>
                   </div>
-                  
-                
-                  
-                  
                 </div>
               </div>
             </div>
           </nav>
     </header>
-    
     <main>
-      <p style="color: #fff; margin-top: 150px;">MENU</p>
-
+      <div class="carousel-container">
+        <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/herofullpic.jpg"  alt="Hero">
+              <div class="carousel-caption ">
+                <h1>HELLO, MIAMI</h1>
+                <p>World-renowned Michelin-starred Chef Gordon Ramsay's iconic Hell's Kitchen is now open in Miami.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/hellskitchen.jpg" alt="img">
+              <div class="carousel-caption ">
+                <h1>HELL'S KITCHEN MIAMI IS NOW OPEN.</h1>
+                <p>A first-of-its-kind Ramsay experience in Boston, Las Vegas, Naperville, and Oklahoma City - Opening October.</p>
+                
+              </div>
+            </div>
+            <a class="btn button" href="#"></a>
+            <div class="carousel-item">
+              <img src="images/joinclass.jpg" alt="img">
+              <div class="carousel-caption ">
+                <h1>GORDON RAMSAY ACADEMY</h1>
+                <p>Learn to cook like Michelin-starred Chef Gordon Ramsay. Online classes are available now featuring knife skills, pasta making, mastering chocolate desserts, and more. </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
 
       
     </main>

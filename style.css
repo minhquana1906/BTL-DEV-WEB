@@ -10,22 +10,24 @@ body{
     background-position: top;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    margin-top: 96px;
+    height: 11000px;
     background-size: 100px ;
     overflow: auto;
 }
-/* .header{
-    height: 100vh;
-    overflow: hidden;
-} */
-.nav-link {
-    font-weight: bold;
-    font-size: 3em;
+@media (max-width: 771px) {
+    .navbar .navbar-brand {
+      position: static;
+      transform: translateX(55%) ;
+    }
+    .sidebar{
+        background-color: rgba(255, 255, 255, 1.15);
+        backdrop-filter: 10px;
+    }
+    #book
 }
-p{
-    text-transform: uppercase;
-    font-size: 2em;
-    font-weight: bold;
+.btn .btn-close{
+    right: 0;
 }
 .trans-color{ 
     color: #fff;
@@ -45,10 +47,57 @@ p{
     margin-right: 50px;
 }
 .book{
-    color: #333;
+    color: black;
     font-weight: bold;
-    color: #333;
+    
 }
-.add-hover:hover{
-    opacity: 0.5;
+.button{
+    background-color: #bc955c; 
+    outline-style: none; 
+    transition: background-color 0.1ms;
+    border-radius: 8px;
 }
+.button:hover{
+    transform: scale(1.1);
+    background-color: #b89068;
+}
+@media(max-width: 991px){
+    .button:hover{
+        transform: unset;
+    }
+    .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+}
+.carousel-inner{
+    max-width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carousel{
+    width: 100%;
+    height: 100%;
+}
+.carousel-item img{
+    max-width: 100%; 
+    max-height: 100%;     
+    object-fit: cover;
+}
+  
+
+
+
+
+/* .nav__overlay{
+    position: fixed;
+    background-color: black;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    
+} */
