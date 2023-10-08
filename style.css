@@ -9,9 +9,10 @@ body{
     padding: 0;
     margin: 0;
     margin-top: 96px;
-    height: 111111px;
+
 
 }
+
 @media (max-width: 771px) {
     .navbar .navbar-brand {
       position: static;
@@ -43,9 +44,6 @@ body{
 .nav-item:nth-child(4){
     margin-right: 50px;
 }
-.book{
-
-}
 .button{
     background-color: #bc955c; 
     outline-style: none; 
@@ -59,31 +57,23 @@ body{
     transform: scale(1.1);
     background-color: #b89068;
 }
-@media(max-width: 991px){
-    .button:hover{
-        transform: unset;
-    }
-    .button{
-        max-width: fit-content;
-        padding: auto 10px;
-        margin-left: 10px;
-        margin-top: 15px;
-    }
-}
 .bg-img-1{
-
     background-image: url(images/herofullpic.jpg);
+    background-position: center;
 }
 .bg-img-2{
     background-image: url(images/kcview.jpg);
+    background-position: center;
     
 }
 .bg-img-3{
     background-image: url(images/joinclass2.jpg);
+    background-position: center;
     
 }
 .carousel-image{
     padding-top: 50%;
+    max-height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
     /* max-height: 70%; */
@@ -96,4 +86,73 @@ body{
     border-radius: 8px;
     
 }
+.gallery__content--left{
+    margin-top: 180px;
+    text-align: justify;
+}
+.article4{
+    background-color: #bc955c;
+}
 
+
+footer{
+    background-color: #black;
+    border-top: 5px solid white;
+}
+.list-unstyled{
+    display: flex;    
+}
+.footer__menu--left a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    
+}
+.footer__menu--right a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+}
+.footer__end--des{
+    text-align: right;
+    line-height: 1.5em;
+
+}
+.footer__end--des a{
+    text-decoration: none;
+    color: #fff;
+    transform: color 0.1ms;
+}
+.footer__end--des a:hover{
+    color: #daa918;
+    text-decoration: underline;
+}
+
+@media(max-width:991px) {
+    .button:hover{
+        transform: unset;
+    }
+    .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+    .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+    .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+}
