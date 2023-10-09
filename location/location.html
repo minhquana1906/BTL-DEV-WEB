@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell's Kitchen Location</title>
+    <link rel="stylesheet" href="..//style.css">
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../images/logo-bg/favicon.png">
+</head>
+<body class="bg-black" style="margin-top: 150px; background: url(../images/logo-bg/hk-background.png);">
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
+            <div class="container">
+              <!-- logo -->
+              <a class="navbar-brand " href="#"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
+              <!-- toggle btn-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- side bar -->
+              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar header -->
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- nav pc -->
+                <div class="nav-pc"> 
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#" ><span class="trans-color">HOME</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">LOCATION</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">SIGN-UP</span></a>
+                      </li>
+                    </ul>
+                    <div class="row-sm text-white border-bottom"></div>
+                    <div class="button">
+                      <a class="btn   " href="#"><span class="fw-bold">BOOK</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main style="height: 100vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col">
+                    <div class="restaurant__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.9975044860553!2d-74.43854482350766!3d39.35629311949649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0ee69ee3a0d7f%3A0x3d20aec904a94763!2s2100%20Pacific%20Ave%2C%20Atlantic%20City%2C%20NJ%2008401%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1696879309876!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="location__footer">
+        <div class="container">
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-6 col-lg-12 col">
+              <div class="footer__menu--left">
+                <ul class="list-unstyled gap-5" >
+                  <li ><a class="trans-color" href="#Careers">Careers</a></li>
+                  <li ><a class="trans-color" href="#FAQS">Faqs</a></li>
+                  <li ><a class="trans-color" href="#About">About</a></li>
+                  <li ><a class="trans-color" href="#Contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-lg-8 col-xl-7 col">
+              <div class="footer__menu--right">
+                <ul class="list-unstyled">
+                  <li ><a class="trans-color" href="#Accessibility">Accessibility</a></li>
+                  <li ><a class="trans-color" href="#Policy">Privacy Policy</a></li>
+                  <li ><a class="trans-color" href="#Term">Term & Conditions</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 col-xl-5 col">
+              <div class="footer__end">
+                <p class="footer__end--des text-white">
+                  <span>Gordon Ramsay Restaurants ©Copyright 2023</span><br>
+                  <a href="#Coppyrights">Gordonramsayrestaurants.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
