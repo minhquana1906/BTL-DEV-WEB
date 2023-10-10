@@ -4,11 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hell's Kitchen Location</title>
-    <link rel="stylesheet" href="..//style.css">
     <link rel="stylesheet" href="main.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="">
+    <style>
+      @font-face {
+    font-family: upperNavfont;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+    }
+    body{
+        padding-top: 100px;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+
+    }
+    /* đổi màu các liên kết */
+    .trans-color{ 
+        color: #fff;
+        transition: color 0.1ms;
+        font-weight: bold;
+    }
+    .trans-color:hover{
+        color: #bc955c;
+    }
+    /* class button  dùng chung*/
+    .button{
+        background-color: #bc955c; 
+        outline-style: none; 
+        transition: background-color 0.1ms;
+        border-radius: 8px;
+        width: fit-content;
+        color: black;
+    }
+    .button:hover{
+        transform: scale(1.1);
+        background-color: #b89068;
+    }
+    /* footer */
+    footer{
+        background-color: black;
+    }
+    .list-unstyled{
+        display: flex;    
+    }
+    .footer__menu--left a{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 20px;
+        
+    }
+    .footer__menu--right a{
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 20px;
+    }
+    .footer__end--des{
+        text-align: right;
+        line-height: 1.5em;
+
+    }
+    .footer__end--des a{
+        text-decoration: none;
+        color: #fff;
+        transform: color 0.1ms;
+    }
+    .footer__end--des a:hover{
+        color: #daa918;
+        text-decoration: underline;
+    }
+/* hiệu ứng nút và các đường liên kết khi thu nhỏ */
+    @media(max-width:991px) {
+      .button:hover{
+        transform: unset;
+    }
+      .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+      .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+      .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+      .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+      .article__content{
+        margin-top: 10%;
+    }
+    }
+      .restaurant__map iframe{
+        width: 100%;
+        height: 420px;
+      }
+      .location__footer{
+        background: #000;
+        padding: 10px;
+      }
+      
+    </style>
 </head>
 <body  style="margin-top: 150px; background: url(../images/logo-bg/hk-background.png);">
     <header>
