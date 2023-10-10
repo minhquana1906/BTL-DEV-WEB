@@ -3,46 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Đăng Nhập</title>
+    <title>Đăng Nhập Nhà Hàng</title>
     <style>
+        
         body {
+            background-image: url(https://github.com/justwannacodee/BTL-DEV-WEB/blob/master/images/hellkitchen.jpg?raw=true);
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f2f2f2;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
-            max-width: 400px;
-            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Màu nền với độ trong suốt */
             padding: 20px;
-            background-color: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
         label {
-            display: block;
-            margin-bottom: 8px;
+            font-size: 18px;
+            color: #333;
         }
         input[type="text"],
         input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 3px;
+            font-size: 16px;
         }
         input[type="submit"] {
-            background-color: #4CAF50;
+            background-color: #ff6600;
             color: white;
             padding: 12px 20px;
             border: none;
             border-radius: 3px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
         }
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #ff4500;
         }
     </style>
 </head>
