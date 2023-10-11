@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell's Kitchen Location</title>
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="">
+    <style>
+      @font-face {
+    font-family: upperNavfont;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+    }
+    body{
+      padding-top: 100px;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      background: url(..//images/logo-bg/hk-background.png);
+      margin-top: -100px;
+    }
+    /* đổi màu các liên kết */
+    .trans-color{ 
+        color: #fff;
+        transition: color 0.1ms;
+        font-weight: bold;
+    }
+    .trans-color:hover{
+        color: #bc955c;
+    }
+    /* class button  dùng chung*/
+    .button{
+        background-color: #bc955c; 
+        outline-style: none; 
+        transition: background-color 0.1ms;
+        border-radius: 8px;
+        width: fit-content;
+        color: black;
+    }
+    .button:hover{
+        transform: scale(1.1);
+        background-color: #b89068;
+    }
+    /* footer */
+    footer{
+        background-color: black;
+        
+    }
+    .list-unstyled{
+        display: flex;    
+    }
+    .footer__menu--left a{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 20px;
+        
+    }
+    .footer__menu--right a{
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 20px;
+    }
+    .footer__end--des{
+        text-align: right;
+        line-height: 1.5em;
+
+    }
+    .footer__end--des a{
+        text-decoration: none;
+        color: #fff;
+        transform: color 0.1ms;
+    }
+    .footer__end--des a:hover{
+        color: #daa918;
+        text-decoration: underline;
+    }
+/* hiệu ứng nút và các đường liên kết khi thu nhỏ */
+    @media(max-width:991px) {
+      .button:hover{
+        transform: unset;
+    }
+      .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+      .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+      .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+      .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+      .article__content{
+        margin-top: 10%;
+    }
+    }
+      .restaurant__map iframe{
+        width: 100%;
+        height: 420px;
+        margin: 100px auto;
+      }
+      .container__img{
+        width: 100%;
+        max-height: 750px;
+        overflow: hidden;
+        padding: 0;
+      }
+      .main__img {
+        padding-top: 50%;
+        background-image:linear-gradient(90deg , rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(..//images/locations/miami-view.jpg);
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        
+      }.description{
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        width: 100%;
+        text-align: center;
+
+      }
+      .description h1{
+        font-size: 72px;
+        font-weight: bold;
+      }
+      .description__button{
+        display: flex;
+        justify-content: center;
+      }
+      .description__button .button{
+        margin: 35px;
+      }
+      .information__list{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+      }
+      .information__list li{
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+      .information__list i{
+        margin-right: 15px;
+        color: red;
+        font-size: 25px;
+      }
+      .opening-hour .day{
+        margin-right: 100px;
+      }
+      .information{
+        padding-right: 50px;
+      }
+      .opening-hour{
+        padding-left: 100px;
+        font-size: 18px;
+        margin-bottom: 100px;
+      }
+      .opening-hour__list{
+        display: flex;
+        flex-direction: column;
+      }
+      .opening-hour__list .time{
+        margin-left: -60px;
+      }
+      .notification{
+        margin-top: 20px;
+      }
+      .story{
+        margin-bottom: 50px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
+            <div class="container">
+              <!-- logo -->
+              <a class="navbar-brand " href="#"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
+              <!-- toggle btn-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- side bar -->
+              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar header -->
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- nav pc -->
+                <div class="nav-pc"> 
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#" ><span class="trans-color">HOME</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">LOCATION</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">SIGN-UP</span></a>
+                      </li>
+                    </ul>
+                    <div class="row-sm text-white border-bottom"></div>
+                    <div class="button">
+                      <a class="btn   " href="#"><span class="fw-bold">BOOK</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main >
+      <div class="container-fluid container__img" >
+        <div class="col-12 col">
+          <div class="main__img">
+            <div class="description">
+              <h1>MIAMI - NOW OPEN</h1>
+              <div class="description__button">
+                <div class="button">
+                  <a href="#" class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5">Book a table</a>
+                </div>
+                <div class="button">
+                  <a href="" class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5">View the menu</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- map -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col">
+                    <div class="restaurant__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.9795803119428!2d-80.19080692387078!3d25.771238008209565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b57ad1b72c73%3A0x996cf05dbd5b1ef1!2sGORDON%20RAMSAY%20HELL&#39;S%20KITCHEN!5e0!3m2!1sen!2sus!4v1696987798199!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <section>
+        <div class="container text-white">
+          <div class="row">
+            <div class="col-12 col-lg-6 col information">
+              <h1 class="fw-bold">MIAMI - NOW OPEN</h1>
+              <ul class="list-unstyled information__list">
+                <li>
+                  <i class="fa-solid fa-location-dot "></i> 
+                  333 Biscayne Boulevard Way, Miami, Florida, 33131
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="#" class="text-decoration-none fw-normal trans-color">786-688-0082</a>
+                </li>
+                <li>
+                  <i class="fa-regular fa-envelope"></i>
+                  <a href="#" class="trans-color text-decoration-none fw-normal">Email Miami</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-crosshairs"></i>
+                  <a href="https://maps.app.goo.gl/TL8iXErTV5ABMqns8" class="trans-color text-decoration-none fw-normal">Get directions</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-6 col opening-hour">
+              <h2 class="fw-bold">OPENING HOURS</h2>
+              <div class="row">
+                <div class="col-4">
+                  <ul class="list-unstyled opening-hour__list">
+                    <li>
+                      <span class="day">MON</span>
+                    </li>utton
+                    <li>
+                      <span class="day">TUE</span>
+                    </li>
+                    <li>
+                        <span class="day">WED</span>        
+                    </li>
+                    <li>
+                      <span class="day">THU</span>
+                    </li>
+                    <li>
+                      <span class="day">FRI</span>
+                    </li>
+                    <li>
+                      <span class="day">SAT</span>
+                    </li>
+                    <li>
+                      <span class="day">SUN</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-8">
+                  <ul class="list-unstyled opening-hour__list">
+                    <li>
+                      <span class="time">11:00 - 11:00</span>
+                    </li>
+                    <li>
+                        <span class="time">11:00 - 11:00</span>
+                    </li>
+                    <li>
+                      <span class="time">11:00 - 11:00</span>
+                    </li>
+                    <li>
+                        <span class="time">11:00 - 11:00</span>
+                    </li>
+                    <li>
+                        <span class="time">11:00 - 11:00</span>
+                    </li>
+                    <li>
+                        <span class="time">11:00 - 11:00</span>
+                    </li>
+                    <li>
+                        <span class="time">11:00 - 11:00</span>
+                    </li>        
+                  </ul>
+                </div>
+              </div>
+              <div class="notification">
+                <p>Bar Menu available from 3:00 PM - 5:00 PM.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="story">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col">
+                        <div class="story--left">
+                            <img class="img-fluid" src="../images/locations/miami-story.jpg" alt="miami's story">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col">
+                        <div class="story--right text-white">
+                            <h2 class="fw-bold">HELL'S KITCHEN MIAMI</h2>
+                            <p >Located a block from the water in Downtown’s Met Square complex, the two-story restaurant will have ample space for diners to indulge in all of the restaurant's iconic menu items, spearheaded by one of the most talented chefs. The 16,736 square foot space includes a ground-floor patio and second-floor dining terrace, as well as a beautiful interior dining room. The interior design is set to emulate the hit television show’s set, with an open kitchen and contemporary bar, where diners can watch the iconic red and blue teams from their seat.</p>
+                            <p>The bar serves a selection of both classic and signature cocktails; from a traditional Negroni and Old Fashioned to the innovative Smoke on the Water, served in a smoke-filled lantern, or the Notes from Gordon, complete with a personalized message from Chef Ramsay himself.</p>
+                            <div class="button">
+                                <a href="#menu" class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5">MIAMI MENU</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </section>
+
+    </main>
+
+    <footer >
+      <div class="container text-white">
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-6 col-lg-12 col">
+            <div class="footer__menu--left">
+              <ul class="list-unstyled gap-5" >
+                <li ><a class="trans-color" href="#Careers">Careers</a></li>
+                <li ><a class="trans-color" href="#FAQS">Faqs</a></li>
+                <li ><a class="trans-color" href="#About">About</a></li>
+                <li ><a class="trans-color" href="#Contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-lg-8 col-xl-7 col">
+            <div class="footer__menu--right">
+              <ul class="list-unstyled">
+                <li ><a class="trans-color" href="#Accessibility">Accessibility</a></li>
+                <li ><a class="trans-color" href="#Policy">Privacy Policy</a></li>
+                <li ><a class="trans-color" href="#Term">Term & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-5 col">
+            <div class="footer__end">
+              <p class="footer__end--des text-white">
+                <span>Gordon Ramsay Restaurants ©Copyright 2023</span><br>
+                <a href="#Coppyrights">Gordonramsayrestaurants.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
