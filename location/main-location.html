@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hell's Kitchen Location | Miami | Restaurants</title>
+    <title>Hell's Kitchen Location | Atlantic City | Restaurants</title>
     <link rel="stylesheet" href="main.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -109,34 +109,32 @@
       .article__content{
         margin-top: 10%;
     }
-    
     }
+    .container__img{
+        width: 100%;
+        max-height: 750px;
+        overflow: hidden;
+        padding: 0;
+    }
+      .main__img {
+        padding-top: 50%;
+        background-image:linear-gradient(90deg , rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(..//images/locations/location_main.jpg);
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+      }
       .restaurant__map iframe{
         width: 100%;
         height: 420px;
         margin: 100px auto;
       }
-      .container__img{
-        width: 100%;
-        max-height: 750px;
-        overflow: hidden;
-        padding: 0;
-      }
-      .main__img {
-        padding-top: 50%;
-        background-image:linear-gradient(90deg , rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(..//images/locations/miami-view.jpg);
-        background-position: center center;
-        background-size: cover;
-        position: relative;
-        
-      }.description{
+      .description{
         color: #fff;
         position: absolute;
         top: 50%;
         bottom: 50%;
         width: 100%;
         text-align: center;
-
       }
       .description h1{
         font-size: 72px;
@@ -149,44 +147,7 @@
       .description__button .button{
         margin: 35px;
       }
-      .information__list{
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-      }
-      .information__list li{
-        margin-bottom: 30px;
-        font-size: 18px;
-      }
-      .information__list i{
-        margin-right: 15px;
-        color: red;
-        font-size: 25px;
-      }
-      .opening-hour .day{
-        margin-right: 100px;
-      }
-      .information{
-        padding-right: 50px;
-      }
-      .opening-hour{
-        /* padding-left: 100px; */
-        font-size: 18px;
-        margin-bottom: 100px;
-      }
-      .opening-hour__list{
-        display: flex;
-        flex-direction: column;
-      }
-      .opening-hour__list .time{
-        margin-left: -60px;
-      }
-      .notification{
-        margin-top: 20px;
-      }
-      .story{
-        margin-bottom: 50px;
-      }
+
     </style>
 </head>
 <body>
@@ -240,141 +201,27 @@
         <div class="col-12 col">
           <div class="main__img">
             <div class="description">
-              <h1>MIAMI - NOW OPEN</h1>
-              <div class="description__button">
-                <div class="button">
-                  <a href="#" class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5">Book a table</a>
-                </div>
-                <div class="button">
-                  <a href="" class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5">View the menu</a>
-                </div>
-              </div>
+              <h1>OUR LOCATIONS</h1>
             </div>
           </div>
         </div>
       </div>
-      <!-- map -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col">
-                    <div class="restaurant__map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.9795803119428!2d-80.19080692387078!3d25.771238008209565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b57ad1b72c73%3A0x996cf05dbd5b1ef1!2sGORDON%20RAMSAY%20HELL&#39;S%20KITCHEN!5e0!3m2!1sen!2sus!4v1696987798199!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-6 col">
+                <a href="atlantic-city.html" target="_self">
+                    <img src="..//images/locations/atlantic-city.jpg" alt="atlantic-city">
+                </a>
+                <iframe name="atlantic-city__location" src="atlantic-city.html" frameborder="0" style="display: none;"></iframe>
             </div>
         </div>
-      <section>
-        <div class="container text-white">
-          <div class="row">
-            <div class="col-12 col-lg-6 col information">
-              <h1 class="fw-bold">MIAMI - NOW OPEN</h1>
-              <ul class="list-unstyled information__list">
-                <li>
-                  <i class="fa-solid fa-location-dot "></i> 
-                  333 Biscayne Boulevard Way, Miami, Florida, 33131
-                </li>
-                <li>
-                  <i class="fa-solid fa-phone"></i>
-                  <a href="#" class="text-decoration-none fw-normal trans-color">786-688-0082</a>
-                </li>
-                <li>
-                  <i class="fa-regular fa-envelope"></i>
-                  <a href="#" class="trans-color text-decoration-none fw-normal">Email Miami</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-location-crosshairs"></i>
-                  <a href="https://maps.app.goo.gl/TL8iXErTV5ABMqns8" class="trans-color text-decoration-none fw-normal">Get directions</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-12 col-lg-6 col opening-hour">
-              <h2 class="fw-bold">OPENING HOURS</h2>
-              <div class="row">
-                <div class="col-4">
-                  <ul class="list-unstyled opening-hour__list">
-                    <li>
-                      <span class="day">MON</span>
-                    </li>utton
-                    <li>
-                      <span class="day">TUE</span>
-                    </li>
-                    <li>
-                        <span class="day">WED</span>        
-                    </li>
-                    <li>
-                      <span class="day">THU</span>
-                    </li>
-                    <li>
-                      <span class="day">FRI</span>
-                    </li>
-                    <li>
-                      <span class="day">SAT</span>
-                    </li>
-                    <li>
-                      <span class="day">SUN</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-8">
-                  <ul class="list-unstyled opening-hour__list">
-                    <li>
-                      <span class="time">11:00 - 11:00</span>
-                    </li>
-                    <li>
-                        <span class="time">11:00 - 11:00</span>
-                    </li>
-                    <li>
-                      <span class="time">11:00 - 11:00</span>
-                    </li>
-                    <li>
-                        <span class="time">11:00 - 11:00</span>
-                    </li>
-                    <li>
-                        <span class="time">11:00 - 11:00</span>
-                    </li>
-                    <li>
-                        <span class="time">11:00 - 11:00</span>
-                    </li>
-                    <li>
-                        <span class="time">11:00 - 11:00</span>
-                    </li>        
-                  </ul>
-                </div>
-              </div>
-              <div class="notification">
-                <p>Bar Menu available from 3:00 PM - 5:00 PM.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section class="story">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6 col">
-                        <div class="story--left">
-                            <img class="img-fluid" src="../images/locations/miami-story.jpg" alt="miami's story">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 col">
-                        <div class="story--right text-white">
-                            <h2 class="fw-bold">HELL'S KITCHEN MIAMI</h2>
-                            <p >Located a block from the water in Downtown’s Met Square complex, the two-story restaurant will have ample space for diners to indulge in all of the restaurant's iconic menu items, spearheaded by one of the most talented chefs. The 16,736 square foot space includes a ground-floor patio and second-floor dining terrace, as well as a beautiful interior dining room. The interior design is set to emulate the hit television show’s set, with an open kitchen and contemporary bar, where diners can watch the iconic red and blue teams from their seat.</p>
-                            <p>The bar serves a selection of both classic and signature cocktails; from a traditional Negroni and Old Fashioned to the innovative Smoke on the Water, served in a smoke-filled lantern, or the Notes from Gordon, complete with a personalized message from Chef Ramsay himself.</p>
-                            <div class="button">
-                                <a href="#menu" class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5">MIAMI MENU</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-      </section>
+      </div>
 
     </main>
 
     <footer >
       <div class="container text-white">
-        <div class="row" >
+        <div class="row" style="margin-bottom: 20px;">
           <div class="col-6 col-lg-12 col">
             <div class="footer__menu--left">
               <ul class="list-unstyled gap-5" >
