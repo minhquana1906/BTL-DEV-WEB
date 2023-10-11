@@ -139,6 +139,7 @@
       }
       .description h1{
         font-size: 72px;
+        font-weight: bold;
       }
       .description__button{
         display: flex;
@@ -147,8 +148,41 @@
       .description__button .button{
         margin: 35px;
       }
-
-
+      .information__list{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+      }
+      .information__list li{
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+      .information__list i{
+        margin-right: 15px;
+        color: red;
+        font-size: 25px;
+      }
+      .opening-hour .day{
+        margin-right: 100px;
+      }
+      .information{
+        padding-right: 50px;
+      }
+      .opening-hour{
+        padding-left: 100px;
+        font-size: 18px;
+        margin-bottom: 100px;
+      }
+      .opening-hour__list{
+        display: flex;
+        flex-direction: column;
+      }
+      .opening-hour__list .time{
+        margin-left: -60px;
+      }
+      .notification{
+        margin-top: 20px;
+      }
     </style>
 </head>
 <body>
@@ -225,7 +259,86 @@
                 </div>
             </div>
         </div>
-        
+      <section>
+        <div class="container text-white">
+          <div class="row">
+            <div class="col-12 col-lg-6 col information">
+              <h1 class="fw-bold">ATLANTIC CITY</h1>
+              <ul class="list-unstyled information__list">
+                <li>
+                  <i class="fa-solid fa-location-dot "></i> 
+                  2100 Pacific Avenue, Atlantic City, New Jersey, 08401
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="#" class="text-decoration-none fw-normal trans-color">(609) 317-2110</a>
+                </li>
+                <li>
+                  <i class="fa-regular fa-envelope"></i>
+                  <a href="#" class="trans-color text-decoration-none fw-normal">Email Atlantic City</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-crosshairs"></i>
+                  <a href="https://maps.app.goo.gl/rrMhuRfTj8JgMdix8" class="trans-color text-decoration-none fw-normal">Get directions</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-6 col opening-hour">
+              <h2 class="fw-bold">OPENING HOURS</h2>
+              <div class="row">
+                <div class="col-4">
+                  <ul class="list-unstyled opening-hour__list">
+                    <li>
+                      <span class="day">MON</span>
+                    </li>
+                    <li>
+                      <span class="day">TUE</span>
+                    </li>
+                    <li>
+                      <span class="day">THU</span>
+                    </li>
+                    <li>
+                      <span class="day">FRI</span>
+                    </li>
+                    <li>
+                      <span class="day">SAT</span>
+                    </li>
+                    <li>
+                      <span class="day">SUN</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-8">
+                  <ul class="list-unstyled opening-hour__list">
+                    <li>
+                      <span class="time">04:30 - 10:00</span>
+                    </li>
+                    <li>
+                      <span class="time">04:30 - 10:00</span>
+                    </li>
+                    <li>
+                      <span class="time">04:30 - 10:30</span>
+                    </li>
+                    <li>
+                      <span class="time">04:30 - 10:30</span>
+                    </li>
+                    <li>
+                      <span class="time">04:30 - 10:30</span>
+                    </li>
+                    <li>
+                      <span class="time">04:30 - 10:00</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="notification">
+                <p>Closed on Wednesdays</p>
+              <p>Hell's Kitchen will be closed from October 16th to November 2nd and will reopen on November 3rd. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
 
