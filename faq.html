@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell's Kitchen</title>
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../images/logo-bg/logo.png">
+    <style>
+         .faq {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #555252;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+.faq h1 {
+    text-align: center;
+    color: #333;
+    font-size: 35px;
+}
+
+.faq ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq li {
+    margin: 20px 0;
+    border-top: 1px solid #ebe1e1;
+}
+
+.faq .question {
+    font-weight: bold;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.faq .answer {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ebe2e2;
+}
+        @font-face {
+    font-family: upperNavfont;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+  }
+  body{
+    padding-top: 100px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+background-image: url(hk-background.png);
+    background-size: 100px;
+}
+
+/* đổi màu các liên kết */
+.trans-color{ 
+    color: #fff;
+    transition: color 0.1ms;
+    font-weight: bold;
+}
+.trans-color:hover{
+    color: #bc955c;
+}
+/* class button  dùng chung*/
+.button{
+    background-color: #bc955c; 
+    outline-style: none; 
+    transition: background-color 0.1ms;
+    border-radius: 8px;
+    width: fit-content;
+    color: black;
+}
+.button:hover{
+    transform: scale(1.1);
+    background-color: #b89068;
+}
+
+header{
+  padding: 30px 0; 
+}
+main{
+  margin: 30px 0; 
+}
+/* footer */
+footer{
+    background-color: black;
+    padding: 30px 0;
+}
+.list-unstyled{
+    display: flex;    
+}
+.footer__menu--left a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    
+}
+.footer__menu--right a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+}
+.footer__end--des{
+    text-align: right;
+    line-height: 1.5em;
+
+}
+.footer__end--des a{
+    text-decoration: none;
+    color: #fff;
+    transform: color 0.1ms;
+}
+.footer__end--des a:hover{
+    color: #daa918;
+    text-decoration: underline;
+}
+/* hiệu ứng nút và các đường liên kết khi thu nhỏ */
+@media(max-width:991px) {
+    .button:hover{
+        transform: unset;
+    }
+    .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+    .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+    .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .article__content{
+        margin-top: 10%;
+    }
+}
+
+    </style>
+</head>
+<body >
+    <header >
+      <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
+            <div class="container">
+              <!-- logo -->
+              <a class="navbar-brand " href="#"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
+              <!-- toggle btn-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- side bar -->
+              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar header -->
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- nav pc -->
+                <div class="nav-pc"> 
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="..//index.html" ><span class="trans-color">HOME</span></a>
+                        <iframe src="../index.html" frameborder="0" style="display: none;"></iframe>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="..//location/main-location.html" ><span class="trans-color">LOCATION</span></a>
+                        <iframe src="..//location/main-location.html" frameborder="0" style="display: none;"></iframe>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">SIGN-UP</span></a>
+                      </li>
+                    </ul>
+                    <div class="row-sm text-white border-bottom"></div>
+                    <div class="button">
+                      <a class="btn" href="..//location/main-location.html"><span class="fw-bold">BOOK</span></a>
+                      <iframe src="..//location/main-location.html" frameborder="0" style="display: none;"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <div class="faq">
+        <h1 style="font-weight: bold; color: #fff;">FAQ (Frequently Asked Questions)</h1>
+        <ul>
+            <li>
+                <div class="question">Q: What is Lorem Ipsum?</div>
+                <div class="answer">A: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </li>
+            <li>
+                <div class="question">Q: Where can I get some?</div>
+                <div class="answer">A: There are many variations of passages of Lorem Ipsum available.</div>
+            </li>
+            <li>
+                <div class="question">Q:Can I purchase a gift card  for Hell's Kitchen?</div>
+                <div class="answer">A:Yes! E-Gift Cards are available for purchase here! View a list of U.S. locations currently accepting E-Gift Cards, here.</div>
+            </li>
+            <li>
+                <div class="question">Q: Can we get a photo?</div>
+                <div class="answer">A: There are many variations of passages of Lorem Ipsum available.</div>
+            </li>
+            <li>
+                <div class="question">Q: Can Gordon attend or speak at our event?</div>
+                <div class="answer">A: Gordon’s schedule is very busy and often booked very far in advance. As much as he would like to, he is unable to attend all the events that he is invited to.</div>
+            </li>
+            <li>
+                <div class="question">Q: Where can I find Gordon's Recipes?</div>
+                <div class="answer">A: Some of Gordon’s favorite recipes can be found HERE.</div>
+            </li>
+            <li>
+                <div class="question">Q:I know a restaurant or a hotel that's need Gordon's Help,Could he visit? </div>
+                <div class="answer">A:Gordon has a team of experts that seek out restaurants and hotels in need of his help for his television programs, but he appreciates you keeping your eye out!</div>
+            </li>
+            <li>
+                <div class="question">Q:We are visiting one of the restaurants, is Gordon available to say hello?</div>
+                <div class="answer">A: We are thrilled that you are dining with us and look forward to welcoming you in a Gordon Ramsay restaurant. Gordon’s busy schedule means he could be anywhere in the world, filming or visiting one of the Gordon Ramsay restaurants. However, you may be lucky and catch him at a time he is visiting the restaurant you are dining in. We wish you a wonderful dining experience either way.</div>
+            </li>
+        </ul>
+    </div>
+        
+    </main>
+
+    <footer >
+      <div class="container text-white">
+        <div class="row" >
+          <div class="col-6 col-lg-12 col">
+            <div class="footer__menu--left">
+              <ul class="list-unstyled gap-5" >
+                <li ><a class="trans-color" href="#Careers">Careers</a></li>
+                <li ><a class="trans-color" href="#FAQS">Faqs</a></li>
+                <li ><a class="trans-color" href="#About">About</a></li>
+                <li ><a class="trans-color" href="#Contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-lg-8 col-xl-7 col">
+            <div class="footer__menu--right">
+              <ul class="list-unstyled">
+                <li ><a class="trans-color" href="#Accessibility">Accessibility</a></li>
+                <li ><a class="trans-color" href="#Policy">Privacy Policy</a></li>
+                <li ><a class="trans-color" href="#Term">Term & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-5 col">
+            <div class="footer__end">
+              <p class="footer__end--des text-white">
+                <span>Gordon Ramsay Restaurants ©Copyright 2023</span><br>
+                <a href="#Coppyrights">Gordonramsayrestaurants.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

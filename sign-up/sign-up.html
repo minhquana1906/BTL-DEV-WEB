@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell's Kitchen Sign-up</title>
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="">
+    <style>
+@font-face {
+    font-family: upperNavfont;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+}
+body{
+    padding-top: 100px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url(joinclass2.jpg);
+
+}
+#LOGIN{
+    color:bisque;
+    text-shadow: 2px 2px 2px red;
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+#wrapper{
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.form-login{
+max-width: 400px;
+background: rgba(0, 0, 0, 0.8);
+flex-grow: 2;
+padding: 30px 30px 40px;
+
+}
+.input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    flex-grow: 1;
+    color: #f5f5f5;
+}
+.group{
+    margin-bottom: 20px;
+margin-top: 15px;
+border-bottom: 1px solid #fff;
+display: flex;
+}
+.input::placeholder{
+    color: red;
+}
+.submit{
+    background: transparent;
+    border: 1px solid #f5f5f5;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+}
+.submit:hover{
+    border: 1px solid #1b747c;
+}
+.group i{
+    color: #fff;
+}
+
+/* đổi màu các liên kết */
+.trans-color{ 
+    color: #fff;
+    transition: color 0.1ms;
+    font-weight: bold;
+}
+.trans-color:hover{
+    color: #bc955c;
+}
+/* class button  dùng chung*/
+.button{
+    background-color: #bc955c; 
+    outline-style: none; 
+    transition: background-color 0.1ms;
+    border-radius: 8px;
+    width: fit-content;
+    color: black;
+}
+.button:hover{
+    transform: scale(1.1);
+    background-color: #b89068;
+}
+
+main{
+  margin: 30px 0; 
+}
+/* footer */
+footer{
+    background-color: black;
+    padding: 30px 0;
+}
+.list-unstyled{
+    display: flex;    
+}
+.footer__menu--left a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    
+}
+.footer__menu--right a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+}
+.footer__end--des{
+    text-align: right;
+    line-height: 1.5em;
+
+}
+.footer__end--des a{
+    text-decoration: none;
+    color: #fff;
+    transform: color 0.1ms;
+}
+.footer__end--des a:hover{
+    color: #daa918;
+    text-decoration: underline;
+}
+/* hiệu ứng nút và các đường liên kết khi thu nhỏ */
+@media(max-width:991px) {
+    .button:hover{
+        transform: unset;
+    }
+    .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+    .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+    .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .article__content{
+        margin-top: 10%;
+    }
+}
+        /* body {
+            
+            background-image: url(../images/logo-bg/hk-background.png);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+
+            height: 100vh;
+        }
+        .sign-up__page {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        label {
+            font-size: 18px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #ff6600;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff4500;
+        } */
+    </style>
+</head>
+<body style="margin-top: 100px;">
+    <header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
+            <div class="container">
+              <!-- logo -->
+              <a class="navbar-brand " href="#"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
+              <!-- toggle btn-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- side bar -->
+              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar header -->
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- nav pc -->
+                <div class="nav-pc"> 
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#" ><span class="trans-color">HOME</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">LOCATION</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">SIGN-UP</span></a>
+                      </li>
+                    </ul>
+                    <div class="row-sm text-white border-bottom"></div>
+                    <div class="button">
+                      <a class="btn   " href="#"><span class="fw-bold">BOOK</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <div id="wrapper">
+        <form action="" class="form-login">
+        <h1 id="LOGIN">Let's join the KITCHEN</h1>
+        <div class="group">
+            <i class="far fa-user"></i>
+            <input type="text" placeholder="Tên đăng nhập" class="input">
+        </div>
+        <div class="group">
+            <i class="fa fa-envelope"></i>
+            <input type="text" placeholder="Email" class="input">
+        </div>
+        <div class="group">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Mật khẩu" class="input">
+        </div>
+        <input type="submit" value="Tham Gia" class="submit">
+        </form>
+            </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row" style="margin-bottom: 20px;">
+              <div class="col-6 col-lg-12 col">
+                <div class="footer__menu--left">
+                  <ul class="list-unstyled gap-5" >
+                    <li ><a class="trans-color" href="#Careers">Careers</a></li>
+                    <li ><a class="trans-color" href="#FAQS">Faqs</a></li>
+                    <li ><a class="trans-color" href="#About">About</a></li>
+                    <li ><a class="trans-color" href="#Contact">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 col-lg-8 col-xl-7 col">
+                <div class="footer__menu--right">
+                  <ul class="list-unstyled">
+                    <li ><a class="trans-color" href="#Accessibility">Accessibility</a></li>
+                    <li ><a class="trans-color" href="#Policy">Privacy Policy</a></li>
+                    <li ><a class="trans-color" href="#Term">Term & Conditions</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 col-xl-5 col">
+                <div class="footer__end">
+                  <p class="footer__end--des text-white">
+                    <span>Gordon Ramsay Restaurants ©Copyright 2023</span><br>
+                    <a href="#Coppyrights">Gordonramsayrestaurants.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </footer>
+    
+</body>
+</html>
