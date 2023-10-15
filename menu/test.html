@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+        }
+        .card{
+            height: 500px;
+            margin: 50px;
+            box-shadow: 5px 5px 20px black;
+            overflow: hidden;
+        }
+        img{
+            height: 500px;
+            width: 350px;
+            border-radius: 3px;
+            transition: .5s;
+        }
+        .intro{
+            height: 70px;
+            width: 350px;
+            padding: 6px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 100px;
+            background: rgb(27, 27, 27, .5);
+            color: white;
+            transition: .5s;
+        }
+        h1{
+            margin: 10px;
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+            margin: 20px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .card:hover{
+            cursor: pointer;
+        }
+        .card:hover .intro{
+            height: 150px;
+            bottom: 100px;
+            background: black;
+        }
+        .card:hover p{
+            opacity: 1;
+            visibility: visible;
+        }
+        .card:hover img{
+            transform: scale(1.1) rotate(-3deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="../images/kcview.jpg" alt="">
+            <div class="intro">
+                <h1>SHRIMP COCKTAIL</h1>
+                <p>chef's daily selection, hk mignonette, gin cocktail sauce half dozen 27.95 | full dozen 54.95</p>
+            </div>
+        </div>        
+        <div class="card">
+            <img src="../images/joinclass2.jpg" alt="">
+            <div class="intro">
+                <h1>SHRIMP COCKTAIL</h1>
+                <p>chef's daily selection, hk mignonette, gin cocktail</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/herofullpic.jpg" alt="">
+            <div class="intro">
+                <h1>SHRIMP COCKTAIL</h1>
+                <p>chef's daily selection, hk mignonette, gin cocktail</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
