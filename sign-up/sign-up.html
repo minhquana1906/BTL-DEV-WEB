@@ -15,65 +15,12 @@
     font-family: lowerNavfont;
     src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
 }
-body{
+  body{
     padding-top: 100px;
-    height: 100vh;
     padding: 0;
     margin: 0;
-    background-image: url(joinclass2.jpg);
-
-}
-#LOGIN{
-    color:bisque;
-    text-shadow: 2px 2px 2px red;
-    text-align: center;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-#wrapper{
-    align-items: center;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-.form-login{
-max-width: 400px;
-background: rgba(0, 0, 0, 0.8);
-flex-grow: 2;
-padding: 30px 30px 40px;
-
-}
-.input{
-    background: transparent;
-    border: 0;
-    outline: 0;
-    flex-grow: 1;
-    color: #f5f5f5;
-}
-.group{
-    margin-bottom: 20px;
-margin-top: 15px;
-border-bottom: 1px solid #fff;
-display: flex;
-}
-.input::placeholder{
-    color: red;
-}
-.submit{
-    background: transparent;
-    border: 1px solid #f5f5f5;
-    color: #fff;
-    width: 100%;
-    text-transform: uppercase;
-    padding: 6px 10px;
-    transition: 0.25s ease-in-out;
-    margin-top: 30px;
-}
-.submit:hover{
-    border: 1px solid #1b747c;
-}
-.group i{
-    color: #fff;
+    background-image: url(../images/logo-bg/hk-background.png);
+    background-size: 100px;  
 }
 
 /* đổi màu các liên kết */
@@ -167,51 +114,15 @@ footer{
         margin-top: 10%;
     }
 }
-        /* body {
-            
-            background-image: url(../images/logo-bg/hk-background.png);
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-
-            height: 100vh;
-        }
-        .sign-up__page {
-            background-color: rgba(255, 255, 255, 0.8); 
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        h2 {
-            font-size: 24px;
-            color: #333;
-        }
-        label {
-            font-size: 18px;
-            color: #333;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-size: 16px;
-        }
-        input[type="submit"] {
-            background-color: #ff6600;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        input[type="submit"]:hover {
-            background-color: #ff4500;
-        } */
+  .main-text{
+    color: #fff;
+    text-align: center;
+    padding-top: 150px;
+  }
+  .main-text h1{
+    font-size: 58px;
+    font-weight: bold;
+  }
     </style>
 </head>
 <body style="margin-top: 100px;">
@@ -260,24 +171,13 @@ footer{
           </nav>
     </header>
     <main>
-      <div id="wrapper">
-        <form action="" class="form-login">
-        <h1 id="LOGIN">Let's join the KITCHEN</h1>
-        <div class="group">
-            <i class="far fa-user"></i>
-            <input type="text" placeholder="Tên đăng nhập" class="input">
-        </div>
-        <div class="group">
-            <i class="fa fa-envelope"></i>
-            <input type="text" placeholder="Email" class="input">
-        </div>
-        <div class="group">
-            <i class="fa fa-lock"></i>
-            <input type="password" placeholder="Mật khẩu" class="input">
-        </div>
-        <input type="submit" value="Tham Gia" class="submit">
-        </form>
-            </div>
+      <div class="main-text">
+        <h1>SIGN UP</h1>
+      </div>
+      <div class="container">
+        <form action=""></form>
+      </div>
+
     </main>
     <footer>
         <div class="container">

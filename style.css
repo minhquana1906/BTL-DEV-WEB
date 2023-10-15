@@ -161,3 +161,53 @@ footer{
     margin-bottom: 50px;
 }
 
+.tiny-gallery .container{
+    position: relative;
+}
+.tiny-gallery .container .img-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding :10px;
+}
+.tiny-gallery .container .img-container .image{
+    height: 180px;
+    width: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.tiny-gallery .container .img-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.tiny-gallery .container .img-container .image:hover img{
+    transform: scale(1.1);
+}
+.popup-image{
+    position: fixed;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.popup-image  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    width: 750px;
+    object-fit: cover;
+}
+.overlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
