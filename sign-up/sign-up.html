@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="main.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="">
+    <link rel="icon" href="../images/logo-bg/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <style>
-@font-face {
-    font-family: upperNavfont;
-    src: url(fonts/Futura\ PT\ Heavy.ttf);
-    font-family: lowerNavfont;
-    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
-}
-  body{
-    padding-top: 100px;
-    padding: 0;
-    margin: 0;
-    background-image: url(../images/logo-bg/hk-background.png);
-    background-size: 100px;  
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');  
+    @font-face {
+      font-family: upperNavfont;
+      src: url(fonts/Futura\ PT\ Heavy.ttf);
+      font-family: lowerNavfont;
+      src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+    }
+    :root {
+    --linear-grad:linear-gradient(to right, black, #ccc);
+    --grad-clr1:black;
+    --grad-clr2:black;
+    }
+    body{
+      padding-top: 100px;
+      padding: 0;
+      margin: 0;
+      background-image: url(../images/logo-bg/hk-background.png);
+      background-size: 100px; 
+      place-content: center;
+
+    }
 
 /* đổi màu các liên kết */
 .trans-color{ 
-    color: #fff;
+    color: rgb(255, 255, 255);
     transition: color 0.1ms;
     font-weight: bold;
 }
@@ -123,60 +133,339 @@ footer{
     font-size: 58px;
     font-weight: bold;
   }
+  .sign__container{
+    position: relative;
+    width: 850px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 25px 30px 55px rgba(56, 56, 56, 0.467);
+    border-radius: 13px;
+    overflow: hidden;
+  }
+  .form-container{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    padding: 0 40px;
+    transition: all 0.6s ease-in-out;
+  }
+  .sign-up-container{
+    opacity: 0;
+    z-index: 1;
+  }
+  .sign-in-container{
+    z-index: 2;
+  }
+  form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+  }
+  h1{
+    color: var(--grad-clr1);
+  }
+  .social-container{
+    margin: 20px 0;
+  }
+  .social-container a{
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+  }
+  .sign__container span{
+    font-size: 12px;
+  }
+  .infield{
+    position: relative;
+    margin: 8px 0;
+    width: 100%;
+  }
+  .sign__container input{
+    width: 100%;
+    padding: 12px 8px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+  }
+  .sign__container label{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: var(--linear-grad);
+    transition: 0.3s;
+  }
+  .form-container input:focus ~ label{
+    width: 100%;
+  }
+  .form-container a{
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+  }
+  .form-container a.forgot{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #eee;
+  }
+  button{
+    border-radius: 20px;
+    border: 1px solid var(--grad-clr1);
+    background: var(--grad-clr2);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .form-container button{
+    margin-top: 17px;
+    transition: 80ms ease-in;
+  }
+  .form-container button:hover{
+    background: #fff;
+    color: var(--grad-clr1);
+  }
+  .overlay-container{
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+  }
+  #overlayBtn{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 307px;
+    transform: translateX(-50%);
+    width: 143.67px;
+    height: 40px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+  }
+  .overlay{
+    position: relative;
+    background: var(--linear-grad);
+    color: #fff;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+  }
+  .overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    transition: 0.6s ease-in-out;
+  }
+  .overlay-left{
+    right: 60%;
+    transform: translateX(-12%);
+  }
+  .overlay-left h1{
+    font-size: 36px;
+  }
+  .overlay-right{
+    right: 0;
+    transform: translateX(0%);
+  }
+  .overlay-panel h1{
+    color: #fff; 
+  }
+   p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 25px 0 35px;
+  }
+  .overlay-panel button{
+    border: none;
+    background: transparent;
+  }
+  .right-panel-active .overlay-container{
+    transform: translateX(-150%);
+  }
+  .right-panel-active .overlay{
+    transform: translateX(50%);
+  }
+  .right-panel-active .overlay-left{
+    transform: translateX(25%);
+  }
+  .right-panel-active .overlay-right{
+    transform: translateX(35%);
+  }
+  .right-panel-active .sign-in-container{
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  .right-panel-active .sign-up-container{
+    transform: translateX(66.7%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+  }
+  @keyframes show {
+    0%, 50%{
+      opacity: 0;
+      z-index: 1;
+    }
+    50.1% , 100%{
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  .btnScaled{
+    animation: scaleBtn 0.6s;
+  }
+  @keyframes scaleBtn {
+    0%{
+      width: 143.67px;
+    }
+    50%{
+      width: 250px;
+    }
+    100%{
+      width: 143.67px;
+    }
+  }
+  .sign__container{
+    margin-bottom: 150px ;
+  }
     </style>
 </head>
-<body style="margin-top: 100px;">
-    <header>
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
-            <div class="container">
-              <!-- logo -->
-              <a class="navbar-brand " href="#"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
-              <!-- toggle btn-->
-              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <!-- side bar -->
-              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <!-- sidebar header -->
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <!-- nav pc -->
-                <div class="nav-pc"> 
-                  <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
-                      <li class="nav-item">
-                        <a class="nav-link active " aria-current="page" href="#" ><span class="trans-color">HOME</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active " href="#" ><span class="trans-color">LOCATION</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active " href="#" ><span class="trans-color">SIGN-UP</span></a>
-                      </li>
-                    </ul>
-                    <div class="row-sm text-white border-bottom"></div>
-                    <div class="button">
-                      <a class="btn   " href="#"><span class="fw-bold">BOOK</span></a>
-                    </div>
-                  </div>
+<body style="margin-top: 150px;">
+  <header>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
+        <div class="container">
+          <!-- logo -->
+          <a class="navbar-brand " href="#"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
+          <!-- toggle btn-->
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- side bar -->
+          <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!-- sidebar header -->
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+              <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- nav pc -->
+            <div class="nav-pc"> 
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="../index.html" ><span class="trans-color">HOME</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " href="..//menu/menu.html" ><span class="trans-color">MENU</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " href="..//location/main-location.html" ><span class="trans-color">LOCATION</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " href="./sign-up.html" ><span class="trans-color">SIGN-UP</span></a>
+                  </li>
+                </ul>
+                <div class="row-sm text-white border-bottom"></div>
+                <div class="button">
+                  <a class="btn   " href="#"><span class="fw-bold">BOOK</span></a>
                 </div>
               </div>
             </div>
-          </nav>
-    </header>
+          </div>
+        </div>
+      </nav>
+</header>
     <main>
-      <div class="main-text">
-        <h1>SIGN UP</h1>
+
+<!-- sign up - in -->
+<div class="container sign__container" id="sign__container">
+  <div class="form-container sign-up-container">
+      <form action="#">
+          <h1>Create Account</h1>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <div class="infield">
+              <input type="text" placeholder="Name" />
+              <label></label>
+          </div>
+          <div class="infield">
+              <input type="email" placeholder="Email" name="email"/>
+              <label></label>
+          </div>
+          <div class="infield">
+              <input type="password" placeholder="Password" />
+              <label></label>
+          </div>
+          <button>Sign Up</button>
+      </form>
+  </div>
+  <div class="form-container sign-in-container">
+      <form action="#">
+          <h1>Sign in</h1>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <div class="infield">
+              <input type="email" placeholder="Email" name="email" id="email" required/>
+              <label></label>
+          </div>
+          <div class="infield">
+              <input type="password" placeholder="Password" id="password" required/>
+              <label></label>
+          </div>
+          <a href="#" class="forgot">Forgot your password?</a>
+          <button onclick="validation();" >Sign In</button>
+      </form>
+  </div>
+  <div class="overlay-container" id="overlayCon">
+      <div class="overlay">
+          <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button >Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button >Sign Up</button>
+          </div>
       </div>
-      <div class="container">
-        <form action=""></form>
-      </div>
+      <button id="overlayBtn"></button>
+  </div>
+</div>
 
     </main>
     <footer>
@@ -212,6 +501,44 @@ footer{
             </div>
           </div>
     </footer>
-    
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+      // sign-in-up-option
+      const sign__container = document.getElementById('sign__container');
+      const overlayCon = document.getElementById('overlayCon');
+      const overlayBtn = document.getElementById('overlayBtn');
+
+      overlayBtn.addEventListener('click', () => {
+        sign__container.classList.toggle('right-panel-active');
+
+        sign__container.classList.remove('btnScaled');
+        window.requestAnimationFrame( () =>{
+          overlayBtn.classList.add('btnScaled');
+        })
+      });
+    </script>
+    <script>
+      //valid login
+      function validation()
+      {
+       Swal.fire('Good job!','You success to sign in!','success');
+        var email = 'quan@gmail.com';
+        var password = '123456';
+
+        var Email = document.getElementById('email').value;
+        var passWord = document.getElementById('password').value;
+
+        if((email == Email) && (password == passWord)){
+          Swal.fire('Good job!','You success to sign in!','success');
+        }
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Email or password is incorrect!', 
+          });
+        }
+       }
+    </script>
 </body>
 </html>

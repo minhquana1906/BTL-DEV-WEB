@@ -9,42 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="../images/logo-bg/logo.png">
     <style>
-         .faq {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #555252;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 50px;
-}
+          .text {
+            text-align: center; /* Căn văn bản theo bên phải */
+            margin-left: 80px; /* Tạo khoảng cách giữa hình và văn bản */
+            color: whitesmoke;
+        } 
+        .career1 {
+            display: flex;
+            align-items: center; /* Căn đều chiều cao của hình và văn bản */
+        }
+#H1{
 
-.faq h1 {
-    text-align: center;
-    color: #333;
-    font-size: 35px;
-}
-
-.faq ul {
-    list-style: none;
-    padding: 0;
-}
-
-.faq li {
-    margin: 20px 0;
-    border-top: 1px solid #ebe1e1;
-}
-
-.faq .question {
-    font-weight: bold;
-    color: #007BFF;
-    font-size: 18px;
-}
-
-.faq .answer {
-    margin-top: 5px;
-    font-size: 16px;
-    color: #ebe2e2;
+  margin-top: 10px;
+  text-align: center;
+  color: rgb(172, 162, 79);
+  font-size: 58px;
+  font-weight: bold;
 }
         @font-face {
     font-family: upperNavfont;
@@ -57,10 +37,15 @@
     height: 100vh;
     padding: 0;
     margin: 0;
-background-image: url(hk-background.png);
     background-size: 100px;
+    background-image: url(../images/logo-bg/hk-background.png);
 }
-
+header{
+  padding: 30px 0; 
+}
+main{
+  margin: 30px 0; 
+}
 /* đổi màu các liên kết */
 .trans-color{ 
     color: #fff;
@@ -82,13 +67,6 @@ background-image: url(hk-background.png);
 .button:hover{
     transform: scale(1.1);
     background-color: #b89068;
-}
-
-header{
-  padding: 30px 0; 
-}
-main{
-  margin: 30px 0; 
 }
 /* footer */
 footer{
@@ -207,45 +185,19 @@ footer{
           </nav>
     </header>
     <main>
-      <div class="faq">
-        <h1 style="font-weight: bold; color: #fff;">FAQ (Frequently Asked Questions)</h1>
-        <ul>
-            <li>
-                <div class="question">Q: What is Lorem Ipsum?</div>
-                <div class="answer">A: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-            </li>
-            <li>
-                <div class="question">Q: Where can I get some?</div>
-                <div class="answer">A: There are many variations of passages of Lorem Ipsum available.</div>
-            </li>
-            <li>
-                <div class="question">Q:Can I purchase a gift card  for Hell's Kitchen?</div>
-                <div class="answer">A:Yes! E-Gift Cards are available for purchase here! View a list of U.S. locations currently accepting E-Gift Cards, here.</div>
-            </li>
-            <li>
-                <div class="question">Q: Can we get a photo?</div>
-                <div class="answer">A: There are many variations of passages of Lorem Ipsum available.</div>
-            </li>
-            <li>
-                <div class="question">Q: Can Gordon attend or speak at our event?</div>
-                <div class="answer">A: Gordon’s schedule is very busy and often booked very far in advance. As much as he would like to, he is unable to attend all the events that he is invited to.</div>
-            </li>
-            <li>
-                <div class="question">Q: Where can I find Gordon's Recipes?</div>
-                <div class="answer">A: Some of Gordon’s favorite recipes can be found HERE.</div>
-            </li>
-            <li>
-                <div class="question">Q:I know a restaurant or a hotel that's need Gordon's Help,Could he visit? </div>
-                <div class="answer">A:Gordon has a team of experts that seek out restaurants and hotels in need of his help for his television programs, but he appreciates you keeping your eye out!</div>
-            </li>
-            <li>
-                <div class="question">Q:We are visiting one of the restaurants, is Gordon available to say hello?</div>
-                <div class="answer">A: We are thrilled that you are dining with us and look forward to welcoming you in a Gordon Ramsay restaurant. Gordon’s busy schedule means he could be anywhere in the world, filming or visiting one of the Gordon Ramsay restaurants. However, you may be lucky and catch him at a time he is visiting the restaurant you are dining in. We wish you a wonderful dining experience either way.</div>
-            </li>
-        </ul>
+      <h1 style=" margin-top: 10px;text-align: center;color: rgb(172, 162, 79); font-size: 58px; font-weight: bold;">CAREER</h1>
+      <div class="career1">
+        <img style="margin-left: 20px;margin-top: 50px;margin-bottom: 50px;" src="https://afamilycdn.com/2018/9/23/dau-bep-2-1537680685057172224757.jpg" alt="">
+      <div class="text">
+          <h3>WORK WITH US</h3>
+  <p>We hire the best, so we offer our employees the best. Perks include health insurance, 401k plans and flex time. Learn about new positions and send your resume.</p>
+  <button class="button" style=" padding: 10px 20px;"><h3><span style="font-weight: 500;">APPLY NOW</span></h3></button>  
+  </div>
     </div>
-        
-    </main>
+   <div style="margin-left: 20px;">
+    <p ><span style="color: #fff;">Gordon Ramsay Hell's Kitchen is an equal opportunity employer.</span></p>
+   </div>
+  </main>
 
     <footer >
       <div class="container text-white">
