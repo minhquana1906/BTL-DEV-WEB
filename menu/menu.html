@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="">
     <style>
-      @font-face {
+@font-face {
   font-family: upperNavfont;
   src: url(fonts/Futura\ PT\ Heavy.ttf);
 }
@@ -59,7 +59,7 @@ body {
 }
 .hero img {
   width: 100%;
-  height: auto;
+  max-height: 600px;
   display: block;
   margin-top: 20px;
 }
@@ -98,19 +98,19 @@ body {
   color: white;
 }
 .image2{
-  background-image: url('../images/menu/las\ vegas.jpg');
+  background-image: url('../images/locations/lasvegas-layer.jpg');
 }
 .image4{
-  background-image: url('../images/menu/washington.jpg');
+  background-image: url('../images/locations/washington-lg.jpg');
 }
 .image5{
-  background-image: url('../images/menu/miami.jpg');
+  background-image: url('../images/locations/miami-view.jpg');
 }
 .image6{
-  background-image: url('../images/menu/atlantic\ city.jpg');
+  background-image: url('../images/locations/atlantic-city.jpg');
 }
 .image7{
-  background-image: url('../images/menu/foxwood.jpg');
+  background-image: url('../images/locations/foxwoods-sm.jpg');
 }
 .image-text,
 .image-subtext {
@@ -209,10 +209,6 @@ footer{
   color: #fff;
   transform: color 0.1ms;
 }
-.footer__end--des a:hover{
-  color: #daa918;
-  text-decoration: underline;
-}
 
     </style>
 </head>
@@ -239,21 +235,21 @@ footer{
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
                             <li class="nav-item">
-                                <a class="nav-link active " aria-current="page" href="#"><span class="trans-color">HOME</span></a>
+                                <a class="nav-link active " aria-current="page" href="../index.html"><span class="trans-color">HOME</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active " href="#"><span class="trans-color">MENU</span></a>
+                                <a class="nav-link active " href="menu.html"><span class="trans-color">MENU</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active " href="#"><span class="trans-color">LOCATION</span></a>
+                                <a class="nav-link active " href="../location/main-location.html"><span class="trans-color">LOCATION</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active " href="#"><span class="trans-color">SIGN-UP</span></a>
+                                <a class="nav-link active " href="../sign-up/sign-up.html"><span class="trans-color">SIGN-UP</span></a>
                             </li>
                         </ul>
                         <div class="row-sm text-white border-bottom"></div>
                         <div class="button">
-                            <a class="btn   " href="#"><span class="fw-bold">BOOK</span></a>
+                            <a class="btn" href="#"><span class="fw-bold">BOOK</span></a>
                         </div>
                     </div>
                 </div>
@@ -274,7 +270,9 @@ footer{
           <div class="image-container image2" style="position: relative;">
             <div class="image-text">
               <p>LAS VEGAS</p>
-              <button class="btn btn-outline-warning" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">LAS VEGAS MENU</button>
+              <div class="button" style="margin-top: 100px;">
+                <a class="btn" href="las-vegas-menu.html"><span class="fw-bold">LAS VEGAS MENU</span></a>
+              </div>            
             </div>
             <div class="image-subtext">
               <p>Nevada</p>
@@ -285,7 +283,7 @@ footer{
           <div class="image-container image4" style="position: relative;">
             <div class="image-text">
               <p>WASHINGTON, D.C</p>
-              <button class="btn btn-outline-warning" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">WASHINGTON MENU</button>
+              <button class="btn btn-outline-warning btn-custom" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); ">WASHINGTON  MENU</button>
             </div>
             <div class="image-subtext">
               <p>District of Columbia</p>
@@ -296,7 +294,7 @@ footer{
           <div class="image-container image5" style="position: relative;">
             <div class="image-text">
               <p>MIAMI</p>
-              <button class="btn btn-outline-warning" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">MIAMI MENU</button>
+              <button class="btn btn-outline-warning btn-custom" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">MIAMI MENU</button>
             </div>
             <div class="image-subtext">
               <p>Florida</p>
@@ -307,7 +305,7 @@ footer{
           <div class="image-container image6" style="position: relative;">
             <div class="image-text">
               <p>ATLANTIC CITY</p>
-              <button class="btn btn-outline-warning" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">ATLANTIC CITY MENU</button>
+              <button class="btn btn-outline-warning btn-custom" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">ATLANTIC MENU</button>
             </div>
             <div class="image-subtext">
               <p>New Jersey</p>
@@ -318,7 +316,7 @@ footer{
           <div class="image-container image7" style="position: relative;">
             <div class="image-text">
               <p>FOXWOODS</p>
-              <button class="btn btn-outline-warning" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">FOXWOODS MENU</button>
+              <button class="btn btn-outline-warning btn-custom" type="submit" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">FOXWOODS MENU</button>
             </div>
             <div class="image-subtext">
               <p>Connecticut</p>

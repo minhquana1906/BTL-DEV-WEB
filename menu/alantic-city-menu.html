@@ -218,36 +218,76 @@
             white-space: nowrap;
         }
         .price {
-            font-weight: bold;
-            text-align: right;
-            margin-left: auto;
-            margin-top: 50px;
-        }.standardcontain__container p {
-            font-weight: 300;
-            line-height: 1.6em;
-            margin: 0 0 15px;
-            margin-top: 100px;
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-bottom: 50px;
-            width: 100%;
-            overflow-x: auto;
-            max-width: none;
-            color: #fff;
-        }
+    position: absolute;
+    top: 120px;
+    right: 10px; 
+    bottom: 10px; 
+    color: white; 
+}
         p {
             font-family: Futura, sans-serif;
         }
-        @media (min-width: 1200px) {
-            .row .col-4 {
-                width: calc(33.3333% - 40px);
-                }
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .menu__card .card{
+            height: 300px;
+            margin: 50px;
+            box-shadow: 5px 5px 20px black;
+            overflow: hidden;
+        }
+        .menu__card img{
+            height: 300px;
+            width: 350px;
+            border-radius: 3px;
+            transition: .5s;
+        }
+        .menu__card .intro{
+            height: 70px;
+            width: 350px;
+            padding: 6px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0px;
+            background: rgb(27, 27, 27, .5);
+            color: white;
+            transition: .5s;
+        }
+        .menu__card h1{
+            margin: 15px;
+            font-size: 20px;
+            margin-right: 100px;
+        }
+        .menu__card p{
+            font-size: 14px;
+            margin: 10px;
+            margin-bottom: 10px;
+            margin-right: 90px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .menu__card .card:hover{
+            cursor: pointer;
+        }
+        .menu__card .card:hover .intro{
+            height: 150px;
+            bottom: px;
+            background: black;
+        }
+        .menu__card .card:hover p{
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu__card .card:hover img{
+            transform: scale(1.1) rotate(-3deg);
         }
         @media (max-width: 1200px) {
             .row .col-4 {
-                width: 100%;
+                width: fit-content;
                 }
-        }
+        } 
     </style>
 </head>
 <body>
@@ -307,7 +347,7 @@
                         <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i><a href="#" style="color: white; text-decoration: none;">View location</a>
                     </div>
                     <div class="menulist__menu">
-                        <button class="btn btn-outline-warning btn-custom" type="submit" style="transform: translateX(-0%)" id="showMain">LUNCH</button>
+                        <button class="btn btn-outline-warning btn-custom" type="submit" style="transform: translateX(-0%)" id="showMain">MAIN</button>
                         <button class="btn btn-outline-warning btn-custom-hk" type="submit" style="transform: translateX(-0%)" id="showHk">SIGNATURE PRIX FIXE</button>
                         <button class="btn btn-outline-warning btn-custom-vegetarian" type="submit" style="transform: translateX(-0%)" id="showDinner">COCKTAILS</button>
                     </div>
@@ -321,36 +361,40 @@
                         <h3>MAIN</h3>
                     </div>
                     <div class="menulist__subheading">
-                        <h3>CHILLED SEAFOOD</h3>
+                        <p>CHILLED SEAFOOD</p>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>OYSTERS ON THE HALF SHELL</h4>
-                            <p>half dozen chef’s daily selection, hk mignonette,</p>
-                            <p>cocktail sauce</p>
-                            <p class="price">$ 23.99</p>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/OYSTERS ON THE HALF SHELL.jpg" alt="">
+                            <div class="intro">
+                                <h1>OYSTERS ON THE HALF SHELL*</h1>
+                                <p>half dozen chef’s daily selection, hk mignonette, cocktail sauce</p>
+                                <p class="price">$ 23.99</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/shrimp cocktail.jpg" alt="">
+                            <div class="intro">
+                                <h1>SHRIMP COCKTAIL</h1>
+                                <p>lemon, cocktail sauce</p>
+                                <p class="price">$ 21.99</p> 
+                            </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>SHRIMP COCKTAIL</h4>
-                            <p>lemon, cocktail sauce</p>
-                            <br>
-                            <p></p>
-                            <p class="price">$ 21.99</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>TUNA TARTARE</h4>
-                            <p>soy chili vinaigrette, pickled fresno chilies, cilantro</p>
-                            <br>
-                            <p></p>
-                            <p class="price">$ 23.99</p>
+                        <div class="card">
+                            <img src="../images/washington-menu/TUNA TARTARE.jpg" alt="">
+                            <div class="intro">
+                                <h1>TUNA TARTARE</h1>
+                                <p>soy chili vinaigrette, pickled fresno chilies, cilantro</p>
+                                <p class="price">$ 23.99</p> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -362,40 +406,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>LOBSTER RISOTTO</h4>
-                                <p>butter poached lobster tail, truffle risotto, crispy onions</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 29.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/SEARED FOIE GRAS.jpg" alt="">
+                                <div class="intro">
+                                    <h1>SEARED FOIE GRAS*</h1>
+                                    <p>apple butter, pecans, bread pudding</p>
+                                    <p class="price">$ 30.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>SEARED FOIE GRAS</h4>
-                                <p>stewed cherries, scottish shortbread, candied marcona</p>
-                                <p>almonds</p>
-                                <p class="price">$ 28.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/PAN SEARED SCALLOPS.jpg" alt="">
+                                <div class="intro">
+                                    <h1>PAN SEARED SCALLOPS*</h1>
+                                    <p>celery root, bacon lardons, brussels sprouts, pickled apples, truffle jus</p>
+                                    <p class="price">$ 27.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>PAN SEARED SCALLOPS</h4>
-                                <p>sweet corn puree, braised bacon lardons, pickled</p>
-                                <p>shallots</p>
-                                <p class="price">$ 26.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/LOBSTER RISOTTO.jpg" alt="">
+                                <div class="intro">
+                                    <h1>LOBSTER RISOTTO</h1>
+                                    <p>butter poached lobster tail, truffle risotto, crispy onions</p>
+                                    <p class="price">$ 31.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>WAGYU MEATBALLS</h4>
-                                <p>american wagyu, pork, slow-roasted tomato sauce,</p>
-                                <p>polentacroutons, parmesan, basil</p>
-                                <p class="price">$ 22.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/WAGYU MEATBALLS.jpg" alt="">
+                                <div class="intro">
+                                    <h1>WAGYU MEATBALLS</h1>
+                                    <p>slow roasted tomato sauce, polenta croutons, parmesan cheese, basil</p>
+                                    <p class="price">$ 23.99</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -406,45 +457,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>TRUFFLE ONION SOUP</h4>
-                                <p>pee wee potatoes, garlic confit, truffle</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 16.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/alantic-city-menu/TRUFFLE ONION SOUP.jpg" alt="">
+                                <div class="intro">
+                                    <h1>TRUFFLE ONION SOUP</h1>
+                                    <p>pee wee potatoes, garlic confit, truffle</p>
+                                    <p class="price">$ 16.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>TOMATO BURRATA SALAD</h4>
-                                <p>white balsamic vinaigrette</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 22.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/alantic-city-menu/RED QUINOA SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>RED QUINOA SALAD</h1>
+                                    <p>honeycrisp apples, dried apricots, goat cheese, toasted hazelnuts, honey vinaigrette</p>
+                                    <p class="price">$ 19.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>RED QUINOA SALAD</h4>
-                                <p>honeycrisp apples, dried apricots, goat cheese,</p>
-                                <p>toasted hazelnuts, honey vinaigrette</p>
-                                <p class="price">$ 19.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/CAESAR SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CAESAR SALAD</h1>
+                                    <p>parmesan cheese frico, garlic croutons, lemon zest
+
+                                        w/ grilled chicken 26.99
+                                        
+                                        w/ shrimp 29.99</p>
+                                    <p class="price">$ 18.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CAESAR SALAD</h4>
-                                <p>parmesan cheese frico, garlic croutons, lemon zest</p>
-                                <p>w/ grilled chicken 26.99</p>
-                                <p>w/ shrimp 29.99</p>
-                                <p class="price">$ 18.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/miami-menu/TOMATO BURRATA SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>TOMATO BURRATA SALAD</h1>
+                                    <p>white balsamic vinaigrette</p>
+                                    <p class="price">$ 22.99</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
@@ -452,127 +512,98 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CRISPY SKIN SALMON</h4>
-                                <p>beluga lentils, shaved fennel salad, citrus herb beurre</p>
-                                <p>blanc</p>
-                                <p class="price">$ 39.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/CRISPY SKIN SALMON.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CRISPY SKIN SALMON</h1>
+                                    <p>beluga lentils, shaved fennel salad, citrus herb beurre blanc</p>
+                                    <p class="price">$ 39.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CHICKEN SCALLOPINI</h4>
-                                <p>roasted pee wee potatoes, artichokes, lacinato kale,</p>
-                                <p>truffle chicken jus</p>
-                                <p class="price">$ 38.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/CHICKEN SCALLOPINI.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CHICKEN SCALLOPINI</h1>
+                                    <p>roasted pee wee potatoes, artichokes, lacinato kale, truffle chicken jus</p>
+                                    <p class="price">$ 38.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BRAISED SHORT RIB</h4>
-                                <p>yukon potato cake, spinach, crispy fried onion rings, beef</p>
-                                <p>jus</p>
-                                <p class="price">$ 52.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/BRAISED SHORT RIB.jpg" alt="">
+                                <div class="intro">
+                                    <h1>BRAISED SHORT RIB</h1>
+                                    <p>yukon potato cake, spinach, crispy fried onion rings, beef jus</p>
+                                    <p class="price">$ 52.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>RACK OF LAMB</h4>
-                                <p>vadouvan carrots, spinach, harissa lamb jus</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 65.99</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BEEF WELLINGTON</h4>
-                                <p>potato purée, glazed root vegetables, red wine demi-</p>
-                                <p>glace</p>
-                                <p class="price">$ 69.99</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>FILET MIGNON</h4>
-                                <p>8 ounces, roasted tomatoes on the vine, béarnaise</p>
-                                <p>sauce</p>
-                                <p class="price">$ 65.99</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>NY STRIP STEAK</h4>
-                                <p>shishito peppers, maitake mushroom, red wine demi-</p>
-                                <p>glaceshishito peppers, maitake mushroom, red wine</p>
-                                <p>demi-glace</p>
-                                <p class="price">$ 62.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/alantic-city-menu/RACK OF LAMB.jpg" alt="">
+                                <div class="intro">
+                                    <h1>RACK OF LAMB</h1>
+                                    <p>vadouvan carrots, spinach, harissa lamb jus</p>
+                                    <p class="price">$ 65.99</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
-                            <h3>SIDE</h3>
+                            <h3>SIDES</h3>
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BAKED MACARONI & CHEESE</h4>
-                                <p>smoked gouda, crispy prosciutto</p>
-                                <p class="price">$ 14.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/BAKED MACARONI & CHEESE.jpg" alt="">
+                                <div class="intro">
+                                    <h1>BAKED MACARONI & CHEESE</h1>
+                                    <p>smoked gouda, crispy prosciutto</p>
+                                    <p class="price">$ 14.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>WILD MUSHROOMS</h4>
-                                <p>shallot white wine glaze</p>
-                                <p class="price">$ 14.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/WILD MUSHROOMS SIDES.jpg" alt="">
+                                <div class="intro">
+                                    <h1>WILD MUSHROOMS</h1>
+                                    <p>shallot white wine glaze</p>
+                                    <p class="price">$ 14.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BRUSSELS SPROUTS</h4>
-                                <p>pickled fresno peppers, cilantro</p>
-                                <p class="price">$ 14.99</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/BRUSSELS SPROUTS.jpg" alt="">
+                                <div class="intro">
+                                    <h1>BRUSSELS SPROUTS</h1>
+                                    <p>pickled fresno peppers, cilantro</p>
+                                    <p class="price">$ 14.99</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>ROASTED CAULIFLOWER</h4>
-                                <p>chili lime gremolata, mint</p>
-                                <p class="price">$ 14.99</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>ELOTE STYLE CORN</h4>
-                                <p>jalapeño aioli, chili’s</p>
-                                <p class="price">$ 14.99</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>POTATO PUREE</h4>
-                                <p>creme fraiche, chives</p>
-                                <p class="price">$ 14.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="standardcontain__container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-x1-10 offset-x1-1 col">
-                                <p>*Consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of food borne illness, especially in cases of certain medical conditions and pregnancies</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/ROASTED CAULIFLOWER.jpg" alt="">
+                                <div class="intro">
+                                    <h1>ROASTED CAULIFLOWER</h1>
+                                    <p>chili lime gremolata, mint</p>
+                                    <p class="price">$ 14.99</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -581,36 +612,48 @@
             <div class="row">
                 <div class="col-12 col">
                     <div class="menulist__currentmenu">
-                        <h3>HK SIGNATURE PRIX FIXE</h3>
-                        <p style="margin-top: 30px;">three courses 105.99 per person / with wine pairing 155.99</p>
-                        <p style="margin-top: 40px;">*please no substitutions or sharing</p>
+                        <h3>SIGNATURE PRIX FIXE</h3>
+                        <p style="margin-top: 30px;">three courses $95.95  |  wine pairing $59.95 per person</p>
+                        <p style="margin-top: 40px;">**please no substitutions or sharing</p>
                     </div>
                     <div class="menulist__subheading">
                         <h3>FIRST</h3>
-                        <p style="font-size: 14px; margin-top: 20px;">choose one</p>
+                        <p style="margin-top: 30px;">choose one</p>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>PAN SEARED SCALLOPS*</h4>
-                            <p>celery root, braised bacon lardons, pickled granny</p>
-                            <p>smith apples</p>
-                            <p>chardonnay, domaine vocoret et fils, chablis 2019</p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/PAN SEARED SCALLOPS.jpg" alt="">
+                            <div class="intro">
+                                <h1>PAN SEARED SCALLOPS</h1>
+                                <p>celery root, braised bacon lardons, pickled granny smith apples</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>TOMATO BURRATA SALAD</h4>
-                            <p>crystalized basil, white balsamic vinaigrette</p>
-                            <p>pinot grigio, santa margherita, alto adige, 2020</p>
-                            <br>
-                            <p></p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/miami-menu/TOMATO BURRATA SALAD.jpg" alt="">
+                            <div class="intro">
+                                <h1>TOMATO BURRATA SALAD</h1>
+                                <p>crystalized basil, white balsamic vinaigrette
+
+                                    pinot grigio, santa margherita, alto adige, 2020</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/miami-menu/SWEET CORN SOUP.jpg" alt="">
+                            <div class="intro">
+                                <h1>TOMATO BURRATA SALAD</h1>
+                                <p>crystalized basil, white balsamic vinaigrette
+
+                                    pinot grigio, santa margherita, alto adige, 2020</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -621,16 +664,16 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>BEEF WELLINGTON*</h4>
-                            <p>potato puree, glazed root vegetables, red wine</p>
-                            <p>demi-glace cabernet sauvignon, jordan, alexander</p>
-                            <p>valley, 2017</p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/BEEF WELLINGTON.jpg" alt="">
+                            <div class="intro">
+                                <h1>BEEF WELLINGTON*</h1>
+                                <p>potato puree, glazed root vegetables, red wine demi-glace add on foie gras for $22.95 or lobster tail at market price* propiertary red blend, leviathan</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -641,24 +684,18 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>STICKY TOFFEE PUDDING</h4>
-                            <p>dulce de leche ice cream</p>
-                            <p>dow’s, 10 year tawny, douro</p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="standardcontain__container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-x1-10 offset-x1-1 col">
-                            <p>*Consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of food borne illness, especially in cases of certain medical conditions and pregnancies</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/STICKY TOFFEE PUDDING.jpg" alt="">
+                            <div class="intro">
+                                <h1>STICKY TOFFEE PUDDING</h1>
+                                <p>dulce de leche ice cream
+
+                                    dow’s, 10 year tawny, douro</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -674,72 +711,47 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>MEET YOUR MAKER</h4>
-                            <p>maker’s mark bourbon, domaine de canton, mint,</p>
-                            <p>apple, strawberry</p>
-                            <p class="price">$ 18.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/MEET YOUR MAKER.jpg" alt="">
+                            <div class="intro">
+                                <h1>MEET YOUR MAKER</h1>
+                                <p>maker’s mark bourbon, domaine de canton, mint, apple, strawberry</p>
+                                <p class="price">$ 15.95</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>NOTES FROM GORDON</h4>
-                            <p>plymouth dry gin, green tea, lemongrass, peach,</p>
-                            <p>lemon, message from Gordon</p>
-                            <p class="price">$ 17.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/NOTES FROM GORDON.jpg" alt="">
+                            <div class="intro">
+                                <h1>NOTES FROM GORDON</h1>
+                                <p>plymouth dry gin, green tea, lemongrass, peach, lemon, message from Gordon</p>
+                                <p class="price">$ 17.95</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>FEAR & LOATHING</h4>
-                            <p>del maguay mezcal, luxardo, cold-pressed blood</p>
-                            <p>orange juice, pineapple, lemon</p>
-                            <p class="price">$ 18.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/FEAR & LOATHING.jpg" alt="">
+                            <div class="intro">
+                                <h1>FEAR & LOATHING</h1>
+                                <p>del maguay mezcal, luxardo, cold-pressed blood orange juice, pineapple, lemon</p>
+                                <p class="price">$ 18.95</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>IT’S YOUR THYME</h4>
-                            <p>ketel one, dolin blanc, pear, thyme, lime</p>
-                            <br>
-                            <p></p>
-                            <p class="price">$ 17.95</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>SMOKE ON THE BOARDWALK</h4>
-                            <p>knob creek rye, aperol, amaro averna, dolin sweet</p>
-                            <p>vermouth, smoked with cherry wood</p>
-                            <p class="price">$ 18.95</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>QUEEN’S PLATINUM JUBILEE</h4>
-                            <p>empress 1908 gin, lillet, st. germaine fever tree</p>
-                            <p>mediterranean elderflower tonic</p>
-                            <p class="price">$ 18.95</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>YUKI ONNA</h4>
-                            <p>absolut citron, huana guanabana, rhubarb puree,</p>
-                            <p>lemon bitters</p>
-                            <p class="price">$ 18.95</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>ANCHO PALOMA</h4>
-                            <p>casamigos blanco, ancho reyes, st-germain, agave,</p>
-                            <p>grapefruit, lime</p>
-                            <p class="price">$ 17.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/IT’S YOUR THYME.jpg" alt="">
+                            <div class="intro">
+                                <h1>IT’S YOUR THYME</h1>
+                                <p>ketel one, dolin blanc, pear, thyme, lime</p>
+                                <p class="price">$ 17.95</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -750,50 +762,50 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>NEGRONI</h4>
+            <div class="container menu__card">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/NEGRONI.jpg" alt="">
+                            <div class="intro">
+                                <h1>NEGRONI</h1>
                                 <p>tanqueray no. ten, campari, dolin sweet vermouth</p>
-                                <br>
-                                <p></p>
                                 <p class="price">$ 17.95</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>OLD FASHIONED</h4>
-                                <p>angel’s envy bourbon whiskey, orange bitters, brown</p>
-                                <p>sugar syrup</p>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/OLD FASHIONED.jpg" alt="">
+                            <div class="intro">
+                                <h1>OLD FASHIONED</h1>
+                                <p>angel’s envy bourbon whiskey, orange bitters, brown sugar syrup</p>
                                 <p class="price">$ 17.95</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>MANHATTAN</h4>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/MANHATTAN.jpg" alt="">
+                            <div class="intro">
+                                <h1>MANHATTAN</h1>
                                 <p>bulleit rye, dolin sweet vermouth, angostura bitters</p>
-                                <br>
-                                <p></p>
                                 <p class="price">$ 17.95</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>PAPER PLANE</h4>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/alantic-city-menu/PAPER PLANE.jpg" alt="">
+                            <div class="intro">
+                                <h1>PAPER PLANE</h1>
                                 <p>buffalo trace bourbon, aperol, amaro nonino, lemon</p>
                                 <p class="price">$ 17.95</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>HARICOT VERT</h4>
-                                <p>olive oil, crispy shallots</p>
-                                <p class="price">$ 14.95</p>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
+            </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
@@ -801,62 +813,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>COORS LIGHT</h4>
-                                <p>4.2%, golden, colorado</p>
-                                <p class="price">$ 10.95</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/alantic-city-menu/COORS LIGHT.jpg" alt="">
+                                <div class="intro">
+                                    <h1>COORS LIGHT</h1>
+                                    <p>4.2%, golden, colorado</p>
+                                    <p class="price">$ 10.95/p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>MILLER LIGHT</h4>
-                                <p>4.2%, milwaukee, wisconsin</p>
-                                <p class="price">$ 10.95</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/alantic-city-menu/MILLER LIGHT.jpg" alt="">
+                                <div class="intro">
+                                    <h1>MILLER LIGHT</h1>
+                                    <p>4.2%, milwaukee, wisconsin</p>
+                                    <p class="price">$ 10.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BLUE MOON BELGIAN WHITE</h4>
-                                <p>5.4%, golden, colorado</p>
-                                <p class="price">$ 10.95</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>SPELLBOUND PORTER</h4>
-                                <p>6.9%, mount holly, new jersey</p>
-                                <p class="price">$ 11.95</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>PERONI</h4>
-                                <p>5.1%, vigevano, italy</p>
-                                <p class="price">$ 11.95</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>SAM SEASONAL OKTOBERFEST</h4>
-                                <p>5.2%, boston, massachusetts</p>
-                                <p class="price">$ 10.95</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/alantic-city-menu/BLUE MOON BELGIAN WHITE.jpg" alt="">
+                                <div class="intro">
+                                    <h1>BLUE MOON BELGIAN WHITE</h1>
+                                    <p>5.4%, golden, colorado</p>
+                                    <p class="price">$ 10.95</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div> 
-                <div class="standardcontain__container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-x1-10 offset-x1-1 col">
-                                <p>*Consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of food borne illness, especially in cases of certain medical conditions and pregnancies</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
     </main>
     <footer >
         <div class="container">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hell's Kitchen</title>
-    <link rel="stylesheet" href="main.js">
+    <link rel="stylesheet" href="menu.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -218,36 +218,76 @@
             white-space: nowrap;
         }
         .price {
-            font-weight: bold;
-            text-align: right;
-            margin-left: auto;
-            margin-top: 50px;
-        }.standardcontain__container p {
-            font-weight: 300;
-            line-height: 1.6em;
-            margin: 0 0 15px;
-            margin-top: 100px;
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-bottom: 50px;
-            width: 100%;
-            overflow-x: auto;
-            max-width: none;
-            color: #fff;
-        }
+    position: absolute;
+    top: 120px;
+    right: 10px; 
+    bottom: 10px; 
+    color: white; 
+}
         p {
             font-family: Futura, sans-serif;
         }
-        @media (min-width: 1200px) {
-            .row .col-4 {
-                width: calc(33.3333% - 40px);
-                }
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .menu__card .card{
+            height: 300px;
+            margin: 50px;
+            box-shadow: 5px 5px 20px black;
+            overflow: hidden;
+        }
+        .menu__card img{
+            height: 300px;
+            width: 350px;
+            border-radius: 3px;
+            transition: .5s;
+        }
+        .menu__card .intro{
+            height: 70px;
+            width: 350px;
+            padding: 6px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0px;
+            background: rgb(27, 27, 27, .5);
+            color: white;
+            transition: .5s;
+        }
+        .menu__card h1{
+            margin: 15px;
+            font-size: 20px;
+            margin-right: 100px;
+        }
+        .menu__card p{
+            font-size: 14px;
+            margin: 10px;
+            margin-bottom: 10px;
+            margin-right: 90px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .menu__card .card:hover{
+            cursor: pointer;
+        }
+        .menu__card .card:hover .intro{
+            height: 150px;
+            bottom: px;
+            background: black;
+        }
+        .menu__card .card:hover p{
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu__card .card:hover img{
+            transform: scale(1.1) rotate(-3deg);
         }
         @media (max-width: 1200px) {
             .row .col-4 {
-                width: 100%;
+                width: fit-content;
                 }
-        }
+        } 
     </style>
 </head>
 <body>
@@ -326,43 +366,46 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>OYSTERS ON THE HALF SHELL* -</h4>
-                            <h4>HALF DOZEN</h4>
-                            <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
-                            <p>DF | GF</p>
-                            <p class="price">$ 24.00</p>
+                        <div class="card">
+                            <img src="../images/washington-menu/OYSTERS ON THE HALF SHELL HALF DOZEN.jpg" alt="">
+                            <div class="intro">
+                                <h1>OYSTERS ON THE HALF SHELL* - HALF DOZEN</h1>
+                                <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
+                                <p class="price">$ 24.00</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/washington-menu/OYSTERS ON THE HALF SHELL FULL DOZEN.jpg" alt="">
+                            <div class="intro">
+                                <h1>OYSTERS ON THE HALF SHELL* - FULL DOZEN</h1>
+                                <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
+                                <p class="price">$ 46.00</p> 
+                            </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>OYSTERS ON THE HALF SHELL* -</h4>
-                            <h4>FULL DOZEN</h4>
-                            <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
-                            <p>DF | GF</p>
-                            <p class="price">$ 46.00</p>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/shrimp cocktail.jpg" alt="">
+                            <div class="intro">
+                                <h1>SHRIMP COCKTAIL</h1>
+                                <p>salsa coctel, avocado, plantain chips</p>
+                                <p class="price">$ 21.00</p> 
+                            </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>SHRIMP COCKTAIL</h4>
-                            <p>salsa coctel, avocado, plantain chips</p>
-                            <p>DF | GF</p>
-                            <br>
-                            <p></p>
-                            <p class="price">$ 21.00</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>TUNA TARTARE*</h4>
-                            <p>ahi tuna, soy chili vinaigrette, pickled fresno, asian pear,</p>
-                            <p>taro chips</p>
-                            <p>DF | GF</p>
-                            <p class="price">$ 24.00</p>
+                        <div class="card">
+                            <img src="../images/washington-menu/TUNA TARTARE.jpg" alt="">
+                            <div class="intro">
+                                <h1>TUNA TARTARE*</h1>
+                                <p>ahi tuna, soy chili vinaigrette, pickled fresno, asian pear, taro chips</p>
+                                <p class="price">$ 24.00</p> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -374,53 +417,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>AVOCADO TOAST</h4>
-                                <p>toasted sourdough, mashed avocado, shaved radish,</p>
-                                <p>sunflower seeds</p>
-                                <p>DF | Vegan</p>
-                                <p class="price">$ 16.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/AVOCADO TOAST.jpg" alt="">
+                                <div class="intro">
+                                    <h1>AVOCADO TOAST</h1>
+                                    <p>toasted sourdough, mashed avocado, shaved radish, sunflower seeds</p>
+                                    <p class="price">$ 16.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>HELLFIRE HOT WINGS</h4>
-                                <p>hellfire sauce, blue cheese dressing</p>
-                                <br>
-                                <br>
-                                <p></p>
-                                <p></p> 
-                                <p class="price">$ 20.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/HELLFIRE HOT WINGS.jpg" alt="">
+                                <div class="intro">
+                                    <h1>HELLFIRE HOT WINGS</h1>
+                                    <p>hellfire sauce, blue cheese dressing</p>
+                                    <p class="price">$ 20.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>PAN-SEARED SCALLOPS*</h4>
-                                <p>celery root purée, braised bacon lardons, pickled</p>
-                                <p>granny smith apples, chives</p>
-                                <p>DF | GF</p>
-                                <p class="price">$ 27.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/PAN SEARED SCALLOPS.jpg" alt="">
+                                <div class="intro">
+                                    <h1>PAN-SEARED SCALLOPS*</h1>
+                                    <p>celery root purée, braised bacon lardons, pickled granny smith apples, chives</p>
+                                    <p class="price">$ 27.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>LOBSTER RISOTTO</h4>
-                                <p>butter-poached lobster tail, truffle, crispy onions</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 30.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>WAGYU MEATBALLS</h4>
-                                <p>american wagyu, pork, slow-roasted tomato sauce,</p>
-                                <p>polenta croutons, parmesan, basil</p>
-                                <p class="price">$ 22.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/LOBSTER RISOTTO.jpg" alt="">
+                                <div class="intro">
+                                    <h1>LOBSTER RISOTTO</h1>
+                                    <p>butter-poached lobster tail, truffle, crispy onions</p>
+                                    <p class="price">$ 30.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -431,83 +468,93 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>GOLDEN BEET SALAD</h4>
-                                <p>greek yogurt, kumquats, pistachio granola, white</p>
-                                <p>balsamic vinaigrette</p>
-                                <p>GF | Vegetarian</p>
-                                <p class="price">$ 21.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/GOLDEN BEET SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>GOLDEN BEET SALAD</h1>
+                                    <p>ggreek yogurt, kumquats, pistachio granola, white balsamic vinaigrette</p>
+                                    <p class="price">$ 21.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>QUINOA SALAD</h4>
-                                <p>honeycrisp apples, dried currants & cranberries,</p>
-                                <p>candied pecans, ricotta salata</p>
-                                <p>GF</p>
-                                <p class="price">$ 20.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/QUINOA SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>QUINOA SALAD</h1>
+                                    <p>honeycrisp apples, dried currants & cranberries, candied pecans, ricotta salata</p>
+                                    <p class="price">$ 20.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CAESAR SALAD*</h4>
-                                <p>parmesan cheese frico, garlic croutons, lemon zest</p>
-                                <p>with grilled chicken $24</p>
-                                <p>with chilled shrimp $26</p>
-                                <p class="price">$ 18.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/CAESAR SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CAESAR SALAD*</h1>
+                                    <p>parmesan frico, garlic croutons, lemon zest
+
+                                        with grilled chicken $24
+                                        
+                                        with chilled shrimp $26</p>
+                                    <p class="price">$ 18.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>PUMPKIN SOUP</h4>
-                                <p>maple-glazed butternut squash, granny smith apples,</p>
-                                <p>toasted pepitas, vadouvan crème fraîche</p>
-                                <p>GF | Vegetarian</p>
-                                <p class="price">$ 16.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/PUMPKIN SOUP.jpg" alt="">
+                                <div class="intro">
+                                    <h1>PUMPKIN SOUP</h1>
+                                    <p>maple-glazed butternut squash, granny smith apples, toasted pepitas, vadouvan crème fraîche</p>
+                                    <p class="price">$ 16.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
                             <h3>SANDWICHES</h3>
-                            <p style="font-size: 13px; margin-top: 20px;">Served with french fries</p>
+                            <p style="font-size: 14px;">Served with french fries</p>
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>HELL’S KITCHEN BURGER*</h4>
-                                <p>toasted brioche, nueske’s applewood-smoked bacon,</p>
-                                <p>ghost pepper cheese, fresno chili jam, mashed</p>
-                                <p>avocado, crispy onions, tomato, spicy aioli</p>
-                                <p class="price">$ 24.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/HELL’S KITCHEN BURGER.jpg" alt="">
+                                <div class="intro">
+                                    <h1>HELL’S KITCHEN BURGER*</h1>
+                                    <p>toasted brioche, nueske’s applewood-smoked bacon, ghost pepper cheese</p>
+                                    <p class="price">$ 24.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>STANDARD BURGER*</h4>
-                                <p>toasted brioche, white cheddar, pickled cucumber,</p>
-                                <p>butter lettuce, tomato, fancy sauce</p>
-                                <p>add nueske’s applewood-smoked bacon $3</p>
-                                <p class="price">$ 21.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/STANDARD BURGER.jpg" alt="">
+                                <div class="intro">
+                                    <h1>STANDARD BURGER*</h1>
+                                    <p>toasted brioche, white cheddar, pickled cucumber, butter lettuce, tomato, fancy sauce</p>
+                                    <p class="price">$ 21.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>SHORT RIB GRILLED CHEESE</h4>
-                                <p>sourdough, braised short rib, caramelized onions,</p>
-                                <p>white cheddar, house pickles</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 26.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/SHORT RIB GRILLED CHEESE.jpg" alt="">
+                                <div class="intro">
+                                    <h1>SHORT RIB GRILLED CHEESE</h1>
+                                    <p>sourdough, braised short rib, caramelized onions, white cheddar, house pickles</p>
+                                    <p class="price">$ 26.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -518,118 +565,119 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BEEF WELLINGTON*</h4>
-                                <p>potato purée, glazed root vegetables, red wine demi-</p>
-                                <p>glace</p>
-                                <p>served medium rare</p>
-                                <p class="price">$ 65.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/BEEF WELLINGTON.jpg" alt="">
+                                <div class="intro">
+                                    <h1>BEEF WELLINGTON*</h1>
+                                    <p>potato puree, glazed root vegetables, red wine demi-glace</p>
+                                    <p class="price">$ 65.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CHICKEN SCALLOPINI</h4>
-                                <p>chicken breast, roasted pee wee potatoes, artichokes,</p>
-                                <p>lacinato kale, truffle chicken jus</p>
-                                <p>DF | GF</p>
-                                <p class="price">$ 32.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/CHICKEN SCALLOPINI.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CHICKEN SCALLOPINI</h1>
+                                    <p>chicken breast, roasted pee wee potatoes, artichokes, lacinato kale, truffle chicken jus</p>
+                                    <p class="price">$ 32.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CRISPY SKIN SALMON*</h4>
-                                <p>beluga lentils, shaved fennel salad, citrus beurre blanc</p>
-                                <p>GF</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 40.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/CRISPY SKIN SALMON.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CRISPY SKIN SALMON*</h1>
+                                    <p>beluga lentils, shaved fennel salad, citrus beurre blanc</p>
+                                    <p class="price">$ 40.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>8 OZ. FILET MIGNON*</h4>
-                                <p>roasted cherry tomatoes on the vine, béarnaise</p>
-                                <p>GF</p>
-                                <p class="price">$ 16.95</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/8 OZ FILET MIGNON.jpg" alt="">
+                                <div class="intro">
+                                    <h1>8 OZ. FILET MIGNON*</h1>
+                                    <p>roasted cherry tomatoes on the vine, béarnaise</p>
+                                    <p class="price">$ 55.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
-                            <h3>PIZZAS</h3>
+                            <h3>PIZZA</h3>
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>MARGHERITA</h4>
-                                <p>slow-roasted tomato sauce, fresh mozzarella, roasted</p>
-                                <p>tomatoes</p>
-                                <p>Vegetarian</p>
-                                <p class="price">$ 18.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/MARGHERITA.jpg" alt="">
+                                <div class="intro">
+                                    <h1>MARGHERITA</h1>
+                                    <p>slow-roasted tomato sauce, fresh mozzarella, roasted tomatoes</p>
+                                    <p class="price">$ 18.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>WILD MUSHROOM</h4>
-                                <p>truffle gouda cheese sauce, wild mushrooms, grilled</p>
-                                <p>onions, spinach</p>
-                                <p>Vegetarian</p>
-                                <p class="price">$ 20.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/WILD MUSHROOM.jpg" alt="">
+                                <div class="intro">
+                                    <h1>WILD MUSHROOM</h1>
+                                    <p>truffle gouda cheese sauce, wild mushrooms, grilled onions, spinach</p>
+                                    <p class="price">$ 20.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
-                            <h3>SIDES</h3>
+                            <h3>SIDE</h3>
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>FRENCH FRIES</h4>
-                                <p>fancy sauce</p>
-                                <p>Vegetarian</p>
-                                <p class="price">$ 15.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/FRENCH FRIES.jpg" alt="">
+                                <div class="intro">
+                                    <h1>FRENCH FRIES</h1>
+                                    <p>fancy sauce</p>
+                                    <p class="price">$ 15.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>ROASTED CAULIFLOWER</h4>
-                                <p>chili-lime breadcrumbs, crispy mint</p>
-                                <p>DF | Vegan</p>
-                                <p class="price">$ 15.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/ROASTED CAULIFLOWER.jpg" alt="">
+                                <div class="intro">
+                                    <h1>ROASTED CAULIFLOWER</h1>
+                                    <p>chili-lime breadcrumbs, crispy mint</p>
+                                    <p class="price">$ 15.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>POTATO PURÉE</h4>
-                                <p>crème fraîche, chives</p>
-                                <p>GF | Vegetarian</p>
-                                <p class="price">$ 40.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="standardcontain__container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-x1-10 offset-x1-1 col">
-                                <p>(v) vegetarian | (v+) vegan | (gf) gluten free | (df) dairy free</p>
-                                <p style="margin-top: 50px;">*consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of foodborne illness, especially in cases of certain medical conditions and pregnancies.</p>
-                                <p style="margin-top: 50px;">CONSUMER ADVISORY: Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions. Section 3-603.11, FDA Food Code. Division of Food Safety. FDACS.gov</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/POTATO PUREE.jpg" alt="">
+                                <div class="intro">
+                                    <h1>POTATO PURÉE</h1>
+                                    <p>crème fraîche, chives</p>
+                                    <p class="price">$ 15.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -647,26 +695,17 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>TUNA TARTARE*</h4>
-                            <p>ahi tuna, soy chili vinaigrette, pickled fresno, asian</p>
-                            <p>pear, taro chips</p>
-                            <p>DF | GF</p>
-                            <p class="price">$ 24.00</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>WAGYU MEATBALLS</h4>
-                            <p>american wagyu, pork, slow-roasted tomato sauce,</p>
-                            <p>polenta croutons, parmesan, basil</p>
-                            <br>
-                            <p></p>
-                            <p class="price">$ 22.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/WAGYU MEATBALLS.jpg" alt="">
+                            <div class="intro">
+                                <h1>WAGYU MEATBALLS</h1>
+                                <p>american wagyu, pork, slow-roasted tomato sauce, polenta croutons, parmesan, basil</p>
+                                <p class="price">$ 22.00</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -677,36 +716,37 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>QUINOA SALAD</h4>
-                            <p>honeycrisp apples, dried currants & cranberries,</p>
-                            <p>candied pecans, ricotta salata</p>
-                            <p>GF</p>
-                            <p class="price">$ 20.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/QUINOA SALAD.jpg" alt="">
+                            <div class="intro">
+                                <h1>QUINOA SALAD</h1>
+                                <p>honeycrisp apples, dried currants & cranberries, candied pecans, ricotta salata</p>
+                                <p class="price">$ 20.00</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>CAESAR SALAD*</h4>
-                            <p>parmesan frico, garlic croutons, lemon zest</p>
-                            <br>
-                            <br>
-                            <p></p>
-                            <p></p>
-                            <p class="price">$ 18.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/CAESAR SALAD.jpg" alt="">
+                            <div class="intro">
+                                <h1>CAESAR SALAD*</h1>
+                                <p>parmesan frico, garlic croutons, lemon zest</p>
+                                <p class="price">$ 18.00</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>PUMPKIN SOUP</h4>
-                            <p>maple-glazed butternut squash, granny smith apples,</p>
-                            <p>toasted pepitas, vadouvan crème fraîche</p>
-                            <p>GF | Vegetarian</p>
-                            <p class="price">$ 16.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/PUMPKIN SOUP.jpg" alt="">
+                            <div class="intro">
+                                <h1>PUMPKIN SOUP</h1>
+                                <p>maple-glazed butternut squash, granny smith apples, toasted pepitas, vadouvan crème fraîche</p>
+                                <p class="price">$ 16.00</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -717,23 +757,27 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>8 OZ. FILET MIGNON*</h4>
-                            <p>roasted cherry tomatoes on the vine, béarnaise</p>
-                            <p>GF</p>
-                            <p class="price">$ 55.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/8 OZ FILET MIGNON.jpg" alt="">
+                            <div class="intro">
+                                <h1>8 OZ. FILET MIGNON*</h1>
+                                <p>roasted cherry tomatoes on the vine, béarnaise</p>
+                                <p class="price">$ 55.00</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>CRISPY SKIN SALMON*</h4>
-                            <p>beluga lentils, shaved fennel salad, citrus beurre blanc</p>
-                            <p>GF</p>
-                            <p class="price">$ 40.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/CRISPY SKIN SALMON.jpg" alt="">
+                            <div class="intro">
+                                <h1>CRISPY SKIN SALMON*</h1>
+                                <p>beluga lentils, shaved fennel salad, citrus beurre blanc</p>
+                                <p class="price">$ 40.00</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -744,23 +788,27 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>WILD MUSHROOMS</h4>
-                            <p>shallot-white wine glaze</p>
-                            <p>GF | Vegetarian</p>
-                            <p class="price">$ 15.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/WILD MUSHROOMS SIDES.jpg" alt="">
+                            <div class="intro">
+                                <h1>WILD MUSHROOMS</h1>
+                                <p>shallot-white wine glaze</p>
+                                <p class="price">$ 15.00</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>POTATO PURÉE</h4>
-                            <p>crème fraîche, chives</p>
-                            <p>GF | Vegetarian</p>
-                            <p class="price">$ 15.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/POTATO PUREE.jpg" alt="">
+                            <div class="intro">
+                                <h1>POTATO PURÉE</h1>
+                                <p>crème fraîche, chives</p>
+                                <p class="price">$ 15.00</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -771,25 +819,17 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>STICKY TOFFEE PUDDING</h4>
-                            <p>english toffee sauce, dulce de leche ice cream</p>
-                            <p>Vegetarian</p>
-                            <p class="price">$ 14.00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="standardcontain__container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-x1-10 offset-x1-1 col">
-                            <p>(v) vegetarian | (v+) vegan | (gf) gluten free | (df) dairy free</p>
-                            <p style="margin-top: 50px;">*consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of foodborne illness, especially in cases of certain medical conditions and pregnancies.</p>
-                            <p style="margin-top: 50px;">CONSUMER ADVISORY: Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions. Section 3-603.11, FDA Food Code. Division of Food Safety. FDACS.gov</p>                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/STICKY TOFFEE PUDDING.jpg" alt="">
+                            <div class="intro">
+                                <h1>STICKY TOFFEE PUDDING</h1>
+                                <p>english toffee sauce, dulce de leche ice cream</p>
+                                <p class="price">$ 14.00</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -801,59 +841,51 @@
                         <h3>DINNER</h3>
                     </div>
                     <div class="menulist__subheading">
-                        <p>RAW/CHILLED</p>
+                        <h3>RAW/CHILLED</h3>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>OYSTERS ON THE HALF SHELL* -</h4>
-                            <h4>HALF DOZEN</h4>
-                            <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
-                            <p>DF | GF</p>
-                            <p class="price">$ 24.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/OYSTERS ON THE HALF SHELL HALF DOZEN.jpg" alt="">
+                            <div class="intro">
+                                <h1>OYSTERS ON THE HALF SHELL* - HALF DOZEN</h1>
+                                <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
+                                <p class="price">$ 24.00</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>OYSTERS ON THE HALF SHELL* -</h4>
-                            <h4>FULL DOZEN</h4>
-                            <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
-                            <p>DF | GF</p>
-                            <p class="price">$ 21.00</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/OYSTERS ON THE HALF SHELL FULL DOZEN.jpg" alt="">
+                            <div class="intro">
+                                <h1>OYSTERS ON THE HALF SHELL* - FULL DOZEN</h1>
+                                <p>chef’s daily selection, hk mignonette, cocktail sauce</p>
+                                <p class="price">$ 46.00</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>SHRIMP COCKTAIL</h4>
-                            <p>salsa coctel, avocado, plantain chips</p>
-                            <p>DF | GF</p>
-                            <br>
-                            <p></p>
-                            <p class="price">$ 22.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/shrimp cocktail.jpg" alt="">
+                            <div class="intro">
+                                <h1>SHRIMP COCKTAIL</h1>
+                                <p>salsa coctel, avocado, plantain chips</p>
+                                <p class="price">$ 21.00</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>TUNA TARTARE*</h4>
-                            <p>ahi tuna, soy chili vinaigrette, pickled fresno, asian</p>
-                            <p>pear, taro chips</p>
-                            <p>DF | GF</p>
-                            <p class="price">$ 24.00</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>SHELLFISH PLATTER FOR TWO*</h4>
-                            <p>shrimp cocktail, chilled oysters & mussels, lobster,</p>
-                            <p>seasonal shellfish</p>
-                            <p>MP</p>
-                            <p>DF | GF</p>
-                            <br>
-                            <br>
-                        </div>
+                        <div class="card">
+                            <img src="../images/washington-menu/TUNA TARTARE.jpg" alt="">
+                            <div class="intro">
+                                <h1>TUNA TARTARE*</h1>
+                                <p>ahi tuna, soy chili vinaigrette, pickled fresno, asian pear, taro chips</p>
+                                <p class="price">$ 24.00</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -864,58 +896,50 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>PAN-SEARED SCALLOPS*</h4>
-                                <p>celery root purée, braised bacon lardons, pickled</p>
-                                <p>granny smith apples, chives</p>
-                                <p>DF | GF</p>
+            <div class="container menu__card">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/PAN SEARED SCALLOPS.jpg" alt="">
+                            <div class="intro">
+                                <h1>PAN-SEARED SCALLOPS*</h1>
+                                <p>celery root purée, braised bacon lardons, pickled granny smith apples, chives</p>
                                 <p class="price">$ 27.00</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>LOBSTER RISOTTO</h4>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/LOBSTER RISOTTO.jpg" alt="">
+                            <div class="intro">
+                                <h1>LOBSTER RISOTTO</h1>
                                 <p>butter-poached lobster tail, truffle, crispy onions</p>
-                                <br>
-                                <p></p>
-                                <br>
-                                <p></p>
                                 <p class="price">$ 30.00</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>SEARED FOIE GRAS*</h4>
-                                <p>carrot cake, poached granny smith apples, golden</p>
-                                <p>raisin purée, candied pecans, chicken jus</p>
-                                <p>DF</p>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/SEARED FOIE GRAS.jpg" alt="">
+                            <div class="intro">
+                                <h1>SEARED FOIE GRAS*</h1>
+                                <p>carrot cake, poached granny smith apples, golden raisin purée, candied pecans, chicken jus</p>
                                 <p class="price">$ 29.00</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>GRILLED OCTOPUS</h4>
-                                <p>white bean purée, pee wee potatoes, roasted</p>
-                                <p>tomatoes, chili oil, chimichurri</p>
-                                <p>GF</p>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/washington-menu/GRILLED OCTOPUS.jpg" alt="">
+                            <div class="intro">
+                                <h1>GRILLED OCTOPUS</h1>
+                                <p>white bean purée, pee wee potatoes, roasted tomatoes, chili oil, chimichurri</p>
                                 <p class="price">$ 28.00</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>WAGYU MEATBALLS</h4>
-                                <p>american wagyu, pork, slow-roasted tomato sauce,</p>
-                                <p>polenta croutons, parmesan, basil</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 22.00</p>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
+            </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
@@ -923,46 +947,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>GOLDEN BEET SALAD</h4>
-                                <p>greek yogurt, kumquats, pistachio granola, white</p>
-                                <p>balsamic vinaigrette</p>
-                                <p>GF | Vegetarian</p>
-                                <p class="price">$ 21.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/GOLDEN BEET SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>GOLDEN BEET SALAD</h1>
+                                    <p>greek yogurt, kumquats, pistachio granola, white balsamic vinaigrette</p>
+                                    <p class="price">$ 6.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>QUINOA SALAD</h4>
-                                <p>honeycrisp apples, dried currants & cranberries,</p>
-                                <p>candied  pecans, ricotta salata</p>
-                                <p>GF</p>
-                                <p class="price">$ 20.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/QUINOA SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>QUINOA SALAD</h1>
+                                    <p>honeycrisp apples, dried currants & cranberries, candied pecans, ricotta salata</p>
+                                    <p class="price">$ 20.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CAESAR SALAD*</h4>
-                                <p>parmesan frico, garlic croutons, lemon zest</p>
-                                <p>with grilled chicken $24</p>
-                                <p>with chilled shrimp $26</p>
-                                <p class="price">$ 18.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/CAESAR SALAD.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CAESAR SALAD*</h1>
+                                    <p>parmesan frico, garlic croutons, lemon zest
+
+                                        with grilled chicken $24
+                                        
+                                        with chilled shrimp $26</p>
+                                    <p class="price">$ 18.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>PUMPKIN SOUP</h4>
-                                <p>maple-glazed butternut squash, granny smith apples,</p>
-                                <p>toasted pepitas, vadouvan crème fraîche</p>
-                                <p>GF | Vegetarian</p>
-                                <p class="price">$ 16.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/PUMPKIN SOUP.jpg" alt="">
+                                <div class="intro">
+                                    <h1>PUMPKIN SOUP</h1>
+                                    <p>maple-glazed butternut squash, granny smith apples, toasted pepitas, vadouvan crème fraîche</p>
+                                    <p class="price">$ 16.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
@@ -970,177 +1002,52 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BEEF WELLINGTON*</h4>
-                                <p>potato purée, glazed root vegetables, red wine demi-</p>
-                                <p>glace</p>
-                                <p>served medium rare</p>
-                                <p class="price">$ 65.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/BEEF WELLINGTON.jpg" alt="">
+                                <div class="intro">
+                                    <h1>BEEF WELLINGTON*</h1>
+                                    <p>potato purée, glazed root vegetables, red wine demi-glace 
+
+                                        served medium rare</p>
+                                    <p class="price">$ 18.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BRAISED SHORT RIB</h4>
-                                <p>yukon potato cake, spinach, crispy onions, beef jus</p>
-                                <p>DF</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 48.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/BRAISED SHORT RIB.jpg" alt="">
+                                <div class="intro">
+                                    <h1>BRAISED SHORT RIB</h1>
+                                    <p>yukon potato cake, spinach, crispy onions, beef jus</p>
+                                    <p class="price">$ 48.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CHICKEN SCALLOPINI</h4>
-                                <p>chicken breast, roasted pee wee potatoes, artichokes,</p>
-                                <p>lacinato kale, truffle chicken jus</p>
-                                <p>DF | GF</p>
-                                <p class="price">$ 32.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/CHICKEN SCALLOPINI.jpg " alt="">
+                                <div class="intro">
+                                    <h1>CHICKEN SCALLOPINI</h1>
+                                    <p>chicken breast, roasted pee wee potatoes, artichokes, lacinato kale, truffle chicken jus</p>
+                                    <p class="price">$ 32.00</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>CRISPY SKIN SALMON*</h4>
-                                <p>beluga lentils, shaved fennel salad, citrus beurre blanc</p>
-                                <p>GF</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 40.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>HALIBUT*</h4>
-                                <p>p.e.i. mussels, chorizo, tomato-saffron broth, shallots,</p>
-                                <p>herbs</p>
-                                <p>GF</p>
-                                <p class="price">$ 49.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>8 OZ. FILET MIGNON*</h4>
-                                <p>roasted cherry tomatoes on the vine, béarnaise</p>
-                                <p>GF</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 55.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>24 OZ. PRIME BONE-IN RIBEYE*</h4>
-                                <p>roasted garlic, glazed maitake mushrooms, peppercorn</p>
-                                <p>sauce</p>
-                                <p>GF</p>
-                                <p class="price">$ 90.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col">
-                        <div class="menulist__subheading">
-                            <h3>STEAK ENHANCEMENTS</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>LOBSTER TAIL</h4>
-                                <p>GF</p>
-                                <p class="price">$ 24.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>FOIE GRAS*</h4>
-                                <p>DF | GF</p>
-                                <p class="price">$ 20.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>SHAVED TRUFFLES</h4>
-                                <p>DF | GF</p>
-                                <p class="price">$ 29.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>KING CRAB</h4>
-                                <p>GF</p>
-                                <p class="price">$ 49.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col">
-                        <div class="menulist__subheading">
-                            <h3>SIDES</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BAKED MACARONI & CHEESE</h4>
-                                <p>smoked gouda sauce, crispy prosciutto, chives</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 15.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BRUSSELS SPROUTS</h4>
-                                <p>chili glaze, cilantro</p>
-                                <p>DF | GF</p>
-                                <p class="price">$ 15.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>ROASTED CAULIFLOWER</h4>
-                                <p>chili-lime breadcrumbs, crispy mint</p>
-                                <p>DF | Vegan</p>
-                                <p class="price">$ 15.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>WILD MUSHROOMS</h4>
-                                <p>shallot-white wine glaze</p>
-                                <p>GF | Vegetarian</p>
-                                <p class="price">$ 15.00</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>POTATO PURÉE</h4>
-                                <p>crème fraîche, chives</p>
-                                <p>GF | Vegetarian</p>
-                                <p class="price">$ 15.00</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/washington-menu/CRISPY SKIN SALMON.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CRISPY SKIN SALMON*</h1>
+                                    <p>beluga lentils, shaved fennel salad, citrus beurre blanc</p>
+                                    <p class="price">$ 40.00</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div> 
-                <div class="standardcontain__container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-x1-10 offset-x1-1 col">
-                                <p>(v) vegetarian | (v+) vegan | (gf) gluten free | (df) dairy free</p>
-                                <p style="margin-top: 50px;">*consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of foodborne illness, especially in cases of certain medical conditions and pregnancies.</p>
-                                <p style="margin-top: 50px;">CONSUMER ADVISORY: Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions. Section 3-603.11, FDA Food Code. Division of Food Safety. FDACS.gov</p>                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
     </main>
     <footer >
@@ -1177,6 +1084,6 @@
         </div>
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>

@@ -224,19 +224,6 @@
     bottom: 10px; 
     color: white; 
 }
-.standardcontain__container p {
-            font-weight: 300;
-            line-height: 1.6em;
-            margin: 0 0 15px;
-            margin-top: 100px;
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-bottom: 50px;
-            width: 100%;
-            overflow-x: auto;
-            max-width: none;
-            color: #fff;
-        }
         p {
             font-family: Futura, sans-serif;
         }
@@ -274,10 +261,10 @@
             margin-right: 100px;
         }
         .menu__card p{
-            font-size: 15px;
+            font-size: 14px;
             margin: 10px;
             margin-bottom: 10px;
-            margin-right: 70px;
+            margin-right: 90px;
             visibility: hidden;
             opacity: 0;
         }
@@ -295,11 +282,6 @@
         }
         .menu__card .card:hover img{
             transform: scale(1.1) rotate(-3deg);
-        }
-         @media (min-width: 1200px) {
-            .row .col-4 {
-                width: calc(33.3333% - 40px);
-                }
         }
         @media (max-width: 1200px) {
             .row .col-4 {
@@ -367,7 +349,7 @@
                     <div class="menulist__menu">
                         <button class="btn btn-outline-warning btn-custom" type="submit" style="transform: translateX(-0%)" id="showMain">MAIN</button>
                         <button class="btn btn-outline-warning btn-custom-hk" type="submit" style="transform: translateX(-0%)" id="showHk">HK SIGNATURE PRIX FIXE</button>
-                        <button class="btn btn-outline-warning btn-custom-vegetarian" type="submit" style="transform: translateX(-0%)" id="showDinner">VEGETARIAN DINNER</button>
+                        <button class="btn btn-outline-warning btn-custom-vegetarian" type="submit" style="transform: translateX(-0%)" id="showDinner">DESSERT</button>
                     </div>
                 </div>
             </div>
@@ -590,11 +572,11 @@
                         </div>
                         <div class="col-4">
                             <div class="card">
-                                <img src="../images/las-vegas-menu/GRILLED AUSTRALIAN LAMB.jpg" alt="">
+                                <img src="../images/las-vegas-menu/DRY AGED NEW YORK STRIP.jpg" alt="">
                                 <div class="intro">
-                                    <h1>GRILLED AUSTRALIAN LAMB*</h1>
-                                    <p>sauteéd spinach, romesco, harissa lamb jus</p>
-                                    <p class="price">$ 84.95</p>
+                                    <h1>DRY AGED NEW YORK STRIP*</h1>
+                                    <p>14 ounces, shishito peppers, red wine demi-glace</p>
+                                    <p class="price">$ 78.95</p>
                                 </div>
                             </div> 
                         </div>
@@ -602,20 +584,11 @@
                             <div class="card">
                                 <img src="../images/las-vegas-menu/FILET MIGNON.jpg" alt="">
                                 <div class="intro">
-                                    <h1>GRILLED AUSTRALIAN LAMB*</h1>
+                                    <h1>FILET MIGNON*</h1>
                                     <p>8 ounces beef, roasted tomatoes on the vine, béarnaise sauce</p>
                                     <p class="price">$ 60.95</p>
                                 </div>
                             </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="standardcontain__container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-x1-10 offset-x1-1 col">
-                                <p>*Consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of food borne illness, especially in cases of certain medical conditions and pregnancies</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -633,23 +606,34 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>PAN SEARED SCALLOPS*</h4>
-                            <p>celery root, bacon lardons, brussels sprouts, pickled</p>
-                            <p>apples, truffle jus chardonnay, davis bynum, 2018</p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/PAN SEARED SCALLOPS.jpg" alt="">
+                            <div class="intro">
+                                <h1>PAN SEARED SCALLOPS*</h1>
+                                <p>celery root, bacon lardons, brussels sprouts, pickled apples, truffle jus</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>GOLDEN BEET SALAD</h4>
-                            <p>goat cheese, pistachios, citrus, white balsamic vinaigrette</p>
-                            <p>sauvignon blanc, attitude by pascal jolivet, 2021</p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/GOLDEN BEET SALAD.jpg" alt="">
+                            <div class="intro">
+                                <h1>GOLDEN BEET SALAD</h1>
+                                <p>goat cheese, pistachios, citrus, white balsamic vinaigrette sauvignon blanc, attitude by pascal jolivet, 2021</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/QUINOA SALAD.jpg" alt="">
+                            <div class="intro">
+                                <h1>QUINOA SALLAD</h1>
+                                <p>goat cheese, pistachios, citrus, white balsamic vinaigrette sauvignon blanc, attitude by pascal jolivet, 2021</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -660,16 +644,16 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>BEEF WELLINGTON*</h4>
-                            <p>potato puree, glazed root vegetables, red wine</p>
-                            <p>demi-glace add on foie gras for $22.95 or lobster tail</p>
-                            <p>at market price* propiertary red blend, leviathan, 2020</p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/BEEF WELLINGTON.jpg" alt="">
+                            <div class="intro">
+                                <h1>BEEF WELLINGTON*</h1>
+                                <p>potato puree, glazed root vegetables, red wine demi-glace add on foie gras for $22.95 or lobster tail at market price* propiertary red blend, leviathan</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -680,26 +664,16 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>STICKY TOFFEE PUDDING</h4>
-                            <p>speculoos ice cream</p>
-                            <p>croft 7 year reserve tawny, portugal</p>
-                            <p>upgrade to premier wine pairing of cardinal du four,</p>
-                            <p>armagnac 1oz  25.95</p>
-                            <p style="margin-top: 34px;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="standardcontain__container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-x1-10 offset-x1-1 col">
-                            <p>*Consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of food borne illness, especially in cases of certain medical conditions and pregnancies</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/STICKY TOFFEE PUDDING.jpg" alt="">
+                            <div class="intro">
+                                <h1>STICKY TOFFEE PUDDING</h1>
+                                <p>speculoos ice cream croft 7 year reserve tawny, portugal upgrade to premier wine pairing of cardinal</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -707,160 +681,187 @@
         <div id="dinner" style="display: none;">
             <div class="row">
                 <div class="col-12 col">
+                    <div class="menulist__currentmenu">
+                        <h3>DESSERT</h3>
+                    </div>
                     <div class="menulist__subheading">
-                        <h3>VEGETARIAN DINNER</h3>
+                        <h3>DESSERT</h3>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container menu__card">
                 <div class="row">
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>ARTICHOKE RISOTTO</h4>
-                            <p>truffle risotto, crispy artichokes, watercress</p>
-                            <p class="price">$ 18.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/STICKY TOFFEE PUDDING.jpg" alt="">
+                            <div class="intro">
+                                <h1>STICKY TOFFEE PUDDING</h1>
+                                <p>speculoos ice cream</p>
+                                <p class="price">$ 15.95</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>SPRING ONION SOUP</h4>
-                            <p>truffle potato hash, herb salad</p>
-                            <p class="price">$ 17.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/ROASTED APPLE CHEESECAKE.jpg" alt="">
+                            <div class="intro">
+                                <h1>ROASTED APPLE CHEESECAKE</h1>
+                                <p>apple compote, salted caramel, vanilla ice cream</p>
+                                <p class="price">$ 15.95</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>ROASTED BEET SALAD</h4>
-                            <p>goat cheese, pistachios, citrus, white balsamic</p>
-                            <p class="price">$ 22.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/DEATH BY CHOCOLATE.jpg" alt="">
+                            <div class="intro">
+                                <h1>DEATH BY CHOCOLATE</h1>
+                                <p>red velvet chocolate mousse cake, chocolate chip cookie dough gelato, cookie crumble</p>
+                                <p class="price">$ 15.95</p>
+                            </div>
+                        </div> 
                     </div>
                     <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>QUINOA SALAD</h4>
-                            <p>honeycrisp apples, dried currants & cranberries,</p>
-                            <p>candied pecans, ricotta salata</p>
-                            <p class="price">$ 19.95</p>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="menu-item text-white">
-                            <h4>WHITE BEAN IN PURGATORY</h4>
-                            <p>spicy tomato sauce, cashew cream cheese,</p>
-                            <p>grilled bread</p>
-                            <p class="price">$ 21.95</p>
-                        </div>
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/COCONUT 3-WAYS.jpg" alt="">
+                            <div class="intro">
+                                <h1>COCONUT 3-WAYS</h1>
+                                <p>coconut sorbet, passion fruit caramel, coconut crouton</p>
+                                <p class="price">$ 15.95</p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
-                            <h3>SIDES</h3>
+                            <h3>DESSERT COCKTAILS</h3>
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BAKED MACARONI & CHEESE</h4>
-                                <p>smoked gouda</p>
-                                <p class="price">$ 16.95</p>
+            <div class="container menu__card">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/ESPRESSO MARTINI.jpg" alt="">
+                            <div class="intro">
+                                <h1>ESPRESSO MARTINI</h1>
+                                <p>absolut vanilla, kahlua, espresso</p>
+                                <p class="price">$ 20.95</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BRUSSEL SPROUTS</h4>
-                                <p>16.95</p>
-                                <p class="price">$ 14.95</p>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/HK CARAJILLO.jpg" alt="">
+                            <div class="intro">
+                                <h1>HK CARAJILLO</h1>
+                                <p>choice of liquor(mezcal, anejo or rye), licor 43, espresso</p>
+                                <p class="price">$ 21.95</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>POTATO PUREE</h4>
-                                <p>creme fraiche, chives</p>
-                                <p class="price">$ 16.95</p>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="../images/las-vegas-menu/FRENCH FIFTY.jpg" alt="">
+                            <div class="intro">
+                                <h1>FRENCH FIFTY</h1>
+                                <p>branson vs phantom cognac, grand marnier, simple syrup, lemon juice, champagne, cinnamon</p>
+                                <p class="price">$ 27.95</p>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>GLAZED ROOT VEGETABLES</h4>
-                                <p>fresh herbs</p>
-                                <p class="price">$ 16.95</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>HARICOT VERT</h4>
-                                <p>olive oil, crispy shallots</p>
-                                <p class="price">$ 14.95</p>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
+            </div>
                 <div class="row">
                     <div class="col-12 col">
                         <div class="menulist__subheading">
-                            <h3>DESSERT</h3>
+                            <h3>COFFEE</h3>
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container menu__card">
                     <div class="row">
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>STICKY TOFFEE PUDDING</h4>
-                                <p>gspeculoos ice cream</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 15.95</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/DRIP.jpg" alt="">
+                                <div class="intro">
+                                    <h1>DRIP</h1>
+                                    <p>infinite blend, honduras, brazil, flavor notes: caramel, chocolate, dried fruits</p>
+                                    <p class="price">$ 6.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>QUINOA SALAD</h4>
-                                <p>honeycrisp apples, dried currants & cranberries,</p>
-                                <p>candied  pecans, ricotta salata</p>
-                                <p class="price">$ 19.95</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/DECAF DRIP.jpg" alt="">
+                                <div class="intro">
+                                    <h1>DECAF DRIP</h1>
+                                    <p>librarian blend, el salvador flavor notes: berry, milk chocolate, sweet nuts</p>
+                                    <p class="price">$ 6.95</p>
+                                </div>
+                            </div> 
                         </div>
                         <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>BLUEBERRY CHEESECAKE</h4>
-                                <p>blueberry cheesecake with chantilly cream, lemon</p>
-                                <p>curd and blueberry ganache</p>
-                                <p class="price"> $ 15.95</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>DEATH BY CHOCOLATE</h4>
-                                <p>rich chocolate fondant cake, chocolate mousse with</p>
-                                <p>crispy pearls, brownie and cookies & cream ice cream</p>
-                                <p class="price">$ 15.95</p>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="menu-item text-white">
-                                <h4>COCONUT 3-WAYS</h4>
-                                <p>coconut sorbet, passion fruit caramel, coconut cake</p>
-                                <br>
-                                <p></p>
-                                <p class="price">$ 15.95</p>
-                            </div>
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/ESPRESSO & DECAF.jpg" alt="">
+                                <div class="intro">
+                                    <h1>ESPRESSO & DECAF</h1>
+                                    <p>black cat analog, brazil flavor notes: dark chocolate</p>
+                                    <p class="price">$ 6.95</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div> 
-                <div class="standardcontain__container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-x1-10 offset-x1-1 col">
-                                <p>*Consuming raw or undercooked meat, poultry, seafood or eggs may increase your risk of food borne illness, especially in cases of certain medical conditions and pregnancies</p>
-                            </div>
+                <div class="row">
+                    <div class="col-12 col">
+                        <div class="menulist__subheading">
+                            <h3>DIGESTIF</h3>
                         </div>
                     </div>
                 </div>
+                <div class="container menu__card">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/AMARETTO DISARONNO.jpg" alt="">
+                                <div class="intro">
+                                    <h1>AMARETTO DISARONNO</h1>
+                                    <p class="price">$ 18.95</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/AMARETTO, SAN DIEGO DISTILLERY.jpg" alt="">
+                                <div class="intro">
+                                    <h1>AMARETTO, SAN DIEGO DISTILLERY</h1>
+                                    <p class="price">$ 18.95</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/CAMPARI.jpg" alt="">
+                                <div class="intro">
+                                    <h1>CAMPARI</h1>
+                                    <p class="price">$ 18.95</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="../images/las-vegas-menu/FERNET BRANCA.jpg" alt="">
+                                <div class="intro">
+                                    <h1>FERNET BRANCA</h1>
+                                    <p class="price">$ 15.95</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
             </div>
     </main>
     <footer >
