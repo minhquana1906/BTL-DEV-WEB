@@ -65,6 +65,11 @@
         </div>
         <div class="carousel-inner ">
           <div class="carousel-item carousel-image bg-img-1 active"> 
+            <picture>
+              <source media="(max-width: 900px)" srcset="images/herofullpic-sm.jpg" />
+              <img src="images/herofullpic.jpg" alt="Chris standing up holding his daughter Elva" />
+            </picture>
+            <div class="overlay"></div>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="fw-bold text-uppercase">HELLO, MIAMI</h1>
               <p>World-renowned Michelin-starred Chef Gordon Ramsay's iconic Hell's Kitchen is now open in Miami.</p>
@@ -73,22 +78,32 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item carousel-image bg-img-2" style="height: 70%;">
+          <div class="carousel-item carousel-image bg-img-2" >
+            <picture>
+              <source media="(max-width: 900px)" srcset="images/kcview-sm.jpg" />
+              <img src="images/kcview.jpg" alt="Chris standing up holding his daughter Elva" />
+            </picture>
+            <div class="overlay"></div>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="fw-bold text-uppercase">HELL'S KITCHEN IS NOW OPEN.</h1>
               <p>Join us at HELL'S KITCHEN in North America!
               </p>
               <div class="button" style="margin: auto;">
-                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2">EXPERIENCE NOW</a>
+                <a href="menu/menu.html" class="btn  btn-lg fw-bold text-uppercase fs-5 p-2">EXPERIENCE NOW</a>
               </div>
             </div>
           </div>
           <div class="carousel-item carousel-image bg-img-3">
+            <picture>
+              <source media="(max-width: 900px)" srcset="images/joinclass2-sm.jpg" />
+              <img src="images/joinclass2.jpg" alt="Chris standing up holding his daughter Elva" />
+            </picture>
+            <div class="overlay"></div>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="fw-bold text-uppercase">GORDON RAMSAY ACADEMY</h1>
               <p>Learn to cook like Michelin-starred Chef Gordon Ramsay. Online classes are available now featuring knife skills, pasta making, mastering chocolate desserts, and more. </p>
               <div class="button" style="margin: auto;">
-                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2">GET COOKING</a>
+                <a href="sign-up/sign-up.html" class="btn btn-lg fw-bold text-uppercase fs-5 p-2">GET COOKING</a>
               </div>
             </div>
           </div>
@@ -160,14 +175,12 @@
                 <div class="col-12 col-lg-6 col">
                     <div class="gallery__content--left" style="padding-right: 30px;">
                       <div>
-                        <h2 class="fw-bold text-uppercase">Choose Wisely</h2>
+                        <h2 class="fw-bold text-uppercase py-4">Choose Wisely</h2>
                       </div>
                       <div>
                         <p>Experience elements from the iconic television series Hell's Kitchen, a fine dining experience like no other from Michelin-starred Chef Gordon Ramsay. The only question we have for you is — are you team red or team blue?</p>
                         <div class="d-flex justify-content-evenly">
-                          <span class="button p-2">
-                            <a class="btn fw-bold text-uppercase fs-5 px-3" href="#open gallery">Open gallery</a>
-                          </span>
+                         
                           <span class="button p-2">
                             <a  class="fw-bold text-uppercase btn px-3 fs-5" href="./menu/menu.html">See the menu</a>
                           </span>        
@@ -229,14 +242,14 @@
             </div>
           </div>
           <div class="button " style="margin: 50px auto;">
-            <a class="btn fw-bold text-uppercase fs-5 p-2" href="./location/main-location.html">Find your location</a>
+            <a class="fw-bold text-uppercase btn px-3 fs-5" href="./location/main-location.html">Find your location</a>
           </div>
         </div>
       </section>
       <section class="section5">
         <div class="container-fluid ">
           <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 section5__img">
               <img class="img-fluid" src="images/menu/joineclub.jpg" alt="">
             </div>
             <div class="col-12 col-lg-6">
@@ -245,7 +258,7 @@
                   <h2 class="fw-bold text-uppercase">Join the e-club</h2>
                 <p >Join the Hell's Kitchen E-Club and be the first to learn about local events, seasonal-menu offerings, and more.</p>
                 <div class="button " style="margin-top: 20px;">
-                  <a class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5" href="#signup">Sign up</a>
+                  <a class="btn fw-bold text-decoration-none text-uppercase p-3 fs-5" href="sign-up/sign-up.html">Sign up</a>
                 </div>
                 </div>
               </div>
@@ -272,8 +285,8 @@
             <div class="footer__menu--right">
               <ul class="list-unstyled">
                 <li ><a class="trans-color" href="btn_web/accessibility.html">Accessibility</a></li>
-                <li ><a class="trans-color" href="btn_web/accessibility.html">Privacy Policy</a></li>
-                <li ><a class="trans-color" href="#Term">Term & Conditions</a></li>
+                <li ><a class="trans-color" href="btn_web/policy.html">Privacy Policy</a></li>
+                <li ><a class="trans-color" href="btn_web/terms-conditions.html">Term & Conditions</a></li>
               </ul>
             </div>
           </div>
@@ -288,18 +301,7 @@
         </div>
       </div>
     </footer>
-  <script>
-    document.querySelectorAll('.img-container .image img').forEach(image => {
-        image.onclick = () => {
-            document.querySelector('#popup-overlay').style.display = 'block';
-            document.querySelector('#popup-overlay img').src = image.getAttribute('src');
-        }
-    });
-
-    document.querySelector('#popup-overlay .overlay').onclick = () => {
-        document.querySelector('#popup-overlay').style.display = 'none';
-    }
-</script>
+  <script src="main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
