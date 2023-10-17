@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell's Kitchen</title>
+    <link rel="stylesheet" href="main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../images/logo-bg/logo.png">
+    <style>
+         .faq {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #555252;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+
+.faq h1 {
+    text-align: center;
+    color: #333;
+    font-size: 35px;
+}
+
+.faq ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq li {
+    margin: 20px 0;
+    border-top: 1px solid #ebe1e1;
+}
+
+.faq .question {
+    font-weight: bold;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.faq .answer {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ebe2e2;
+}
+        @font-face {
+    font-family: upperNavfont;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+  }
+  body{
+    padding-top: 100px;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: url(..//images/logo-bg/hk-background.png);
+    background-size: 100px;
+    
+}
+
+/* đổi màu các liên kết */
+.trans-color{ 
+    color: #fff;
+    transition: color 0.1ms;
+    font-weight: bold;
+}
+.trans-color:hover{
+    color: #bc955c;
+}
+/* class button  dùng chung*/
+.button{
+    background-color: #bc955c; 
+    outline-style: none; 
+    transition: background-color 0.1ms;
+    border-radius: 8px;
+    width: fit-content;
+    color: black;
+}
+.button:hover{
+    transform: scale(1.1);
+    background-color: #b89068;
+}
+
+header{
+  padding: 30px 0; 
+}
+main{
+  margin: 30px 0; 
+}
+/* footer */
+footer{
+    background-color: black;
+    padding: 30px 0;
+    top: 0px;
+}
+.list-unstyled{
+    display: flex;    
+}
+.footer__menu--left a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    
+}
+.footer__menu--right a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+}
+.footer__end--des{
+    text-align: right;
+    line-height: 1.5em;
+
+}
+.footer__end--des a{
+    text-decoration: none;
+    color: #fff;
+    transform: color 0.1ms;
+}
+.footer__end--des a:hover{
+    color: #daa918;
+    text-decoration: underline;
+}
+main{
+    color:#fff
+}
+main h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* hiệu ứng nút và các đường liên kết khi thu nhỏ */
+@media(max-width:991px) {
+    .button:hover{
+        transform: unset;
+    }
+    .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+    .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+    .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .article__content{
+        margin-top: 10%;
+    }
+}
+
+    </style>
+</head>
+<body >
+    <header >
+      <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
+            <div class="container">
+              <!-- logo -->
+              <a class="navbar-brand " href="#"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
+              <!-- toggle btn-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- side bar -->
+              <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!-- sidebar header -->
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- nav pc -->
+                <div class="nav-pc"> 
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="..//index.html" ><span class="trans-color">HOME</span></a>
+                        <iframe src="../index.html" frameborder="0" style="display: none;"></iframe>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">MENU</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="..//location/main-location.html" ><span class="trans-color">LOCATION</span></a>
+                        <iframe src="..//location/main-location.html" frameborder="0" style="display: none;"></iframe>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " href="#" ><span class="trans-color">SIGN-UP</span></a>
+                      </li>
+                    </ul>
+                    <div class="row-sm text-white border-bottom"></div>
+                    <div class="button">
+                      <a class="btn" href="..//location/main-location.html"><span class="fw-bold">BOOK</span></a>
+                      <iframe src="..//location/main-location.html" frameborder="0" style="display: none;"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="ing">
+            <h1>TERMS & CONDITIONS</h1>
+        </div>
+        <div class="standardContent__container"><div class="container"><div class="row"><div class="col-12 col-xl-10 offset-xl-1 col"><div><p><strong>1. Acceptance of terms of use and amendments</strong><br>
+            Each time you use or cause access to this Site , you agree to be bound by these Terms of Use, as amended from time to time with or without notice to you. Please read the site's <a href="https://www.gordonramsayrestaurants.com/en/us/hells-kitchen/privacy-policy" data-new-window="true" title="Privacy Policy" target="_blank" rel="noopener noreferrer"><strong>Privacy Policy</strong></a>, which is incorporated within these Terms of Use by reference.</p>
+            <p>This Site and the services provided to you are provided on an "AS IS" basis. You agree that GRNA LLC ("GRNA") reserves the right to modify or discontinue this Site and its services, and to remove the data you provide, either temporarily or permanently, at any time, without notice and without any liability towards you. GRNA will not be held responsible or liable for timeliness of or removal of information, failure to store information, inaccuracy of information, or improper delivery of information.</p>
+            <p><strong>2. Your responsibilities and registration obligations</strong><br>
+            In order to use this Site or certain parts of it, you may be required to register for a user account on this website; in this case, you agree to provide truthful information when requested, and -- if a minimum age is required for eligibility for a user account -- you undertake that you are at least the required age. By registering for a user account, you explicitly agree to this Site's Terms of Use, including any amendments made by GRNA that are published herein.</p>
+            <p><strong>3. Privacy policy</strong><br>
+            Registration data and other personally identifiable information the Site may collect is subject to the terms of the GRNA&nbsp;<a href="https://www.gordonramsayrestaurants.com/en/us/hells-kitchen/privacy-policy" data-new-window="true" title="Privacy Policy" target="_blank" rel="noopener noreferrer"><strong>Privacy Policy</strong></a>.</p>
+            <p><strong>4. Your conduct</strong><br>
+            You agree that all information or data of any kind ("content"), made available publicly or privately, will be under the sole responsibility of the person providing the said content, or of the person whose user account is used. GRNA will not be responsible to you in any way for content displayed on this Site, nor for any error or omission.</p>
+            <p>By using this Site or any service provided, you explicitly agree that:</p>
+            <ul>
+              <li>you will not provide any content or conduct yourself in any way that may be construed as: unlawful; illegal; threatening; harmful; abusive; harassing; stalking; tortious; defamatory; libelous; vulgar; obscene; offensive; objectionable; pornographic; designed to interfere with or disrupt the operation of this Site or any service provided; infected with a virus or other destructive or deleterious programming routine; giving rise to civil or criminal liability; or in violation of an applicable local, national or international law;</li>
+              <li>you will not impersonate or misrepresent your association with any person or entity; you will not forge or otherwise seek to conceal or misrepresent the origin of any content provided by you;</li>
+              <li>you will not collect or harvest any information about other users;</li>
+              <li>you will not provide, and you will not use this Site to provide, any content or service in any commercial manner, or in any manner that would involve junk mail, spam, chain letters, pyramid schemes, or any other form of unauthorized advertising or commerce; you will not use this Site to promote or operate any service or content without GRNA prior written consent;</li>
+              <li>you will not provide any content that may give rise to GRNA being held civilly or criminally liable, or that may be considered a violation of any local, national or international law, including -- but not limited to -- laws relating to copyrights, trademarks, patents, or trade secrets.</li>
+            </ul>
+            <p><strong>5. Submission of content on this Site</strong><br>
+            By providing any content to this Site:</p>
+            <ul>
+              <li>you agree to grant GRNA a worldwide, royalty-free, perpetual, non-exclusive right and license (including any moral rights or other necessary rights) to use, display, reproduce, modify, adapt, publish, distribute, perform, promote, archive, translate, and to create derivative works and compilations, in whole or in part. Such license will apply with respect to any form, media, technology already known at the time of provision or developed subsequently;</li>
+              <li>you warrant and represent that you have all legal, moral, and other rights that may be necessary to grant GRNA the license specified in this section;</li>
+              <li>you acknowledge and agree that GRNA will have the right (but not obligation), at GRNA entire discretion, to refuse to publish, or to remove, or to block access to any content you provide, at any time and for any reason, with or without notice.</li>
+            </ul>
+            <p><strong>6. Third-party services</strong><br>
+            Goods and services of third parties may be advertised and/or may be made available on or through this website. Representations made regarding products and services provided by third parties will be governed by the policies and representations made by these third parties. GRNA will not in any manner be liable for or responsible for any of your dealings or interaction with third parties.</p>
+            <p><strong>7. Indemnification</strong><br>
+            You agree to indemnify and hold harmless GRNA and GRNA representatives, subsidiaries, affiliates, related parties, officers, directors, employees, agents, independent contractors, advertisers, partners, and co-branders, from any claim or demand, including reasonable legal fees, that may be filed by any third party, arising out of your conduct or in connection with this Site or service, your provision of content, your violation of these Terms of Use, or any other violation by you of the rights of another person or party.</p>
+            <p><strong>8. DISCLAIMER OF WARRANTIES</strong><br>
+            YOU UNDERSTAND AND AGREE THAT YOUR USE OF THIS SITE AND OF ANY SERVICES OR CONTENT PROVIDED (THE "SERVICE") IS AT YOUR OWN RISK. SERVICES AND CONTENT ARE PROVIDED TO YOU "AS IS", AND GRNA EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, EITHER IMPLIED OR EXPRESS, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+            <p>GRNA MAKES NO WARRANTY, EITHER IMPLIED OR EXPRESS, THAT ANY PART OF THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, VIRUS-FREE, TIMELY, SECURE, ACCURATE, RELIABLE, OR OF ANY QUALITY, NOR IS IT WARRANTED EITHER IMPLICITLY OR EXPRESSLY THAT ANY CONTENT IS SAFE IN ANY MANNER FOR DOWNLOAD. YOU UNDERSTAND AND AGREE THAT NEITHER GRNA NOR ANY PARTICIPANT IN THE SERVICE PROVIDES PROFESSIONAL ADVICE OF ANY KIND AND THAT ANY ADVICE OR ANY OTHER INFORMATION OBTAINED VIA THIS SITE MAY BE USED SOLELY AT YOUR OWN RISK, AND THAT GRNA WILL NOT BE HELD LIABLE IN ANY WAY.</p>
+            <p>Some jurisdictions may not allow disclaimers of implied warranties, and certain statements in the above disclaimer may not apply to you as regards implied warranties; the other terms and conditions remain enforceable notwithstanding.</p>
+            <p><strong>9. LIMITATION OF LIABILITY</strong><br>
+            YOU EXPRESSLY UNDERSTAND AND AGREE THAT GRNA WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES; THIS INCLUDES, BUT IS NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF GRNA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM (I) THE USE OF SERVICES OR THE INABILITY TO USE SERVICES, (II) THE COST OF OBTAINING SUBSTITUTE GOODS AND/OR SERVICES RESULTING FROM ANY TRANSACTION ENTERED INTO ON THIS SITE, (III) UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA TRANSMISSIONS, (IV) STATEMENTS BY ANY THIRD PARTY OR CONDUCT OF ANY THIRD PARTY USING SERVICES, OR (V) ANY OTHER MATTER RELATING TO SERVICES PROVIDED HEREUNDER.</p>
+            <p>In some jurisdictions, GRNA is not permitted to limit liability and, therefore, such limitations may not apply to you. If allowed by law and not withstanding the foregoing, the GRNA maximum liability shall be limited to $100.00.</p>
+            <p><strong>10. Reservation of rights</strong><br>
+            GRNA reserves all of the GRNA rights, including but not limited to any and all copyrights, trademarks, patents, trade secrets, and any other proprietary right that GRNA may have in respect of this Site , its content, and goods and services that may be provided. The use of GRNA rights and property requires GRNA prior written consent. By making services available to you, GRNA is not providing you with any implied or express licenses or rights, and you will have no rights to make any commercial use of this Site or services or any and all copyrights, trademarks, patents, trade secrets and any other proprietary right that GRNA may have with respect to this Site without GRNA prior written consent.</p>
+            <p><strong>11. Notification of copyright infringement</strong><br>
+            If you believe that your property has been used in any way that could be considered a copyright infringement or a violation of your intellectual property rights, please contact GRNA at:</p>
+            <p>PO Box 165165</p>
+            <p>Irving, TX 76016<br>
+            Attn: Legal Department</p>
+            <p><strong>12. Applicable law</strong><br>
+            You agree that these Terms of Use and any dispute arising out of your use of this Site or products or services provided will be governed by and construed in accordance with the laws of the state of Texas. By using this website, you accept that jurisdiction is granted to the courts of Texas located in Dallas County, and that any disputes will be heard by said courts.</p>
+            <p><strong>13. Miscellaneous information</strong><br>
+            (i) In the event that any provision of these Terms of Use is deemed to conflict with any law by a court with jurisdiction over the parties, the said provision will be interpreted to reflect the original intentions of the parties in accordance with applicable law, and the remainder of these Terms of Use will remain valid and applicable; (ii) The failure of either party to assert any right under these Terms of Use will not be considered to be a waiver of that party's rights, and the said rights will remain in full force and effect; (iii) You agree that any claim or cause in respect of this Site or its services must be filed within one (1) year after such claim or cause arose, or the said claim or cause will be forever barred, without regard to any contrary law, if allowed by law; (iv) GRNA may assign GRNA rights and obligations under these Terms of Use; in this event, GRNA will be relieved of any further obligations.</p>
+            <p><strong>Contact Information:</strong><br>
+            GRNA LLC <br>
+            PO Box 165165</p>
+            <p>Irving, TX 76016</p>
+            <p><br></p>
+            <p><strong>eGift Card Terms and Conditions</strong></p>
+            <p><strong>General Terms</strong></p>
+            <p>Gordon Ramsay North America eGift Cards are distributed by CashStar Inc., a Delaware corporation ("CashStar"). By visiting&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/">https://gordonramsaynorthamerica.cashstar.com</a>, you agree that the laws of the State of Texas, without regard to principles of conflict of laws, will govern these eGift Card terms and conditions ("Ts &amp; Cs"). These Ts &amp; Cs are subject to change without notice. Gordon Ramsay North America eGift Cards are issued by GRNA LLC (d/b/a Gordon Ramsay North America). For additional Terms and Conditions see&nbsp;<a href="https://www.gordonramsayrestaurants.com/en/us/terms-and-conditions">here</a>.</p>
+            <p><strong>eGift Cards</strong></p>
+            <p>Gordon Ramsay North America eGift Cards are redeemable at&nbsp;<strong>select U.S. non-casino Gordon Ramsay restaurant locations</strong>.&nbsp; To view a list of U.S. locations currently accepting eGift Cards please visit&nbsp;<a href="https://www.gordonramsayrestaurants.com/en/us/giftcards/">this link</a>.&nbsp;</p>
+            <p>To make a purchase, visit&nbsp;<a href="https://gordonramsaynorthamerica.semi.cashstar.com/store/buy">Gordon Ramsay North America eGift Cards</a>.&nbsp; No fees of any kind will be imposed on purchasers or recipients of eGift Cards in connection with the sale of eGift Cards.</p>
+            <p><strong>Redemption</strong></p>
+            <p>Click&nbsp;<a href="https://www.gordonramsayrestaurants.com/en/us/terms-and-conditions">here</a>&nbsp;for the Terms and Conditions of redemption.</p>
+            <p><strong>View Your Balance</strong></p>
+            <p>To view your eGift Card balance, click&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/self_service/v2/register/">here</a>.</p>
+            <p><strong>Returns</strong></p>
+            <p>You may not return or cancel your Gordon Ramsay North America eGift Card after it is received. Purchasers who wish to cancel an eGift Card purchase order prior to its delivery to a recipient should contact&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/about/customer_support/contact">Customer Support</a>.</p>
+            <p><strong>Lost or Stolen eGift Cards</strong></p>
+            <p>If you suspect that someone has copied or stolen your eGift Card, contact&nbsp;<a href="https://gordonramsaynorthamerica.semi.cashstar.com/about/customer_support/contact">Customer Support</a>&nbsp;<em><strong>immediately</strong></em>. eGift Cards will not be replaced if lost or stolen without proof of purchase. eGift Cards have cash value and should be safeguarded accordingly.</p>
+            <p><strong>Limitations</strong></p>
+            <p>You may not use an eGift Card to purchase other eGift Cards.&nbsp; eGift Cards cannot be reloaded, resold, transferred for value, or redeemed for cash, except to the extent required by law. Void if reloaded, resold, transferred for value, or redeemed for cash. Unused eGift Cards may not be transferred.&nbsp; eGift Cards may not be used the same day they are purchased.</p>
+            <p>No more than Two Thousand U.S. Dollars ($2,000) may be associated with any one eGift Card in a 24-hour period.&nbsp; The total value you may load onto all of your eGift Cards, together with the value of any new eGift Cards that any one individual purchases may not exceed Ten Thousand U.S. dollars ($10,000.00) in one 24-hour period.&nbsp;</p>
+            <p><strong>Our Policies</strong></p>
+            <p>Information that you provide when purchasing eGift Cards is subject to the&nbsp;<a href="https://gordonramsaynorthamerica.semi.cashstar.com/self_service/v2/about/privacy_policy">Privacy Policy</a>. CashStar and GRNALLC may provide eGift Card purchasers with information about the redemption status of eGift Cards.</p>
+            <p><strong>Risk of Loss</strong></p>
+            <p>Ownership and risk of loss of eGift Cards passes to the purchaser as soon as we send our confirmation to the recipient. We are not responsible for lost or stolen eGift Cards. If you have any questions, please see the&nbsp;<a href="https://gordonramsaynorthamerica.semi.cashstar.com/self_service/v2/about/faq">FAQs</a>.</p>
+            <p><strong>Gordon Ramsay North America eGift Card Customer Service</strong></p>
+            <p>If you need assistance with any aspect of your purchase, ownership, or use of your eGift Card, please contact&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/about/customer_support/contact">Customer Support</a>. Please refer to your order number, or be ready to supply your email address.</p>
+            <p><strong>Payment Methods</strong></p>
+            <p>Gordon Ramsay North America eGift Cards may be paid for with a valid Visa, MasterCard, American Express.</p>
+            <p><strong>Delivery Information and Requirements for eGift Card Purchasers</strong></p>
+            <p>All orders of eGift Cards are subject to a process that compares purchaser information provided on the website with information about the purchaser provided by the purchaser's financial institution. If there is a discrepancy, your eGift Card order may be delayed until it can be corrected.</p>
+            <p>If you have concerns about your order, please contact&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/about/customer_support/contact">Customer Support</a>. Please refer to your order number, or be ready to supply your email address.</p>
+            <p>We are not responsible for eGift Cards that are undeliverable or not received due to your failure to enter an accurate email address for the recipient. Please check to make sure the email address of the recipient is correct and contact&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/about/customer_support/contact">Customer Support</a>&nbsp;if you suspect the recipient did not receive his/her eGift Card. Should an email be returned to us due to inaccurate delivery information for the recipient, we will attempt to contact you for a valid email address.</p>
+            <p><strong>Reasons for Failed Delivery of eGift Cards</strong></p>
+            <p>eGift Cards are delivered via email. If you have confirmed the recipient's email address but the eGift Card has not been viewed within a reasonable period after the requested delivery date, following is a list of the most common reasons why delivery may have failed:</p>
+            <ol>
+              <li>Spam filter blocked email or routed it to a bulk/spam folder</li>
+              <li>Recipient's firewall blocked the email</li>
+              <li>Email inbox is over size limit</li>
+              <li>Invalid email address</li>
+            </ol>
+            <p>If a spam filter is blocking Gordon Ramsay North America eGift Card Team emails from getting to an inbox, the email options will need to be modified so that Gordon Ramsay North America eGift Card Team emails are not considered spam.&nbsp; If you need further assistance, contact&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/about/customer_support/contact">Customer Support</a>. Please refer to your order number, or be ready to supply your email address.</p>
+            <p><strong>Personalized Messaging</strong></p>
+            <p>If you wish to add a personal message to an eGift Card, simply type your message in the Message field during the purchase process.&nbsp; Personal messages are limited in length to the space provided on the eGift Card.</p>
+            <p>There is no additional charge to include a personalized message.</p>
+            <p>If we find inappropriate, offensive or otherwise objectionable messages, we reserve the right to cancel them.</p>
+            <p><strong>Limitation of Liability</strong></p>
+            <p>CASHSTAR AND ITS AFFILIATES MAKE NO WARRANTIES, EXPRESS OR IMPLIED, WITH RESPECT TO EGIFT CARDS, INCLUDING WITHOUT LIMITATION, ANY EXPRESS OR IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IF AN EGIFT CARD CODE IS NON-FUNCTIONAL, YOUR SOLE REMEDY, AND OUR SOLE LIABILITY, SHALL BE THE REPLACEMENT OF SUCH EGIFT CARD. CERTAIN STATE LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS.</p>
+            <p><strong>Disputes</strong></p>
+            <p>These Ts &amp; Cs shall be construed in accordance with and governed by the laws of the United States and the State of Texas, without reference to their rules regarding conflicts of law. You hereby irrevocably consent to the exclusive jurisdiction of the state or federal courts in Dallas County, Texas, USA in all disputes arising out of or related to the eGift Cards or the gordonramsaynorthamerica.semi.cashstar.com site.</p>
+            <p><em>Gordon Ramsay North America eGift Cards, powered by CashStar.</em></p>
+            <p>ADDITIONAL TERMS &amp; CONDITIONS</p>
+            <p>The purchase and use of the eGift Card this Card constitute acceptance of the eGift Card terms. This Card is issued by and represents an obligation solely of GRNA LLC (d/b/a Gordon Ramsay North America) (“GRNA”).&nbsp;<strong>An eGift Card is valid at select non-casino GRNA restaurants located in the U.S.</strong>&nbsp;&nbsp;</p>
+            <h3>ONLINE COMPLETE TERMS &amp; CONDITIONS</h3>
+            <p>By purchasing and/or using your GRNA eGift Card, you agree to the terms contained herein.</p>
+            <p>You agree that we may provide notices, disclosures and amendments to these terms, and other information relating to your GRNA eGift Card by electronic means, including posting such materials online at&nbsp;<a href="https://www.gordonramsayrestaurants.com/en/us/">https://www.gordonramsayrestaurants.com/en/us/</a>.</p>
+            <p>The eGift Card may be used at&nbsp;<strong>select non-casino U.S. GRNA restaurants</strong>&nbsp;until the full balance is used. The eGift Card has no cash value; except as required by law, it is not redeemable for cash. Any resale is strictly prohibited. For balance information or to report your card lost or stolen, contact&nbsp;<a href="https://gordonramsaynorthamerica.cashstar.com/about/customer_support/contact">Customer Support</a>.</p>
+            <ul>
+              <li>eGift Card purchases are non-refundable.&nbsp; Protect the eGift Card like you would cash.</li>
+              <li>eGift Cards cannot be redeemed in conjunction with any contracted banquet or private dining event.</li>
+              <li>We cannot be held liable for the loss, theft, or delayed receipt of any orders.</li>
+              <li>We will not be responsible for lost eGift Cards as a result of non-delivery due to incorrect email addresses or other occurrences outside of our control.</li>
+              <li>Title and risk of loss shall pass to the purchaser upon purchase.</li>
+              <li>Currently, our online service and call center are unable to take any International orders.</li>
+            </ul>
+            <p>These terms include an Arbitration provision that governs any disputes between you and us. This provision will eliminate your right to a trial by jury; and substantially affect your rights, including preventing you from bringing, joining or participating in class or consolidated proceedings.</p>
+            <h3>USE OF GRNA EGIFT CARDS BY BUSINESSES</h3>
+            <p>Businesses that purchase our eGift Cards are prohibited from reselling eGift Cards and using eGift Cards to solicit new customers.</p>
+            <h3>FEES AND EXPIRATION OF CARD BALANCES</h3>
+            <p>We do not charge any activation, service, dormancy or inactivity fees in connection with your eGift Card. Your eGift Card has no expiration date nor does the value on your eGift Card ever expire.</p>
+            <h3>BILLING ERRORS, CORRECTIONS</h3>
+            <p>We will correct the balance of your eGift Card if we believe that a clerical, billing, or accounting error occurred. If you have questions regarding your Transaction history or any correction, or if you wish to dispute any Transaction or correction that has been applied to your eGift Card, please contact customer support. Assuming you provide sufficient details, we will review your claim and tell you what we find. We will correct any error promptly after we finish our review. If we do not find any error, we will explain what we found. We have no obligation to review or correct any billing error unless you provide us sufficient notice for us to review your claim within sixty (60) days of the date of the Transaction in question.</p>
+            <h3>PRIVACY STATEMENT</h3>
+            <p>Our privacy policy is incorporated into these terms by reference. Please read our Privacy Policy&nbsp;<a href="https://www.gordonramsayrestaurants.com/en/us/">here</a>&nbsp;carefully to understand how we collect, use, and disclose information about customers, how to update or change your personal information, and how we communicate with you.</p>
+            <h3>ARBITRATION</h3>
+            <p>Please read this section carefully. It affects rights that you may otherwise have. It provides for resolution of most disputes through arbitration instead of court trials and class actions. Arbitration is more informal than a lawsuit in court, uses a neutral arbitrator instead of a judge or jury, and discovery is more limited. Arbitration is final and binding and subject to only very limited review by a court. This provision is intended to be interpreted broadly to encompass all disputes or claims arising out of or relating to your GRNA eGift Card and your relationship with us. Any dispute or claim arising out of or relating to these terms or use of the eGift Card and your relationship with GRNA or any subsidiary, parent or affiliate company or companies (whether based in contract, tort, statute, fraud, misrepresentation or any other legal theory) will be resolved by binding arbitration, except that either of us may take claims to small claims court if they qualify for hearing by such a court. For all disputes, you must first send a written description of your claim to GRNA LLC, Attn:&nbsp; Legal Dept., P.O. Box 165165, Irving, TX &nbsp;75016-5165 to allow us an opportunity to resolve the dispute. You and we each agree to negotiate your claim in good faith. You may request arbitration if your claim or dispute cannot be resolved within 60 days. The arbitration of any dispute or claim shall be conducted in accordance with the rules of the American Arbitration Association ("AAA"), including the AAA's Consumer Arbitration Rules (as applicable), as modified by this Agreement. The AAA Rules and information about arbitration and fees are available online at&nbsp;<a href="https://www.adr.org/">www.adr.org</a>. You and we agree that this Agreement evidences a transaction in interstate commerce and this arbitration provision will be interpreted and enforced in accordance with the U.S. Federal Arbitration Act and federal arbitration law, and not governed by state law. Any arbitration will be held in a reasonably convenient location in the state in which you reside or at another mutually agreed location. The arbitration will be conducted in the English language. An arbitrator may award on an individual basis any relief that would be available in a court, including injunctive or declaratory relief to the extent required to satisfy your individual claim, and must follow and enforce this Agreement as a court would. Any arbitration shall be confidential, and neither you nor we may disclose the existence, content or results of any arbitration, except as may be required by law or for purposes of enforcement of the arbitration award. Judgment on any arbitration award may be entered in any court having proper jurisdiction. Costs of Arbitration. Upon filing of the arbitration demand, we will pay all filing, administration and arbitrator fees other than the initial $200 filing fee, and for claims of less than $1,000, we will reimburse you for the filing fee within 30 days of receiving a written request from you. Each party will bear the fees and expense of its own attorneys, experts, witnesses and preparation and presentation of evidence at the arbitration. However, for claims under $10,000 as to which you provided notice and negotiated in good faith as required above before initiating arbitration, if the arbitrator finds you are the prevailing party in the arbitration, you will be entitled to a recovery of reasonable attorneys’ fees and costs. Except for claims determined to be frivolous, we agree not to seek an award of attorneys’ fees in arbitration even if an award is otherwise available under applicable law.</p>
+            <p>Class Action Waiver and Jury Waiver. You and we each agree that any proceeding, whether in arbitration or in court, will be conducted only on an individual basis and not in a class, consolidated or representative action. If a court or arbitrator determines in an action between you and us that this class action waiver is unenforceable, the arbitration agreement will be void as to you. If you opt out of the arbitration provision as specified above, this class action waiver provision will not apply to you. Neither you, nor any other customer, can be a class representative, class member, or otherwise participate in a class, consolidated or representative proceeding without having complied with the opt out procedure set forth above. If for any reason a claim proceeds in court rather than through arbitration, you and we each waive any right to a jury trial.</p>
+            <p>These terms shall be governed by and construed in accordance with the laws of the State of Texas notwithstanding any conflict of law rules.<br>
+             <br>
+            </p></div></div></div></div></div>
+        </div>
+    </main>
+
+    <footer >
+      <div class="container text-white">
+        <div class="row" >
+          <div class="col-6 col-lg-12 col">
+            <div class="footer__menu--left">
+              <ul class="list-unstyled gap-5" >
+                <li ><a class="trans-color" href="career.html">Careers</a></li>
+                <li ><a class="trans-color" href="faq.html">Faqs</a></li>
+                <li ><a class="trans-color" href="about/about.html">About</a></li>
+                <li ><a class="trans-color" href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-lg-8 col-xl-7 col">
+            <div class="footer__menu--right">
+              <ul class="list-unstyled">
+                <li ><a class="trans-color" href="accessibility.html">Accessibility</a></li>
+                <li ><a class="trans-color" href="policy.html">Privacy Policy</a></li>
+                <li ><a class="trans-color" href="#Term">Term & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-5 col">
+            <div class="footer__end">
+              <p class="footer__end--des text-white">
+                <span>Gordon Ramsay Restaurants ©Copyright 2023</span><br>
+                <a href="#Coppyrights">Gordonramsayrestaurants.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
