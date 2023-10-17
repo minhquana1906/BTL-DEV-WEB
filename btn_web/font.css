@@ -1,0 +1,140 @@
+h1.heading {
+    border-bottom: 2px solid;
+    display: flex;
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 50px;
+    
+}
+@font-face {
+    font-family: upperNavfont;
+    src: url(fonts/Futura\ PT\ Heavy.ttf);
+    font-family: lowerNavfont;
+    src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+}
+.contact__011{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact__011 p{
+    color: #fff;
+}
+
+form.form {
+    margin: 10px;
+    padding: 50px;
+    width: 100%;
+    height: 700px;
+}
+.form-control {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background:url(..//images/logo-bg/hk-background.png);
+    background-size:100px;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-attachment: fixed;
+    color: #fff;
+}
+.form-control label {
+    min-width: 160px;
+}
+.form-control input:not([type=checkbox]):not([type=radio]), .form-control textarea, .form-control select {
+    min-width: 400px;
+    border-radius: 3px;
+    border-color: #A36A6A;
+    border-style: solid;
+    border-width: 2px;
+    text-indent: 10px;
+    font-family: 'Dancing Script';
+    color: #A36A6A;
+    box-sizing: border-box;
+}
+.form-control select {
+    height:28px;
+}
+.form-control input[type="date"], .form-control select{
+    color:#A36A6A;
+    font-size:14px;
+}
+.form-control input:focus, .form-control textarea:focus, .form-control select:focus{
+    outline: none !important;
+    border:2px solid#127de7!important;
+}
+.form-control input, .form-control select {
+    line-height: 24px;
+}
+.form-control textarea {
+    min-height: 100px;
+    padding: 5px 0;
+    font-size: 16px;
+}
+.form #btn-send {
+    margin-left: 160px;
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-family: 'Dancing Script';
+    color: #524a4a;
+    border: 2px solid transparent;
+    background-color: #BC955C;
+    transition: all 0.5s;
+    line-height: 24px;
+    cursor:pointer;
+}
+.form #btn-send:hover {
+    background-color:#b5b8bb;
+}
+.form .error small {
+    color: red;
+    margin-top: 5px;
+}
+.inp-wrapper.error {
+    display: flex;
+    flex-direction: column;    
+}
+.inp-wrapper.radio{
+    display:flex;
+}
+.chk-item label, .rdo-item label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.rdo-item:not(:last-child) {
+    margin-right: 10px;
+}
+p#message-success {
+    color: green;
+    margin-left: 160px;
+    line-height: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ddd;
+    opacity: 1; /* Firefox */
+    font-style: italic;
+    font-family: "Dancing Script", cursive;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ddd;
+    font-style: italic;
+    font-family: "Dancing Script", cursive;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ddd;
+    font-style: italic;
+    font-family: "Dancing Script", cursive;
+}
