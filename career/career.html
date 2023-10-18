@@ -11,12 +11,15 @@
     <style>
           .text {
             text-align: center; /* Căn văn bản theo bên phải */
-            margin-left: 80px; /* Tạo khoảng cách giữa hình và văn bản */
             color: whitesmoke;
         } 
         .career1 {
             display: flex;
             align-items: center; /* Căn đều chiều cao của hình và văn bản */
+        }
+        .career1 img{
+          width: 100%;
+          max-height: 400px;
         }
 #H1{
 
@@ -185,18 +188,25 @@ footer{
           </nav>
     </header>
     <main>
-      <h1 style=" margin-top: 10px;text-align: center;color: rgb(172, 162, 79); font-size: 58px; font-weight: bold;">CAREER</h1>
-      <div class="career1">
-        <img style="margin-left: 20px;margin-top: 50px;margin-bottom: 50px;" src="https://afamilycdn.com/2018/9/23/dau-bep-2-1537680685057172224757.jpg" alt="">
-      <div class="text">
+      <div class="container">
+        <h1 style=" margin-top: 10px;text-align: center;color: rgb(172, 162, 79); font-size: 58px; font-weight: bold;">CAREER</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 col">
+              <div class=" container career1">
+                <img class="img-fluid" style="margin-left: 20px;margin-top: 50px;margin-bottom: 50px;" src="../images/career.jpg" alt="">
+            </div>
+            </div>
+      <div class="col-12 col-lg-6 col py-lg-5">
+        <div class="text">
           <h3>WORK WITH US</h3>
   <p>We hire the best, so we offer our employees the best. Perks include health insurance, 401k plans and flex time. Learn about new positions and send your resume.</p>
   <button class="button" style=" padding: 10px 20px;"><h3><span style="font-weight: 500;">APPLY NOW</span></h3></button>  
   </div>
     </div>
-   <div style="margin-left: 20px;">
-    <p ><span style="color: #fff;">Gordon Ramsay Hell's Kitchen is an equal opportunity employer.</span></p>
-   </div>
+    </div>
+      </div>
+      </div>
   </main>
 
     <footer >
@@ -205,7 +215,7 @@ footer{
           <div class="col-6 col-lg-12 col">
             <div class="footer__menu--left">
               <ul class="list-unstyled gap-5" >
-                <li ><a class="trans-color" href="#Careers">Careers</a></li>
+                <li ><a class="trans-color" href="">Careers</a></li>
                 <li ><a class="trans-color" href="#FAQS">Faqs</a></li>
                 <li ><a class="trans-color" href="#About">About</a></li>
                 <li ><a class="trans-color" href="#Contact">Contact</a></li>
