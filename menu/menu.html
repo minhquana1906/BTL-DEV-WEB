@@ -122,7 +122,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
@@ -131,16 +133,18 @@ body {
   opacity: 0;
   transition: opacity 0.5s;
   }
-.image-subtext {
+/* .image-subtext {
   top: 50%;
-  }
+  } */
 .image-container:hover .image-text,
 .image-container:hover .image-subtext {
   opacity: 1;
   }
-.image-text p,
-.image-subtext p {
+.image-text 
+{
   margin: 0;
+  font-weight: bold;
+  font-size: 23px;
   }
 .image-container img {
   position: absolute;
@@ -212,10 +216,6 @@ footer{
   color: #fff;
   transform: color 0.1ms;
 }
-.image-text p {
-  font-weight: bold;
-  font-size: 23px;
-}
 .center-button {
   display: flex;
   justify-content: center;
@@ -278,17 +278,16 @@ footer{
       <div class="container">
         <div class="row">     
         <div class="col-12 mb-3">
-          <div class="image-container image2" style="position: relative;">
+          <!-- <div class="image-container image2" >
             <div class="image-text">
-              <p style="margin-top: 20px;">LAS VEGAS</p>
-              <div class="button" style="margin-left: 80px; margin-top: 70px;">
-                <a class="btn" href="las-vegas-menu.html"><span class="fw-bold">LAS VEGAS MENU</span></a>
-              </div>            
-            </div>
-            <div class="image-subtext">
+              <h2 class="fw-bold" style="padding-bottom: 15px;">LAS VEGAS</h2>
               <p>Nevada</p>
+              <div class="button" >
+                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2" href="las-vegas-menu.html"><span class="fw-bold">LAS VEGAS MENU</span></a>
+              </div>            
+              
             </div>
-          </div>
+          </div> -->
         </div>             
         <div class="col-12 mb-3">
           <div class="image-container image4" style="position: relative;">
