@@ -116,13 +116,14 @@ body {
 .image7{
   background-image: url('../images/locations/foxwoods-sm.jpg');
 }
-.image-text,
-.image-subtext {
+.image-text{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
@@ -131,16 +132,15 @@ body {
   opacity: 0;
   transition: opacity 0.5s;
   }
-.image-subtext {
-  top: 50%;
-  }
-.image-container:hover .image-text,
-.image-container:hover .image-subtext {
+
+.image-container:hover .image-text{
   opacity: 1;
   }
-.image-text p,
-.image-subtext p {
+.image-text 
+{
   margin: 0;
+  font-weight: bold;
+  font-size: 23px;
   }
 .image-container img {
   position: absolute;
@@ -179,48 +179,71 @@ a {
     width: 100%;
   }
 }
-footer{
-  background-color: #black;
+    /* footer */
+    footer{
+        background-color: black;
+        
+    }
+    .list-unstyled{
+        display: flex;    
+    }
+    .footer__menu--left a{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 20px;
+        
+    }
+    .footer__menu--right a{
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 20px;
+    }
+    .footer__end--des{
+        text-align: right;
+        line-height: 1.5em;
 
-}
-.list-unstyled{
-  display: flex;    
-}
-.footer__menu--left a{
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  padding-left: 20px;
-  
-}
-.footer__menu--right a{
-  font-size: 18px;
-  font-weight: 400;
-  text-decoration: none;
-  color: #fff;
-  padding-left: 20px;
-}
-.footer__end--des{
-  text-align: right;
-  line-height: 1.5em;
-
-}
-.footer__end--des a{
-  text-decoration: none;
-  color: #fff;
-  transform: color 0.1ms;
-}
-.image-text p {
-  font-weight: bold;
-  font-size: 23px;
-}
-.center-button {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+    }
+    .footer__end--des a{
+        text-decoration: none;
+        color: #fff;
+        transform: color 0.1ms;
+    }
+    .hov-link:hover{
+        color: #daa918;
+        text-decoration: underline;
+    }
+/* hiệu ứng nút và các đường liên kết khi thu nhỏ */
+    @media(max-width:991px) {
+      .button:hover{
+        transform: unset;
+    }
+      .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+      .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+      .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+      .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+      .article__content{
+        margin-top: 10%;
+    }
+  }
     </style>
 </head>
 <body class="bg-black">
@@ -278,67 +301,57 @@ footer{
       <div class="container">
         <div class="row">     
         <div class="col-12 mb-3">
-          <div class="image-container image2" style="position: relative;">
+           <div class="image-container image2" >
             <div class="image-text">
-              <p style="margin-top: 20px;">LAS VEGAS</p>
-              <div class="button" style="margin-left: 80px; margin-top: 70px;">
-                <a class="btn" href="las-vegas-menu.html"><span class="fw-bold">LAS VEGAS MENU</span></a>
+              <h2 class="fw-bold" style="padding-bottom: 15px;">LAS VEGAS</h2>
+              <p>Nevada</p>
+              <div class="button" >
+                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2" href="las-vegas-menu.html"><span class="fw-bold">LAS VEGAS MENU</span></a>
               </div>            
             </div>
-            <div class="image-subtext">
-              <p>Nevada</p>
-            </div>
-          </div>
+          </div> 
         </div>             
         <div class="col-12 mb-3">
-          <div class="image-container image4" style="position: relative;">
+          <div class="image-container image4">
             <div class="image-text">
-              <p>WASHINGTON, D.C</p>
-              <div class="button" style="margin-left: 45px; margin-top: 70px;">
-                <a class="btn" href="washington-menu.html"><span class="fw-bold">WASHINGTON, D.C. MENU</span></a>
-              </div>             
-            </div>
-            <div class="image-subtext">
+              <h2 class="fw-bold" style="padding-bottom: 15px;">WASHINGTON, D.C.</h2>
               <p>District of Columbia</p>
+              <div class="button">
+                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2" href="washington-menu.html"><span class="fw-bold">WASHINGTON, D.C. MENU</span></a>
+              </div>             
             </div>
           </div>
         </div>        
         <div class="col-12 mb-3">
-          <div class="image-container image5" style="position: relative;">
+          <div class="image-container image5">
             <div class="image-text">
-              <p>MIAMI</p>
-              <div class="button" style="margin-left: 95px; margin-top: 70px;">
-                <a class="btn" href="miami-menu.html"><span class="fw-bold">MIAMI MENU</span></a>
-              </div>             
-            </div>
-            <div class="image-subtext">
+              <h2 class="fw-bold" style="padding-bottom: 15px;">MIAMI</h2>
               <p>Florida</p>
+              <div class="button">
+                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2" href="miami-menu.html"><span class="fw-bold">MIAMI MENU</span></a>
+              </div>             
             </div>
           </div>
         </div>          
         <div class="col-12 mb-3">
           <div class="image-container image6" style="position: relative;">
             <div class="image-text">
-              <p>ATLANTIC CITY</p>
-              <div class="button" style="margin-left: 65px; margin-top: 70px;">
-                <a class="btn" href="alantic-city-menu.html"><span class="fw-bold">ATLANTIC CITY MENU</span></a>
-              </div>             
-            </div>
-            <div class="image-subtext">
+              <h2 class="fw-bold" style="padding-bottom: 15px;">ATLANTIC CITY</h2>
               <p>New Jersey</p>
+              <div class="button">
+                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2" href="alantic-city-menu.html"><span class="fw-bold">ATLANTIC CITY MENU</span></a>
+              </div>             
             </div>
           </div>
         </div>        
         <div class="col-12 mb-3">
           <div class="image-container image7" style="position: relative;">
             <div class="image-text">
-              <p>FOXWOODS</p>
-              <div class="button" style="margin-left: 75px; margin-top: 70px;">
-                <a class="btn" href="foxwood-menu.html"><span class="fw-bold">FOXWOODS MENU</span></a>
-              </div>             
-            </div>
-            <div class="image-subtext">
+              <h2 class="fw-bold" style="padding-bottom: 15px;">FOXWOODS</h2>
               <p>Connecticut</p>
+              <div class="button">
+                <a class="btn  btn-lg fw-bold text-uppercase fs-5 p-2" href="foxwood-menu.html"><span class="fw-bold">FOXWOODS MENU</span></a>
+              </div>             
             </div>
           </div>
         </div>          
@@ -346,24 +359,24 @@ footer{
       </div>
     </main>
     <footer >
-      <div class="container">
-        <div class="row" style="margin-bottom: 20px;">
+      <div class="container text-white">
+        <div class="row line1" style="margin-bottom: 20px;">
           <div class="col-6 col-lg-12 col">
             <div class="footer__menu--left">
-              <ul class="list-unstyled" >
-                <li><a href="#Careers">Careers</a></li>
-                <li><a href="#FAQS">Faqs</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Contact">Contact</a></li>
+              <ul class="list-unstyled gap-5" >
+                <li ><a class="trans-color" href="..//career/career.html">Careers</a></li>
+                <li ><a class="trans-color" href="..//faq/faq.html">Faqs</a></li>
+                <li ><a class="trans-color" href="..//about/about.html">About</a></li>
+                <li ><a class="trans-color" href="..//btn_web/contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
           <div class="col-6 col-lg-8 col-xl-7 col">
             <div class="footer__menu--right">
               <ul class="list-unstyled">
-                <li><a href="#Accessibility">Accessibility</a></li>
-                <li><a href="#Policy">Privacy Policy</a></li>
-                <li><a href="#Term">Term & Conditions</a></li>
+                <li ><a class="trans-color" href="../btn_web/accessibility.html">Accessibility</a></li>
+                <li ><a class="trans-color" href="..//btn_web/policy.html">Privacy Policy</a></li>
+                <li ><a class="trans-color" href="..//btn_web/terms-conditions.html">Term & Conditions</a></li>
               </ul>
             </div>
           </div>

@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="menu.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../images/logo-bg/favicon.png">
     <style>
-        @font-face {
+                @font-face {
             font-family: upperNavfont;
             src: url(fonts/Futura\ PT\ Heavy.ttf);
         }
@@ -107,25 +108,15 @@
                 margin-top: 10%;
             }
         }
-        .menu-overlay {
-            position: absolute;
-            bottom: 100px;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-        .menu-overlay h1 {
-            font-size: 48px;
-        }
+
         .menulist__heading h2 {
             font-size: 32px;
             color: #e1b988;
             margin: 15px 0 10px;
+        }
+        .menulist__heading i{ 
+            font-size: 24px;
+            margin-right: 10px;
         }
         .h1, .h2, h1, h2 {
             margin-top: 0;
@@ -134,31 +125,20 @@
             line-height: 1.2;
         }
         .menulist__heading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            margin-top: 300px;
             text-align: center;
             color: #fff;
-            z-index: 2;
+       
         }
         .menulist__menu {
             text-align: center;
-            margin-top: 450px;
+            margin-top: 50px;
         }
         .menulist__menu button {
             margin: 0 15px 30px;
             width: fit-content;
         }
-        .menulist__heading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #fff;
-            z-index: 2;
-        }
+
         main {
             display: flex;
             flex-direction: column;
@@ -345,24 +325,19 @@
         </nav>
     </header>
     <main>
-        <div class="menu-overlay">
-            <h1>MENU</h1>
-        </div>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-12">
-                    <div class="menulist__heading">
-                        <h2 style="margin-bottom: 30px;">FOXWOODS</h2>
-                        <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i><a href="../location/foxwoods.html" style="color: white; text-decoration: none;">View location</a>
-                    </div>
-                    <div class="menulist__menu">
-                        <button class="btn btn-outline-warning btn-custom" type="submit" style="transform: translateX(-0%)" id="showMain">LUNCH</button>
-                        <button class="btn btn-outline-warning btn-custom-hk" type="submit" style="transform: translateX(-0%)" id="showHk">DESSERT</button>
-                        <button class="btn btn-outline-warning btn-custom-vegetarian" type="submit" style="transform: translateX(-0%)" id="showDinner">DINNER</button>
-                    </div>
-                </div>
+        <div class="container ">
+           
+            <div class="menulist__heading">
+                <h1 class="text-white " >MENU</h1>
+                <h2 style="margin-bottom: 30px;">FOXWOODS</h2>
+                <i class="fas fa-map-marker-alt" ></i><a href="../location/foxwoods.html" style="color: white; text-decoration: none;">View location</a>
             </div>
-        </div>
+            <div class="menulist__menu">
+                <button class="btn btn-custom" type="submit" style="transform: translateX(-0%)" id="showMain">LUNCH</button>
+                <button class="btn btn-custom-hk" type="submit" style="transform: translateX(-0%)" id="showHk">LOUNGE</button>
+                <button class="btn btn-custom-vegetarian" type="submit" style="transform: translateX(-0%)" id="showDinner">DINNER</button>
+            </div>
+</div>
         <div id="main" style="display: block;">
             <div class="row">
                 <div class="col-12 col">
@@ -1160,24 +1135,24 @@
             </div>
     </main>
     <footer >
-        <div class="container">
-          <div class="row" style="margin-bottom: 20px;">
+        <div class="container text-white">
+          <div class="row line1" style="margin-bottom: 20px;">
             <div class="col-6 col-lg-12 col">
               <div class="footer__menu--left">
-                <ul class="list-unstyled" >
-                  <li><a href="#Careers">Careers</a></li>
-                  <li><a href="#FAQS">Faqs</a></li>
-                  <li><a href="#About">About</a></li>
-                  <li><a href="#Contact">Contact</a></li>
+                <ul class="list-unstyled gap-5" >
+                  <li ><a class="trans-color" href="..//career/career.html">Careers</a></li>
+                  <li ><a class="trans-color" href="..//faq/faq.html">Faqs</a></li>
+                  <li ><a class="trans-color" href="..//about/about.html">About</a></li>
+                  <li ><a class="trans-color" href="..//btn_web/contact.html">Contact</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-6 col-lg-8 col-xl-7 col">
               <div class="footer__menu--right">
                 <ul class="list-unstyled">
-                  <li><a href="#Accessibility">Accessibility</a></li>
-                  <li><a href="#Policy">Privacy Policy</a></li>
-                  <li><a href="#Term">Term & Conditions</a></li>
+                  <li ><a class="trans-color" href="../btn_web/accessibility.html">Accessibility</a></li>
+                  <li ><a class="trans-color" href="..//btn_web/policy.html">Privacy Policy</a></li>
+                  <li ><a class="trans-color" href="..//btn_web/terms-conditions.html">Term & Conditions</a></li>
                 </ul>
               </div>
             </div>
