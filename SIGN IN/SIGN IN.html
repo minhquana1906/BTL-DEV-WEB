@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell's Kitchen Sign-up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../images/logo-bg/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');  
+    @font-face {
+      font-family: upperNavfont;
+      src: url(fonts/Futura\ PT\ Heavy.ttf);
+      font-family: lowerNavfont;
+      src: url(fonts/Futura\ Bk\ BT\ Book.ttf);
+    }
+    :root {
+    --linear-grad:linear-gradient(to right, black, #ccc);
+    --grad-clr1:black;
+    --grad-clr2:black;
+    }
+    body{
+      padding-top: 100px;
+      padding: 0;
+      margin: 0;
+      background-image: url(../images/logo-bg/hk-background.png);
+      background-size: 100px; 
+      place-content: center;
+
+    }
+
+/* đổi màu các liên kết */
+.trans-color{ 
+    color: rgb(255, 255, 255);
+    transition: color 0.1ms;
+    font-weight: bold;
+}
+.trans-color:hover{
+    color: #bc955c;
+}
+/* class button  dùng chung*/
+.button{
+    background-color: #bc955c; 
+    outline-style: none; 
+    transition: background-color 0.1ms;
+    border-radius: 8px;
+    width: fit-content;
+    color: black;
+}
+.button:hover{
+    transform: scale(1.1);
+    background-color: #b89068;
+}
+
+main{
+  margin: 30px 0; 
+}
+/* footer */
+footer{
+    background-color: black;
+    padding: 30px 0;
+}
+.list-unstyled{
+    display: flex;    
+}
+.footer__menu--left a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    
+}
+.footer__menu--right a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+}
+.footer__end--des{
+    text-align: right;
+    line-height: 1.5em;
+
+}
+.footer__end--des a{
+    text-decoration: none;
+    color: #fff;
+    transform: color 0.1ms;
+}
+.footer__end--des a:hover{
+    color: #daa918;
+    text-decoration: underline;
+}
+/* hiệu ứng nút và các đường liên kết khi thu nhỏ */
+@media(max-width:991px) {
+    .button:hover{
+        transform: unset;
+    }
+    .button{
+        max-width: fit-content;
+        padding: auto 10px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    .list-unstyled{
+        flex-direction: column;
+        padding: 20px;
+        
+    }   
+    .list-unstyled li{
+        margin-bottom: 15px;
+    } 
+    .footer__end--des{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .article__content{
+        margin-top: 10%;
+    }
+}
+  .main-text{
+    color: #fff;
+    text-align: center;
+    padding-top: 150px;
+  }
+  .main-text h1{
+    font-size: 58px;
+    font-weight: bold;
+  }
+  .sign__container{
+    position: relative;
+    width: 850px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 25px 30px 55px rgba(56, 56, 56, 0.467);
+    border-radius: 13px;
+    overflow: hidden;
+  }
+  .form-container{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    padding: 0 40px;
+    transition: all 0.6s ease-in-out;
+  }
+  .sign-up-container{
+    opacity: 0;
+    z-index: 1;
+  }
+  .sign-in-container{
+    z-index: 2;
+  }
+  form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+  }
+  h1{
+    color: var(--grad-clr1);
+  }
+  .social-container{
+    margin: 20px 0;
+  }
+  .social-container a{
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+  }
+  .sign__container span{
+    font-size: 12px;
+  }
+  .infield{
+    position: relative;
+    margin: 8px 0;
+    width: 100%;
+  }
+  .sign__container input{
+    width: 100%;
+    padding: 12px 8px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+  }
+  .sign__container label{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: var(--linear-grad);
+    transition: 0.3s;
+  }
+  .form-container input:focus ~ label{
+    width: 100%;
+  }
+  .form-container a{
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+  }
+  .form-container a.forgot{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #eee;
+  }
+  button{
+    border-radius: 20px;
+    border: 1px solid var(--grad-clr1);
+    background: var(--grad-clr2);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .form-container button{
+    margin-top: 17px;
+    transition: 80ms ease-in;
+  }
+  .form-container button:hover{
+    background: #fff;
+    color: var(--grad-clr1);
+  }
+  .overlay-container{
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+  }
+  #overlayBtn{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 307px;
+    transform: translateX(-50%);
+    width: 143.67px;
+    height: 40px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+  }
+  .overlay{
+    position: relative;
+    background: var(--linear-grad);
+    color: #fff;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+  }
+  .overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    transition: 0.6s ease-in-out;
+  }
+  .overlay-left{
+    right: 60%;
+    transform: translateX(-12%);
+  }
+  .overlay-left h1{
+    font-size: 36px;
+  }
+  .overlay-right{
+    right: 0;
+    transform: translateX(0%);
+  }
+  .overlay-panel h1{
+    color: #fff; 
+  }
+   p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 25px 0 35px;
+  }
+  .overlay-panel button{
+    border: none;
+    background: transparent;
+  }
+  .right-panel-active .overlay-container{
+    transform: translateX(-150%);
+  }
+  .right-panel-active .overlay{
+    transform: translateX(50%);
+  }
+  .right-panel-active .overlay-left{
+    transform: translateX(25%);
+  }
+  .right-panel-active .overlay-right{
+    transform: translateX(35%);
+  }
+  .right-panel-active .sign-in-container{
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  .right-panel-active .sign-up-container{
+    transform: translateX(66.7%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+  }
+  @keyframes show {
+    0%, 50%{
+      opacity: 0;
+      z-index: 1;
+    }
+    50.1% , 100%{
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  .btnScaled{
+    animation: scaleBtn 0.6s;
+  }
+  @keyframes scaleBtn {
+    0%{
+      width: 143.67px;
+    }
+    50%{
+      width: 250px;
+    }
+    100%{
+      width: 143.67px;
+    }
+  }
+  .sign__container{
+    margin-bottom: 150px ;
+  }
+    </style>
+</head>
+<body style="margin-top: 150px;">
+  <header >
+    <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-black fixed-top">
+          <div class="container">
+            <!-- logo -->
+            <a class="navbar-brand " href="../index.html"><img style="height: 70px;" src="../images/logo-bg/logo.png" alt="website logo "></a>
+            <!-- toggle btn-->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- side bar -->
+            <div class="sidebar offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <!-- sidebar header -->
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                <button type="button" class="btn-close btn-close-white shadow-none"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <!-- nav pc -->
+              <div class="nav-pc"> 
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-lg-end gap-1.5 flex-grow-1 px-3 ">
+                    <li class="nav-item">
+                      <a class="nav-link active " aria-current="page" href="../index.html" ><span class="trans-color">HOME</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active " href="..//menu/menu.html" ><span class="trans-color">MENU</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active " href="main-location.html" ><span class="trans-color">LOCATION</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active " href="..//SIGN IN/SIGN IN.html" ><span class="trans-color">SIGN IN</span></a>
+                    </li>
+                  </ul>
+                  <div class="row-sm text-white border-bottom"></div>
+                  <div class="button">
+                    <a class="btn" href="main-location.html"><span class="fw-bold">BOOK</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+  </header>
+    <main>
+<!-- sign up - in -->
+<div class="container sign__container" id="sign__container">
+  <div class="form-container sign-up-container">
+      <form action="#">
+          <h1>Create Account</h1>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <div class="infield">
+              <input type="text" placeholder="Name" />
+              <label></label>
+          </div>
+          <div class="infield">
+              <input type="email" placeholder="Email" name="email"/>
+              <label></label>
+          </div>
+          <div class="infield">
+              <input type="password" placeholder="Password" />
+              <label></label>
+          </div>
+          <button>Sign Up</button>
+      </form>
+  </div>
+  <div class="form-container sign-in-container">
+      <form action="#">
+          <h1>Sign in</h1>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <div class="infield">
+              <input type="email" placeholder="Email" name="email" id="email" required/>
+              <label></label>
+          </div>
+          <div class="infield">
+              <input type="password" placeholder="Password" id="password" required/>
+              <label></label>
+          </div>
+          <a href="#" class="forgot">Forgot your password?</a>
+          <button onclick="validation();" >Sign In</button>
+      </form>
+  </div>
+  <div class="overlay-container" id="overlayCon">
+      <div class="overlay">
+          <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button >Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button >Sign Up</button>
+          </div>
+      </div>
+      <button id="overlayBtn"></button>
+  </div>
+</div>
+    </main>
+    <footer >
+      <div class="container text-white">
+        <div class="row line1" style="margin-bottom: 20px;">
+          <div class="col-6 col-lg-12 col">
+            <div class="footer__menu--left">
+              <ul class="list-unstyled gap-5" >
+                <li ><a class="trans-color" href="..//career/career.html">Careers</a></li>
+                <li ><a class="trans-color" href="..//faq/faq.html">Faqs</a></li>
+                <li ><a class="trans-color" href="..//about/about.html">About</a></li>
+                <li ><a class="trans-color" href="..//btn_web/contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 col-lg-8 col-xl-7 col">
+            <div class="footer__menu--right">
+              <ul class="list-unstyled">
+                <li ><a class="trans-color" href="../btn_web/accessibility.html">Accessibility</a></li>
+                <li ><a class="trans-color" href="..//btn_web/policy.html">Privacy Policy</a></li>
+                <li ><a class="trans-color" href="..//btn_web/terms-conditions.html">Term & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 col-xl-5 col">
+            <div class="footer__end">
+              <p class="footer__end--des text-white">
+                <span>Gordon Ramsay Restaurants ©Copyright 2023</span><br>
+                <a href="#Coppyrights">Gordonramsayrestaurants.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+      // sign-in-up-option
+      const sign__container = document.getElementById('sign__container');
+      const overlayCon = document.getElementById('overlayCon');
+      const overlayBtn = document.getElementById('overlayBtn');
+
+      overlayBtn.addEventListener('click', () => {
+        sign__container.classList.toggle('right-panel-active');
+
+        sign__container.classList.remove('btnScaled');
+        window.requestAnimationFrame( () =>{
+          overlayBtn.classList.add('btnScaled');
+        })
+      });
+    </script>
+    <script>
+      //valid login
+      function validation()
+      {
+        var email = 'quan@gmail.com';
+        var password = '123456';
+
+        var Email = document.getElementById('email').value;
+        var passWord = document.getElementById('password').value;
+
+        if((email == Email) && (password == passWord)){
+          Swal.fire('Congratulations!','You success to sign in!','success');
+        }
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Email or password is incorrect!', 
+          });
+        }
+       }
+    </script>
+</body>
+</html>
